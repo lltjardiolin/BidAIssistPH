@@ -1,0 +1,1182 @@
+<SCRIPT LANGUAGE="JavaScript">
+var WinObj =null;
+var o=window.open;
+window.open=launchCenter;
+function launchCenter(url,name,features)
+{
+features=features+',';
+var width=features.substring((features.indexOf('width=')+6));
+width=width.substring(0,width.indexOf(','));
+var height=features.substring((features.indexOf('height=')+7));
+height=height.substring(0,height.indexOf(','));
+features+=',innerHeight='+height;
+features+=',innerWidth='+width;
+if (window.screen) {
+     features += ',top='+(screen.availHeight- height)*0.5+',left='+(screen.availWidth-width)*0.5;
+}
+if(name=='helpWin')
+{o(url,'helpWin',features);}
+else
+{
+if (null != WinObj)WinObj.close();
+WinObj = o(url,'a',features);}
+}
+</script><link rel='stylesheet' type='text/css' href='/GEPS/common/Styles.css'>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<title>OpportunitiesSearch</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="../Common/Styles.css" type="text/css" rel="stylesheet">
+		
+		
+		<SCRIPT language="JavaScript">
+		function clearPreloadPage() 
+		{ //DOM
+			if (document.getElementById)
+			{
+				document.getElementById('prepage').style.visibility='hidden';
+			}
+			else
+			{
+				if (document.layers)
+				{ //NS4
+					document.prepage.visibility = 'hidden';
+				}
+				else 
+				{ //IE4
+					document.all.prepage.style.visibility = 'hidden';
+				}
+			}
+		}
+
+		</SCRIPT>
+	</HEAD>
+	<body onload="clearPreloadPage();">
+		<!-- Insert codes below after <BODY> tag immediately  -->
+		<div id="prepage" style="Z-INDEX: 9999; BACKGROUND: #f1f1f1; FILTER: Alpha(Opacity=50); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%"><FONT face="ËÎÌå"></FONT></div>
+		<!-- Finish to add the JavaScript Page Preloader. Add your own web contents below -->
+		<form name="OpportunitiesSearchUI" method="post" action="./SplashOpportunitiesSearchUI.aspx?menuIndex=3&amp;ClickFrom=OpenOpp&amp;Result=3" id="OpportunitiesSearchUI">
+<div>
+
+</div>
+
+
+
+<SCRIPT>
+    var now = new Date("2026/9/29 0:20:10");
+    var d_names = new Array("Sunday", "Monday", "Tuesday",
+    "Wednesday", "Thursday", "Friday", "Saturday");
+
+    var m_names = new Array("January", "February", "March",
+    "April", "May", "June", "July", "August", "September",
+    "October", "November", "December");
+
+    var d = new Date("2026/9/29 0:20:10");
+var curr_day = d.getDay();
+var curr_date = d.getDate();
+var sup = "";
+if (curr_date == 1 || curr_date == 21 || curr_date == 31) {
+    sup = "st";
+}
+else if (curr_date == 2 || curr_date == 22) {
+    sup = "nd";
+}
+else if (curr_date == 3 || curr_date == 23) {
+    sup = "rd";
+}
+else {
+    sup = "th";
+}
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+
+function curTime() {
+    now = new Date(now - (-1000));
+    var hrs = now.getHours()
+    var min = now.getMinutes()
+    var sec = now.getSeconds()
+    var don = "AM"
+    if (hrs >= 12) { don = "PM" }
+    if (hrs > 12) { hrs -= 12 }
+    if (hrs == 0) { hrs = 12 }
+    if (hrs < 10) { hrs = "0" + hrs }
+    if (min < 10) { min = "0" + min }
+    if (sec < 10) { sec = "0" + sec }
+    clock.innerHTML = d_names[curr_day] + ", " + m_names[curr_month] + " " + curr_date + ", " + curr_year + " " + hrs + ":" + min + " " + don
+    setTimeout("curTime()", 1000)
+}
+
+var XMLHTTP = null;
+
+function LoadXML(url) {
+    if (window.XMLHttpRequest) {
+        XMLHTTP = new XMLHttpRequest();
+    } else {
+        XMLHTTP = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+
+    if (url.indexOf("?") < 0) {
+        url += "?ver=" + new Date().getTime();
+    }
+    else {
+        url += "&ver=" + new Date().getTime();
+    }
+
+    XMLHTTP.onreadystatechange = OnResponse;
+    XMLHTTP.open('GET', url, true);
+    XMLHTTP.send(null);
+}
+
+function OnResponse() {
+
+    //var msgSpecial = 'Couldn\'t retrieve special message for now.';
+    var msgSpecial = '';
+    var contractAmt = '';
+    var msgOpportunities = '';
+    var msgAward = '';
+    var msgStat = '';
+    var msgNewsUp = "";
+    var msgUpEvent = "";
+
+    if (XMLHTTP.readyState != 4) return;
+
+    if (XMLHTTP.status != 200) {
+
+        /*Do Nothing*/
+
+    } else {
+
+        var XMLHTTPDoc;
+        var bgColor;
+
+        XMLHTTPDoc = XMLHTTP.responseXML.documentElement.getElementsByTagName("specialMessage");
+        for (var i = 0; i < XMLHTTPDoc.length; i++) {
+
+            XMLHTTPElement = XMLHTTPDoc[i].getElementsByTagName('Description');
+
+            try {
+                msgSpecial = '<MARQUEE><b>' + XMLHTTPElement[0].firstChild.nodeValue + '</b></MARQUEE>';
+                //msgSpecial = XMLHTTPElement[0].firstChild.nodeValue
+            } catch (er) {
+
+            }
+
+        }
+
+        if (document.getElementById("spMsg")) {
+            document.getElementById("spMsg").innerHTML = msgSpecial;
+        }
+
+
+    }
+
+}
+
+</SCRIPT>
+<style>
+	.bgleft {
+		/*background: url("/images/philgeps_banner1.jpg") no-repeat;
+		width: 531px;
+		height: 104px;
+		*/		
+		background: url("/GEPS/images/philgeps_banner.jpg") no-repeat;
+		height: 75px;
+		width: 587px;
+	}
+	
+	.bgmid {
+		/*
+		background: url("/images/philgeps_banner_bg.jpg") repeat-x;
+		height: 104px;
+		*/
+	}
+	
+	.bgright {
+		/*
+		background: url("/images/philgeps_banner3.jpg") no-repeat;
+		width: 366px;
+		height: 104px;
+		*/
+	}
+</style>
+
+<SCRIPT TYPE="text/javascript">
+<!--
+
+    function newImage(arg) {
+        if (document.images) {
+            rslt = new Image();
+            rslt.src = arg;
+            return rslt;
+        }
+    }
+
+    function changeImages() {
+        if (document.images && (preloadFlag == true)) {
+            for (var i = 0; i < changeImages.arguments.length; i += 2) {
+                document[changeImages.arguments[i]].src = changeImages.arguments[i + 1];
+            }
+        }
+    }
+
+    var preloadFlag = false;
+    function preloadImages() {
+        if (document.images) {
+            log_out_01_log_out_03_over = newImage("/GEPS/images/log-out_01-log-out_03_over.gif");
+	    log_out_02_log_out_03_over = newImage("/GEPS/images/log-out_02-log-out_03_over.gif");
+	    log_out_03_over = newImage("/GEPS/images/log-out_03-over.gif");
+	    log_out_04_log_out_03_over = newImage("/GEPS/images/log-out_04-log-out_03_over.gif");
+	    log_out_05_log_out_03_over = newImage("/GEPS/images/log-out_05-log-out_03_over.gif");
+	    preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+
+    function newImage(arg) {
+        if (document.images) {
+            rslt = new Image();
+            rslt.src = arg;
+            return rslt;
+        }
+    }
+
+    function changeImages() {
+        if (document.images && (preloadFlag == true)) {
+            for (var i = 0; i < changeImages.arguments.length; i += 2) {
+                document[changeImages.arguments[i]].src = changeImages.arguments[i + 1];
+            }
+        }
+    }
+
+    var preloadFlag = false;
+    function preloadImages() {
+        if (document.images) {
+            menu_01_menu_15_over = newImage("/GEPS/images/menu_01-menu_15_over.gif");
+	    menu_01_menu_13_over = newImage("/GEPS/images/menu_01-menu_13_over.gif");
+	    menu_01_menu_11_over = newImage("/GEPS/images/menu_01-menu_11_over.gif");
+	    menu_01_menu_09_over = newImage("/GEPS/images/menu_01-menu_09_over.gif");
+	    menu_01_menu_07_over = newImage("/GEPS/images/menu_01-menu_07_over.gif");
+	    menu_01_menu_05_over = newImage("/GEPS/images/menu_01-menu_05_over.gif");
+	    menu_01_menu_03_over = newImage("/GEPS/images/menu_01-menu_03_over.gif");
+	    menu_02_menu_03_over = newImage("/GEPS/images/menu_02-menu_03_over.gif");
+	    menu_03_over = newImage("/GEPS/images/menu_03-over.gif");
+	    menu_04_menu_05_over = newImage("/GEPS/images/menu_04-menu_05_over.gif");
+	    menu_04_menu_03_over = newImage("/GEPS/images/menu_04-menu_03_over.gif");
+	    menu_05_over = newImage("/GEPS/images/menu_05-over.gif");
+	    menu_06_menu_07_over = newImage("/GEPS/images/menu_06-menu_07_over.gif");
+	    menu_06_menu_05_over = newImage("/GEPS/images/menu_06-menu_05_over.gif");
+	    menu_07_over = newImage("/GEPS/images/menu_07-over.gif");
+	    menu_08_menu_09_over = newImage("/GEPS/images/menu_08-menu_09_over.gif");
+	    menu_08_menu_07_over = newImage("/GEPS/images/menu_08-menu_07_over.gif");
+	    menu_09_over = newImage("/GEPS/images/menu_09-over.gif");
+	    menu_10_menu_11_over = newImage("/GEPS/images/menu_10-menu_11_over.gif");
+	    menu_10_menu_09_over = newImage("/GEPS/images/menu_10-menu_09_over.gif");
+	    menu_11_over = newImage("/GEPS/images/menu_11-over.gif");
+	    menu_12_menu_13_over = newImage("/GEPS/images/menu_12-menu_13_over.gif");
+	    menu_12_menu_11_over = newImage("/GEPS/images/menu_12-menu_11_over.gif");
+	    menu_13_over = newImage("/GEPS/images/menu_13-over.gif");
+	    menu_14_menu_15_over = newImage("/GEPS/images/menu_14-menu_15_over.gif");
+	    menu_14_menu_13_over = newImage("/GEPS/images/menu_14-menu_13_over.gif");
+	    menu_15_over = newImage("/GEPS/images/menu_15-over.gif");
+	    menu_16_menu_15_over = newImage("/GEPS/images/menu_16-menu_15_over.gif");
+	    menu_17_menu_07_over = newImage("/GEPS/images/menu_17-menu_07_over.gif");
+	    menu_17_menu_30_over = newImage("/GEPS/images/menu_17-menu_30_over.gif");
+	    menu_18_menu_09_over = newImage("/GEPS/images/menu_18-menu_09_over.gif");
+	    menu_19_menu_11_over = newImage("/GEPS/images/menu_19-menu_11_over.gif");
+	    menu_20_menu_13_over = newImage("/GEPS/images/menu_20-menu_13_over.gif");
+	    menu_20_menu_34_over = newImage("/GEPS/images/menu_20-menu_34_over.gif");
+	    menu_21_menu_15_over = newImage("/GEPS/images/menu_21-menu_15_over.gif");
+	    menu_22_menu_03_over = newImage("/GEPS/images/menu_22-menu_03_over.gif");
+	    menu_23_menu_05_over = newImage("/GEPS/images/menu_23-menu_05_over.gif");
+	    menu_23_menu_28_over = newImage("/GEPS/images/menu_23-menu_28_over.gif");
+	    menu_25_over = newImage("/GEPS/images/menu_25-over.gif");
+	    menu_27_menu_25_over = newImage("/GEPS/images/menu_27-menu_25_over.gif");
+	    menu_28_over = newImage("/GEPS/images/menu_28-over.gif");
+	    menu_29_menu_28_over = newImage("/GEPS/images/menu_29-menu_28_over.gif");
+	    menu_30_over = newImage("/GEPS/images/menu_30-over.gif");
+	    menu_31_menu_32_over = newImage("/GEPS/images/menu_31-menu_32_over.gif");
+	    menu_31_menu_30_over = newImage("/GEPS/images/menu_31-menu_30_over.gif");
+	    menu_32_over = newImage("/GEPS/images/menu_32-over.gif");
+	    menu_33_menu_34_over = newImage("/GEPS/images/menu_33-menu_34_over.gif");
+	    menu_33_menu_32_over = newImage("/GEPS/images/menu_33-menu_32_over.gif");
+	    menu_34_over = newImage("/GEPS/images/menu_34-over.gif");
+	    menu_35_menu_34_over = newImage("/GEPS/images/menu_35-menu_34_over.gif");
+	    menu_36_menu_25_over = newImage("/GEPS/images/menu_36-menu_25_over.gif");
+	    menu_37_menu_28_over = newImage("/GEPS/images/menu_37-menu_28_over.gif");
+	    menu_38_menu_30_over = newImage("/GEPS/images/menu_38-menu_30_over.gif");
+	    menu_39_menu_32_over = newImage("/GEPS/images/menu_39-menu_32_over.gif");
+	    menu_40_menu_34_over = newImage("/GEPS/images/menu_40-menu_34_over.gif");
+	    preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+<!--
+	Lloyd: 02/19/2013: Perf Tunning
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  ONLOAD="preloadImages();LoadXML('/SplashData.aspx');" >
+-->
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  ONLOAD="preloadImages();" >
+<table width="100%" height="20%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+	<!--
+    <td width="531"><img src="/GEPS/images/philgeps_banner1.jpg" width="531" height="104" /></td>
+	<td background="/GEPS/images/philgeps_banner_bg.jpg">&nbsp;</td>
+	<td width="366"><img src="/GEPS/images/philgeps_banner3.jpg" width="366" height="104" /></td>
+	-->
+	<td nowrap><div class="bgleft"></div></td>
+	<td nowrap><div class="bgmid"></div></td>
+	<td nowrap><div class="bgright"></div></td>
+  </tr>  
+    <td height="55" colspan="3" valign="top"> 
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="127">
+			<a href="/GEPS~/../" onMouseOver="changeImages('menu1', '/GEPS/images/home_over.gif'); return true;" onMouseOut="changeImages('menu1', '/GEPS/images/home_out.gif'); return true;">
+				<img src="/GEPS/images/home_out.gif" align="absbottom" alt="Home" name="menu1" width="128" height="32" border="0" />
+			</a>
+		</td>
+		<td width="127">
+			<a href="/GEPS/announcement/viewAnnoucement.aspx?menuIndex=2" onMouseOver="changeImages('menu3', '/GEPS/images/nav_focus_over.gif'); return true;" onMouseOut="changeImages('menu3', '/GEPS/images/nav_focus_out.gif'); return true;">
+				<img src="/GEPS/images/nav_focus_out.gif" align="absbottom" alt="Announcements" name="menu3" width="128" height="32" border="0" />
+			</a>
+		</td>
+        <td width="127">
+			<img src="/GEPS/images/opp_over.gif" align="absbottom" width="128" height="32" />
+		</td>
+        <td width="127">
+			<a href="http://www.ps-philgeps.gov.ph/home/index.php/what-we-sell/common-use-items" target="_blank" onMouseOver="changeImages('menu_cat', '/GEPS/images/catalogue_over.gif'); return true;" onMouseOut="changeImages('menu_cat', '/GEPS/images/catalogue_out.gif'); return true;">
+				<img src="/GEPS/images/catalogue_out.gif" align="absbottom" alt="Catalogue" name="menu_cat" width="128" height="32" border="0" />
+			</a>
+		</td>
+        <td width="127">
+			<a href="/GEPS/aboutGEPS/aboutGEPS.aspx?menuIndex=5" onMouseOver="changeImages('menu4', '/GEPS/images/aboutus_over.gif'); return true;" onMouseOut="changeImages('menu4', '/GEPS/images/aboutus_%20out.gif'); return true;">
+				<img src="/GEPS/images/aboutus_%20out.gif" align="absbottom" alt="About GEPS" name="menu4" width="128" height="32" border="0" />
+			</a>
+		</td>
+		<td width="127">
+			<a href="/GEPS/SiteAdministration/SplashPage/GovrntListUI_Splash.aspx?menuIndex=6" onMouseOver="changeImages('menu6', '/GEPS/images/govlinks_over.gif'); return true;" onMouseOut="changeImages('menu6', '/GEPS/images/govlinks_%20out.gif'); return true;">
+				<img src="/GEPS/images/govlinks_%20out.gif" align="absbottom" alt="Government Links" name="menu6" width="128" height="32" border="0" />
+			</a>
+		</td>
+        <td width="128">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+	<td>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr height="25">
+				<td colspan="6" style="padding: 0px 1px;">					
+					<div style="background: url(/GEPS/images/inside_nav_bg.gif); height: 25px; line-height: 24px;">
+						<img src="/GEPS/images/spacer.gif" width="20" height="18" border="0" />
+						<a class=NavLink href="/GEPS/Tender/SplashOpenOpportunitiesUI.aspx?ClickFrom=OpenOpp&menuIndex=3">Open Opportunities</a>
+						&nbsp;&nbsp;<span class="NavPipe">|</span>&nbsp;&nbsp;
+						<a class=NavLink href="/GEPS/Tender/RecentAwardNoticeUI.aspx?menuIndex=3">Recent Award</a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="10">
+					<img src="/GEPS/images/inside_nav_label_a.gif" align="top" width="10">
+				</td>
+				<td nowrap align="left" background="/GEPS/images/inside_nav_label_bg.gif">
+					<span id="ctl09_Label1" class="DisplayText5" style="display:none">Tuesday, September 29, 2026</span>&nbsp;&nbsp;<span class="DisplayText5" id="clock"></span>
+				</td>
+				<td nowrap background="/GEPS/images/inside_nav_label_bg.gif" width="100%">
+					<span class="DoubleArrow">»</span>
+					<span id="spMsg" class="NavTxt"></span>
+				</td>
+				<td background="/GEPS/images/inside_nav_label_bg.gif" align="center" nowrap>
+					<span class="DoubleArrow">»</span>
+					<a href="/GEPS/log-in.aspx" class="NavTxtLink">Login</a>
+					<span class="ContentTXT">|</span>
+					<!--<a href="/GEPS/R3/R3_RegisterAs.html" id="register" class="NavTxtLink">Register Now</a>-->
+				</td>
+				<td width="10">
+					<img src="/GEPS/images/inside_nav_label_b.gif" align="top" width="10">
+				</td>
+			</tr>
+			
+		</table>
+	</td>
+  </tr>
+</table>
+    
+    </td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+</body>
+	
+<!-- <div id="ctl08_helpDIV" style="PADDING-RIGHT:16px; DISPLAY:none; PADDING-LEFT:16px; RIGHT:0px; PADDING-BOTTOM:16px; PADDING-TOP:16px; POSITION:absolute; TOP:65px"> </div>-->
+<div id="helpDIV" style="DISPLAY: inline">
+	<a id="ctl08_HelpLink" tabindex="100" class="NavTxtLink" href="javascript:void(window.open(&#39;/GEPS/helppages/HelpRedirect.aspx&#39;, &#39;helpWin&#39;, &#39;resizable=yes,toolbar=no,menubar=no,directories=no,status=no,width=480,height=480,scrollbars=yes&#39;));">Help</a>&nbsp;<span class="ContextTXT">|</span>
+</div>
+
+			<TABLE id="Table1" cellSpacing="1" cellPadding="4" width="100%" border="0">
+				<TR>
+					<TD colSpan="3"><span id="lblOpenOpp" class="PageTitle">Open Opportunities</span>&nbsp;
+						<a id="lbtnSearch" class="A" href="javascript:__doPostBack(&#39;lbtnSearch&#39;,&#39;&#39;)">Search</a><span id="lblSlash1">|</span><a id="lbtnDetailed" class="A" href="javascript:__doPostBack(&#39;lbtnDetailed&#39;,&#39;&#39;)">Detailed Search</a><span id="lblSlash2">|</span><a id="lbtnCat" class="A" href="javascript:__doPostBack(&#39;lbtnCat&#39;,&#39;&#39;)">View By Category</a><span id="lblSlash3">|</span><a id="lbtnAgency" class="A" href="javascript:__doPostBack(&#39;lbtnAgency&#39;,&#39;&#39;)">View By Agency</a></TD>
+				</TR>
+			</TABLE>
+			<table id="Table2" cellspacing="1" cellpadding="4" width="100%" border="0">
+	<tr>
+		<TD class="DisplayTextBackground" style="WIDTH: 10%"><span id="lblSearch" class="DisplayText4" style="display:inline-block;width:32px;">Search</span></TD>
+		<TD><input name="txtKeyword" type="text" id="txtKeyword" class="Textbox5" /><input type="submit" name="btnSearch" value="Search" id="btnSearch" class="Button" /></TD>
+	</tr>
+</table>
+
+			
+			
+			<TABLE id="Table5" cellSpacing="1" cellPadding="4" width="100%" border="0">
+				<TR>
+					<TD width="100%" colSpan="3"><table id="pgCtrlDetailedSearch" border="0" style="width:100%;">
+	<tr style="height:20px;">
+		<td align="left" style="white-space:nowrap;"><span>&nbsp;&nbsp;</span><span disabled="disabled" style="font-family:Verdana;font-size:8pt;">&lt;Previous&gt;</span><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span><span style="color:Blue;font-family:Verdana;font-size:8pt;">Page</span><span>&nbsp;&nbsp;</span><select name="pgCtrlDetailedSearch$pageDropDownList" id="pgCtrlDetailedSearch_pageDropDownList" onChange="javascript:resetfunction(this);form.reset();" style="font-family:Verdana;font-size:8pt;">
+			<option selected="selected" value="1">1</option>
+			<option value="21">2</option>
+			<option value="41">3</option>
+			<option value="61">4</option>
+			<option value="81">5</option>
+			<option value="101">6</option>
+			<option value="121">7</option>
+			<option value="141">8</option>
+			<option value="161">9</option>
+			<option value="181">10</option>
+			<option value="201">11</option>
+			<option value="221">12</option>
+			<option value="241">13</option>
+			<option value="261">14</option>
+			<option value="281">15</option>
+			<option value="301">16</option>
+			<option value="321">17</option>
+			<option value="341">18</option>
+			<option value="361">19</option>
+			<option value="381">20</option>
+			<option value="401">21</option>
+			<option value="421">22</option>
+			<option value="441">23</option>
+			<option value="461">24</option>
+			<option value="481">25</option>
+			<option value="501">26</option>
+			<option value="521">27</option>
+			<option value="541">28</option>
+			<option value="561">29</option>
+			<option value="581">30</option>
+			<option value="601">31</option>
+			<option value="621">32</option>
+			<option value="641">33</option>
+			<option value="661">34</option>
+			<option value="681">35</option>
+			<option value="701">36</option>
+			<option value="721">37</option>
+			<option value="741">38</option>
+			<option value="761">39</option>
+			<option value="781">40</option>
+			<option value="801">41</option>
+			<option value="821">42</option>
+			<option value="841">43</option>
+			<option value="861">44</option>
+			<option value="881">45</option>
+			<option value="901">46</option>
+			<option value="921">47</option>
+			<option value="941">48</option>
+			<option value="961">49</option>
+			<option value="981">50</option>
+			<option value="1001">51</option>
+			<option value="1021">52</option>
+			<option value="1041">53</option>
+			<option value="1061">54</option>
+			<option value="1081">55</option>
+			<option value="1101">56</option>
+			<option value="1121">57</option>
+			<option value="1141">58</option>
+			<option value="1161">59</option>
+			<option value="1181">60</option>
+			<option value="1201">61</option>
+			<option value="1221">62</option>
+			<option value="1241">63</option>
+			<option value="1261">64</option>
+			<option value="1281">65</option>
+			<option value="1301">66</option>
+			<option value="1321">67</option>
+			<option value="1341">68</option>
+			<option value="1361">69</option>
+			<option value="1381">70</option>
+			<option value="1401">71</option>
+			<option value="1421">72</option>
+			<option value="1441">73</option>
+			<option value="1461">74</option>
+			<option value="1481">75</option>
+			<option value="1501">76</option>
+			<option value="1521">77</option>
+			<option value="1541">78</option>
+			<option value="1561">79</option>
+			<option value="1581">80</option>
+			<option value="1601">81</option>
+			<option value="1621">82</option>
+			<option value="1641">83</option>
+			<option value="1661">84</option>
+			<option value="1681">85</option>
+			<option value="1701">86</option>
+			<option value="1721">87</option>
+			<option value="1741">88</option>
+			<option value="1761">89</option>
+			<option value="1781">90</option>
+			<option value="1801">91</option>
+			<option value="1821">92</option>
+			<option value="1841">93</option>
+			<option value="1861">94</option>
+			<option value="1881">95</option>
+			<option value="1901">96</option>
+			<option value="1921">97</option>
+			<option value="1941">98</option>
+			<option value="1961">99</option>
+			<option value="1981">100</option>
+			<option value="2001">101</option>
+			<option value="2021">102</option>
+			<option value="2041">103</option>
+			<option value="2061">104</option>
+			<option value="2081">105</option>
+			<option value="2101">106</option>
+			<option value="2121">107</option>
+			<option value="2141">108</option>
+			<option value="2161">109</option>
+			<option value="2181">110</option>
+			<option value="2201">111</option>
+			<option value="2221">112</option>
+			<option value="2241">113</option>
+			<option value="2261">114</option>
+			<option value="2281">115</option>
+			<option value="2301">116</option>
+			<option value="2321">117</option>
+			<option value="2341">118</option>
+			<option value="2361">119</option>
+			<option value="2381">120</option>
+			<option value="2401">121</option>
+			<option value="2421">122</option>
+			<option value="2441">123</option>
+			<option value="2461">124</option>
+			<option value="2481">125</option>
+			<option value="2501">126</option>
+			<option value="2521">127</option>
+			<option value="2541">128</option>
+			<option value="2561">129</option>
+			<option value="2581">130</option>
+			<option value="2601">131</option>
+			<option value="2621">132</option>
+			<option value="2641">133</option>
+			<option value="2661">134</option>
+			<option value="2681">135</option>
+			<option value="2701">136</option>
+			<option value="2721">137</option>
+			<option value="2741">138</option>
+			<option value="2761">139</option>
+			<option value="2781">140</option>
+			<option value="2801">141</option>
+			<option value="2821">142</option>
+			<option value="2841">143</option>
+			<option value="2861">144</option>
+			<option value="2881">145</option>
+			<option value="2901">146</option>
+			<option value="2921">147</option>
+			<option value="2941">148</option>
+			<option value="2961">149</option>
+			<option value="2981">150</option>
+			<option value="3001">151</option>
+			<option value="3021">152</option>
+			<option value="3041">153</option>
+			<option value="3061">154</option>
+			<option value="3081">155</option>
+			<option value="3101">156</option>
+			<option value="3121">157</option>
+			<option value="3141">158</option>
+			<option value="3161">159</option>
+			<option value="3181">160</option>
+			<option value="3201">161</option>
+			<option value="3221">162</option>
+			<option value="3241">163</option>
+			<option value="3261">164</option>
+			<option value="3281">165</option>
+			<option value="3301">166</option>
+			<option value="3321">167</option>
+			<option value="3341">168</option>
+			<option value="3361">169</option>
+			<option value="3381">170</option>
+			<option value="3401">171</option>
+			<option value="3421">172</option>
+			<option value="3441">173</option>
+			<option value="3461">174</option>
+			<option value="3481">175</option>
+			<option value="3501">176</option>
+			<option value="3521">177</option>
+			<option value="3541">178</option>
+			<option value="3561">179</option>
+			<option value="3581">180</option>
+			<option value="3601">181</option>
+			<option value="3621">182</option>
+			<option value="3641">183</option>
+			<option value="3661">184</option>
+			<option value="3681">185</option>
+			<option value="3701">186</option>
+			<option value="3721">187</option>
+			<option value="3741">188</option>
+			<option value="3761">189</option>
+			<option value="3781">190</option>
+			<option value="3801">191</option>
+			<option value="3821">192</option>
+			<option value="3841">193</option>
+			<option value="3861">194</option>
+			<option value="3881">195</option>
+			<option value="3901">196</option>
+			<option value="3921">197</option>
+			<option value="3941">198</option>
+			<option value="3961">199</option>
+			<option value="3981">200</option>
+			<option value="4001">201</option>
+			<option value="4021">202</option>
+			<option value="4041">203</option>
+			<option value="4061">204</option>
+			<option value="4081">205</option>
+			<option value="4101">206</option>
+			<option value="4121">207</option>
+			<option value="4141">208</option>
+			<option value="4161">209</option>
+			<option value="4181">210</option>
+			<option value="4201">211</option>
+			<option value="4221">212</option>
+			<option value="4241">213</option>
+			<option value="4261">214</option>
+			<option value="4281">215</option>
+			<option value="4301">216</option>
+			<option value="4321">217</option>
+			<option value="4341">218</option>
+			<option value="4361">219</option>
+			<option value="4381">220</option>
+			<option value="4401">221</option>
+			<option value="4421">222</option>
+			<option value="4441">223</option>
+			<option value="4461">224</option>
+			<option value="4481">225</option>
+			<option value="4501">226</option>
+			<option value="4521">227</option>
+			<option value="4541">228</option>
+			<option value="4561">229</option>
+			<option value="4581">230</option>
+			<option value="4601">231</option>
+			<option value="4621">232</option>
+			<option value="4641">233</option>
+			<option value="4661">234</option>
+			<option value="4681">235</option>
+			<option value="4701">236</option>
+			<option value="4721">237</option>
+			<option value="4741">238</option>
+			<option value="4761">239</option>
+			<option value="4781">240</option>
+			<option value="4801">241</option>
+			<option value="4821">242</option>
+			<option value="4841">243</option>
+			<option value="4861">244</option>
+			<option value="4881">245</option>
+			<option value="4901">246</option>
+			<option value="4921">247</option>
+			<option value="4941">248</option>
+			<option value="4961">249</option>
+			<option value="4981">250</option>
+			<option value="5001">251</option>
+			<option value="5021">252</option>
+			<option value="5041">253</option>
+			<option value="5061">254</option>
+			<option value="5081">255</option>
+			<option value="5101">256</option>
+			<option value="5121">257</option>
+			<option value="5141">258</option>
+			<option value="5161">259</option>
+			<option value="5181">260</option>
+			<option value="5201">261</option>
+			<option value="5221">262</option>
+			<option value="5241">263</option>
+			<option value="5261">264</option>
+			<option value="5281">265</option>
+			<option value="5301">266</option>
+			<option value="5321">267</option>
+			<option value="5341">268</option>
+			<option value="5361">269</option>
+			<option value="5381">270</option>
+			<option value="5401">271</option>
+			<option value="5421">272</option>
+			<option value="5441">273</option>
+			<option value="5461">274</option>
+			<option value="5481">275</option>
+			<option value="5501">276</option>
+			<option value="5521">277</option>
+			<option value="5541">278</option>
+			<option value="5561">279</option>
+			<option value="5581">280</option>
+			<option value="5601">281</option>
+			<option value="5621">282</option>
+			<option value="5641">283</option>
+			<option value="5661">284</option>
+			<option value="5681">285</option>
+			<option value="5701">286</option>
+			<option value="5721">287</option>
+			<option value="5741">288</option>
+			<option value="5761">289</option>
+			<option value="5781">290</option>
+			<option value="5801">291</option>
+			<option value="5821">292</option>
+			<option value="5841">293</option>
+			<option value="5861">294</option>
+			<option value="5881">295</option>
+			<option value="5901">296</option>
+			<option value="5921">297</option>
+			<option value="5941">298</option>
+			<option value="5961">299</option>
+			<option value="5981">300</option>
+			<option value="6001">301</option>
+			<option value="6021">302</option>
+			<option value="6041">303</option>
+			<option value="6061">304</option>
+			<option value="6081">305</option>
+			<option value="6101">306</option>
+			<option value="6121">307</option>
+			<option value="6141">308</option>
+			<option value="6161">309</option>
+			<option value="6181">310</option>
+			<option value="6201">311</option>
+			<option value="6221">312</option>
+			<option value="6241">313</option>
+			<option value="6261">314</option>
+			<option value="6281">315</option>
+			<option value="6301">316</option>
+			<option value="6321">317</option>
+			<option value="6341">318</option>
+			<option value="6361">319</option>
+			<option value="6381">320</option>
+			<option value="6401">321</option>
+			<option value="6421">322</option>
+			<option value="6441">323</option>
+			<option value="6461">324</option>
+			<option value="6481">325</option>
+			<option value="6501">326</option>
+			<option value="6521">327</option>
+			<option value="6541">328</option>
+			<option value="6561">329</option>
+			<option value="6581">330</option>
+			<option value="6601">331</option>
+			<option value="6621">332</option>
+			<option value="6641">333</option>
+			<option value="6661">334</option>
+			<option value="6681">335</option>
+			<option value="6701">336</option>
+			<option value="6721">337</option>
+			<option value="6741">338</option>
+			<option value="6761">339</option>
+			<option value="6781">340</option>
+			<option value="6801">341</option>
+			<option value="6821">342</option>
+			<option value="6841">343</option>
+			<option value="6861">344</option>
+			<option value="6881">345</option>
+			<option value="6901">346</option>
+			<option value="6921">347</option>
+			<option value="6941">348</option>
+			<option value="6961">349</option>
+			<option value="6981">350</option>
+			<option value="7001">351</option>
+			<option value="7021">352</option>
+			<option value="7041">353</option>
+			<option value="7061">354</option>
+			<option value="7081">355</option>
+			<option value="7101">356</option>
+			<option value="7121">357</option>
+			<option value="7141">358</option>
+			<option value="7161">359</option>
+			<option value="7181">360</option>
+			<option value="7201">361</option>
+			<option value="7221">362</option>
+			<option value="7241">363</option>
+			<option value="7261">364</option>
+			<option value="7281">365</option>
+			<option value="7301">366</option>
+			<option value="7321">367</option>
+			<option value="7341">368</option>
+			<option value="7361">369</option>
+			<option value="7381">370</option>
+			<option value="7401">371</option>
+			<option value="7421">372</option>
+			<option value="7441">373</option>
+			<option value="7461">374</option>
+			<option value="7481">375</option>
+			<option value="7501">376</option>
+			<option value="7521">377</option>
+			<option value="7541">378</option>
+			<option value="7561">379</option>
+			<option value="7581">380</option>
+			<option value="7601">381</option>
+			<option value="7621">382</option>
+			<option value="7641">383</option>
+			<option value="7661">384</option>
+			<option value="7681">385</option>
+			<option value="7701">386</option>
+			<option value="7721">387</option>
+			<option value="7741">388</option>
+			<option value="7761">389</option>
+			<option value="7781">390</option>
+			<option value="7801">391</option>
+			<option value="7821">392</option>
+			<option value="7841">393</option>
+			<option value="7861">394</option>
+			<option value="7881">395</option>
+			<option value="7901">396</option>
+			<option value="7921">397</option>
+			<option value="7941">398</option>
+			<option value="7961">399</option>
+			<option value="7981">400</option>
+			<option value="8001">401</option>
+			<option value="8021">402</option>
+			<option value="8041">403</option>
+			<option value="8061">404</option>
+			<option value="8081">405</option>
+			<option value="8101">406</option>
+			<option value="8121">407</option>
+			<option value="8141">408</option>
+			<option value="8161">409</option>
+			<option value="8181">410</option>
+			<option value="8201">411</option>
+			<option value="8221">412</option>
+			<option value="8241">413</option>
+			<option value="8261">414</option>
+			<option value="8281">415</option>
+			<option value="8301">416</option>
+			<option value="8321">417</option>
+			<option value="8341">418</option>
+			<option value="8361">419</option>
+			<option value="8381">420</option>
+			<option value="8401">421</option>
+			<option value="8421">422</option>
+			<option value="8441">423</option>
+			<option value="8461">424</option>
+			<option value="8481">425</option>
+			<option value="8501">426</option>
+			<option value="8521">427</option>
+			<option value="8541">428</option>
+			<option value="8561">429</option>
+			<option value="8581">430</option>
+			<option value="8601">431</option>
+			<option value="8621">432</option>
+			<option value="8641">433</option>
+			<option value="8661">434</option>
+			<option value="8681">435</option>
+			<option value="8701">436</option>
+			<option value="8721">437</option>
+			<option value="8741">438</option>
+			<option value="8761">439</option>
+			<option value="8781">440</option>
+			<option value="8801">441</option>
+			<option value="8821">442</option>
+			<option value="8841">443</option>
+			<option value="8861">444</option>
+			<option value="8881">445</option>
+			<option value="8901">446</option>
+			<option value="8921">447</option>
+			<option value="8941">448</option>
+			<option value="8961">449</option>
+			<option value="8981">450</option>
+			<option value="9001">451</option>
+			<option value="9021">452</option>
+			<option value="9041">453</option>
+			<option value="9061">454</option>
+			<option value="9081">455</option>
+			<option value="9101">456</option>
+			<option value="9121">457</option>
+			<option value="9141">458</option>
+			<option value="9161">459</option>
+			<option value="9181">460</option>
+			<option value="9201">461</option>
+			<option value="9221">462</option>
+			<option value="9241">463</option>
+			<option value="9261">464</option>
+			<option value="9281">465</option>
+			<option value="9301">466</option>
+			<option value="9321">467</option>
+			<option value="9341">468</option>
+			<option value="9361">469</option>
+			<option value="9381">470</option>
+			<option value="9401">471</option>
+			<option value="9421">472</option>
+			<option value="9441">473</option>
+			<option value="9461">474</option>
+			<option value="9481">475</option>
+			<option value="9501">476</option>
+			<option value="9521">477</option>
+			<option value="9541">478</option>
+			<option value="9561">479</option>
+			<option value="9581">480</option>
+			<option value="9601">481</option>
+			<option value="9621">482</option>
+			<option value="9641">483</option>
+			<option value="9661">484</option>
+			<option value="9681">485</option>
+			<option value="9701">486</option>
+			<option value="9721">487</option>
+			<option value="9741">488</option>
+			<option value="9761">489</option>
+			<option value="9781">490</option>
+			<option value="9801">491</option>
+			<option value="9821">492</option>
+			<option value="9841">493</option>
+			<option value="9861">494</option>
+			<option value="9881">495</option>
+			<option value="9901">496</option>
+			<option value="9921">497</option>
+			<option value="9941">498</option>
+			<option value="9961">499</option>
+			<option value="9981">500</option>
+			<option value="10001">501</option>
+			<option value="10021">502</option>
+			<option value="10041">503</option>
+			<option value="10061">504</option>
+			<option value="10081">505</option>
+			<option value="10101">506</option>
+			<option value="10121">507</option>
+			<option value="10141">508</option>
+			<option value="10161">509</option>
+			<option value="10181">510</option>
+			<option value="10201">511</option>
+			<option value="10221">512</option>
+			<option value="10241">513</option>
+			<option value="10261">514</option>
+			<option value="10281">515</option>
+			<option value="10301">516</option>
+			<option value="10321">517</option>
+			<option value="10341">518</option>
+			<option value="10361">519</option>
+			<option value="10381">520</option>
+			<option value="10401">521</option>
+			<option value="10421">522</option>
+			<option value="10441">523</option>
+			<option value="10461">524</option>
+			<option value="10481">525</option>
+			<option value="10501">526</option>
+			<option value="10521">527</option>
+			<option value="10541">528</option>
+			<option value="10561">529</option>
+			<option value="10581">530</option>
+			<option value="10601">531</option>
+			<option value="10621">532</option>
+			<option value="10641">533</option>
+			<option value="10661">534</option>
+			<option value="10681">535</option>
+			<option value="10701">536</option>
+			<option value="10721">537</option>
+			<option value="10741">538</option>
+			<option value="10761">539</option>
+			<option value="10781">540</option>
+			<option value="10801">541</option>
+			<option value="10821">542</option>
+			<option value="10841">543</option>
+			<option value="10861">544</option>
+			<option value="10881">545</option>
+			<option value="10901">546</option>
+			<option value="10921">547</option>
+			<option value="10941">548</option>
+			<option value="10961">549</option>
+			<option value="10981">550</option>
+			<option value="11001">551</option>
+			<option value="11021">552</option>
+			<option value="11041">553</option>
+			<option value="11061">554</option>
+			<option value="11081">555</option>
+
+		</select><span style="color:Blue;font-family:Verdana;font-size:8pt;">&nbsp;&nbsp;of&nbsp;&nbsp;</span><span style="color:Blue;font-family:Verdana;font-size:8pt;">555</span><span>&nbsp;&nbsp;</span><a onclick="javascript:this.document.OpportunitiesSearchUI.reset();" id="pgCtrlDetailedSearch_nextLB" tabindex="10" href="javascript:__doPostBack(&#39;pgCtrlDetailedSearch$nextLB&#39;,&#39;&#39;)" style="font-family:Verdana;font-size:8pt;">&lt;Next&gt;</a><span>&nbsp;&nbsp;</span><td align="right" style="white-space:nowrap;"><span style="font-family:Verdana;font-size:8pt;font-weight:bold;font-style:normal;color:#004080;">11,083&nbsp;opportunities found</span></td></td>
+	</tr>
+</table></TD>
+				</TR>
+				<TR>
+					<TD colSpan="3"><table class="GridTable" cellspacing="0" rules="all" border="1" id="dgSearchResult" style="border-color:White;width:100%;border-collapse:collapse;">
+	<tr class="GridHeader">
+		<td class="GridHeader" style="width:5%;"> </td><td class="GridHeader" style="width:10%;">Publish</td><td class="GridHeader" style="width:10%;">Closing</td><td class="GridHeader">Title</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">1</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">01/10/2026 10:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl02_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13103393&amp;Result=3">Supply and Delivery of materials for the Maintenance of RHU Building</a>
+										<span id="dgSearchResult_ctl02_lblOrgAndBusCat">, Construction Materials and Supplies ,MUNICIPALITY OF CATUBIG, NORTHERN SAMAR</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">2</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">12/10/2026 10:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl03_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13217328&amp;Result=3">Georesistivity Test in Barangays Bantug, Caligayan, Namnama, San Vicente, Camasi, Cumabao and Liwanag Sitio Villa Verde, Tumauini, Isabela propose for Water System</a>
+										<span id="dgSearchResult_ctl03_lblOrgAndBusCat">, Surveying Services ,MUNICIPALITY OF TUMAUINI, ISABELA</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">3</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">01/10/2026 05:00 PM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl04_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13237656&amp;Result=3">SUPPLY AND DELIVERY OF VARIOUS SUPPLIES FOR THE PROJECT KALINGAIN BATANG ESPESYAL OF THE DEPARTMENT OF EDUCATION-CAVITE</a>
+										<span id="dgSearchResult_ctl04_lblOrgAndBusCat">, Office Supplies and Devices ,PROVINCE OF CAVITE</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">4</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">06/10/2026 08:10 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl05_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13242695&amp;Result=3">2026-09-5003 Procurement of Food Packs for Pamaskong Handog</a>
+										<span id="dgSearchResult_ctl05_lblOrgAndBusCat">, Catering Services ,PROVINCE OF QUEZON</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">5</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">06/10/2026 08:10 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl06_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13242701&amp;Result=3">2026-08-4558 Procurement of Drugs and Medicines</a>
+										<span id="dgSearchResult_ctl06_lblOrgAndBusCat">, Drugs and Medicines ,PROVINCE OF QUEZON</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">6</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">06/10/2026 08:10 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl07_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13242706&amp;Result=3">2026-08-4649 Procurement of Drugs and Medicines</a>
+										<span id="dgSearchResult_ctl07_lblOrgAndBusCat">, Drugs and Medicines ,PROVINCE OF QUEZON</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">7</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">06/10/2026 08:10 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl08_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13242711&amp;Result=3">2026-08-4606 Procurement of Drugs and Medicines</a>
+										<span id="dgSearchResult_ctl08_lblOrgAndBusCat">, Drugs and Medicines ,PROVINCE OF QUEZON</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">8</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">06/10/2026 08:10 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl09_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13244365&amp;Result=3">2026-08-4650 Procurement of Drugs and Medicines</a>
+										<span id="dgSearchResult_ctl09_lblOrgAndBusCat">, Drugs and Medicines ,PROVINCE OF QUEZON</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">9</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">05/10/2026 01:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl10_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13247884&amp;Result=3">REHABILITATION OF COVERED COURT (Phase 1)</a>
+										<span id="dgSearchResult_ctl10_lblOrgAndBusCat">, Construction Materials and Supplies ,BARANGAY CABUNGA-AN - TARANGNAN, SAMAR</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">10</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">06/10/2026 05:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl11_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13253279&amp;Result=3">PURCHASE OF MEDICINE SUPPLIES FOR VICTORIA RHU 1 (3RD & 4TH QTR)</a>
+										<span id="dgSearchResult_ctl11_lblOrgAndBusCat">, Drugs and Medicines ,MUNICIPALITY OF VICTORIA, TARLAC</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">11</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">05/10/2026 09:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl12_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13253714&amp;Result=3">MEO-2026-046-B Improvement of Basketball Court, Brgy. Bitaoyan II, Badiangan, Iloilo</a>
+										<span id="dgSearchResult_ctl12_lblOrgAndBusCat">, Construction Materials and Supplies ,MUNICIPALITY OF BADIANGAN, ILOILO</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">12</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">05/10/2026 09:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl13_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13253819&amp;Result=3">MEO-2026-047-B Improvement of Basketball Court, Sitio Dawis, Brgy. Budiawe, Badiangan, Iloilo</a>
+										<span id="dgSearchResult_ctl13_lblOrgAndBusCat">, Construction Materials and Supplies ,MUNICIPALITY OF BADIANGAN, ILOILO</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">13</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">20/10/2026 09:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl14_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13254056&amp;Result=3">PLANT MIX ASPHALT ETC. (PR-2026-8751-00036)</a>
+										<span id="dgSearchResult_ctl14_lblOrgAndBusCat">, Construction Materials and Supplies ,CITY OF MANDAUE, CEBU</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">14</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">01/10/2026 05:00 PM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl15_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13254113&amp;Result=3">SUPPLY AND DELIVERY OF PRINTED FORMS AND OTHER SUPPLIES FOR OFFICIAL USE OF THE OFFICE OF THE PROVINCIAL ASSESSOR</a>
+										<span id="dgSearchResult_ctl15_lblOrgAndBusCat">, Office Supplies and Devices ,PROVINCE OF CAVITE</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">15</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">20/10/2026 09:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl16_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13254212&amp;Result=3">DESKTOP COMPUTER (PR-2026-9999-00234)</a>
+										<span id="dgSearchResult_ctl16_lblOrgAndBusCat">, Information Technology ,CITY OF MANDAUE, CEBU</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">16</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">05/10/2026 09:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl17_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13254220&amp;Result=3">2026-006-B-PA CONCRETING OF BARANGAY ROAD, SITIO 2 CENTRO 2, BRGY. CALANSANAN, BADIANGAN, ILOILO</a>
+										<span id="dgSearchResult_ctl17_lblOrgAndBusCat">, Construction Projects ,MUNICIPALITY OF BADIANGAN, ILOILO</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">17</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">05/10/2026 09:00 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl18_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13254272&amp;Result=3">2026-007-B-PA CONCRETING OF BARANGAY ROAD, SITIO III, BRGY. BITAOYAN, BADIANGAN, ILOILO</a>
+										<span id="dgSearchResult_ctl18_lblOrgAndBusCat">, Construction Projects ,MUNICIPALITY OF BADIANGAN, ILOILO</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">18</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">02/10/2026 09:30 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl19_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13254346&amp;Result=3">Procurement of Food (Lunch and Snacks) - MSWDO</a>
+										<span id="dgSearchResult_ctl19_lblOrgAndBusCat">, Catering Services ,MUNICIPALITY OF LEON, ILOILO</span>
+									</td>
+	</tr><tr class="GridItem">
+		<td align="center" valign="middle" style="width:5%;">19</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">02/10/2026 09:30 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl20_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13254391&amp;Result=3">Procurement of Food(Lunch and Snacks) - MSWDO</a>
+										<span id="dgSearchResult_ctl20_lblOrgAndBusCat">, Catering Services ,MUNICIPALITY OF LEON, ILOILO</span>
+									</td>
+	</tr><tr class="GridAltItem">
+		<td align="center" valign="middle" style="width:5%;">20</td><td class="GridItemTD" align="center" valign="middle" style="width:5%;">28/09/2026</td><td class="GridItemTD" align="center" valign="middle" style="width:10%;">05/10/2026 08:10 AM</td><td class="GridItemTD">
+										<a id="dgSearchResult_ctl21_hyLinkTitle" href="SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13255269&amp;Result=3">2026-08-4772 Procurement of Meals</a>
+										<span id="dgSearchResult_ctl21_lblOrgAndBusCat">, Catering Services ,PROVINCE OF QUEZON</span>
+									</td>
+	</tr>
+</table></TD>
+				</TR>
+				<TR>
+					<TD align="center" colSpan="3"></TD>
+				</TR>
+			</TABLE>
+			<input name="txtHidden" type="hidden" id="txtHidden" />
+		
+
+<!--HEIGHT: expression(document.body.offsetHeight-this.offsetTop-5);"-->
+<TABLE id="TablePageFoot" class="TablePageFoot" style="WIDTH: 100%;"
+	cellSpacing="0" cellPadding="0" border="0" >	
+	<tr>
+	<TD valign="bottom" align="left"></TD>
+</tr>
+
+	<!--<tr id="ctl07_TRThinLine" height="20">
+	<TD valign="bottom" align="left" colspan="4">
+      <HR SIZE=1>
+    </TD>
+</tr>
+
+  <tr id="ctl07_TRContactGEPS" height="20">
+	<TD valign="bottom"><A class=a onclick="javascript:showcontactus('/GEPS/Contact/contactGEPS.aspx')" href="#" ><FONT 
+      style="FONT-SIZE: 8pt"><B 
+      >Contact&nbsp;Us</B></FONT></A>&nbsp;&nbsp; &nbsp; 
+  </TD>
+</tr>
+
+  <tr id="ctl07_TRSitemap" height="20">
+	<TD style="WIDTH: 50%" valign="bottom"><A 
+      class=a href="/GEPS/Sitemap/Sitemap.aspx" 
+      ><FONT style="FONT-SIZE: 8pt"><B 
+      >Sitemap</B></FONT></A></TD>
+</tr>
+ -->
+	<tr id="ctl07_TRCopyRight" bordercolor="#356aa0" bgcolor="#d5e2f2" height="25">
+	<TD width="20" background="/images/inside_nav_label_bg.gif">&nbsp;</TD>
+	<TD valign="middle" align="left" width="50%" background="/images/inside_nav_label_bg.gif">
+			<FONT style="FONT-SIZE: 8pt; COLOR: #000000"><span id="ctl07_copyLBL" class="DisplayText5">&copy;&nbsp2004-2026&nbsp;&nbsp;DBM Procurement Service. All rights reserved.</span></FONT>
+		</TD>
+	<TD valign="middle" align="right" background="/images/inside_nav_label_bg.gif">&nbsp;</TD>
+	<TD valign="middle" align="right" width="300" background="/images/inside_nav_label_bg.gif">
+		
+<!-- <div id="ctl07_Help2_helpDIV" style="PADDING-RIGHT:16px; DISPLAY:none; PADDING-LEFT:16px; RIGHT:0px; PADDING-BOTTOM:16px; PADDING-TOP:16px; POSITION:absolute; TOP:65px"> </div>-->
+<div id="helpDIV" style="DISPLAY: inline">
+	<a id="ctl07_Help2_HelpLink" tabindex="100" class="NavTxtLink" href="javascript:void(window.open(&#39;/GEPS/helppages/HelpRedirect.aspx&#39;, &#39;helpWin&#39;, &#39;resizable=yes,toolbar=no,menubar=no,directories=no,status=no,width=480,height=480,scrollbars=yes&#39;));">Help</a>&nbsp;<span class="ContextTXT">|</span>
+</div>
+
+		<A class="NavTxtLink" onclick="javascript:showcontactus('/GEPS/Contact/contactGEPS.aspx')" href="#" style="white-space: nowrap;">Contact Us</A>
+		<span class="ContextTXT">|</span>
+		<A class="NavTxtLink" href="/GEPS/Sitemap/Sitemap.aspx">Sitemap</A>
+		
+		</TD>
+	<TD width="20" background="/images/inside_nav_label_bg.gif">&nbsp;</TD>
+</tr>
+
+</TABLE>
+	
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D36BA530" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="FIXTURE" />
+</div><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="FIXTURE" /></form>
+	</body>
+</HTML>

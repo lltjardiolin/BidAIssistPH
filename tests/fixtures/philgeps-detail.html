@@ -1,0 +1,740 @@
+<SCRIPT LANGUAGE="JavaScript">
+var WinObj =null;
+var o=window.open;
+window.open=launchCenter;
+function launchCenter(url,name,features)
+{
+features=features+',';
+var width=features.substring((features.indexOf('width=')+6));
+width=width.substring(0,width.indexOf(','));
+var height=features.substring((features.indexOf('height=')+7));
+height=height.substring(0,height.indexOf(','));
+features+=',innerHeight='+height;
+features+=',innerWidth='+width;
+if (window.screen) {
+     features += ',top='+(screen.availHeight- height)*0.5+',left='+(screen.availWidth-width)*0.5;
+}
+if(name=='helpWin')
+{o(url,'helpWin',features);}
+else
+{
+if (null != WinObj)WinObj.close();
+WinObj = o(url,'a',features);}
+}
+</script><link rel='stylesheet' type='text/css' href='/GEPS/common/Styles.css'>
+
+<SCRIPT>
+    var now = new Date("2026/9/29 0:20:40");
+    var d_names = new Array("Sunday", "Monday", "Tuesday",
+    "Wednesday", "Thursday", "Friday", "Saturday");
+
+    var m_names = new Array("January", "February", "March",
+    "April", "May", "June", "July", "August", "September",
+    "October", "November", "December");
+
+    var d = new Date("2026/9/29 0:20:40");
+var curr_day = d.getDay();
+var curr_date = d.getDate();
+var sup = "";
+if (curr_date == 1 || curr_date == 21 || curr_date == 31) {
+    sup = "st";
+}
+else if (curr_date == 2 || curr_date == 22) {
+    sup = "nd";
+}
+else if (curr_date == 3 || curr_date == 23) {
+    sup = "rd";
+}
+else {
+    sup = "th";
+}
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+
+function curTime() {
+    now = new Date(now - (-1000));
+    var hrs = now.getHours()
+    var min = now.getMinutes()
+    var sec = now.getSeconds()
+    var don = "AM"
+    if (hrs >= 12) { don = "PM" }
+    if (hrs > 12) { hrs -= 12 }
+    if (hrs == 0) { hrs = 12 }
+    if (hrs < 10) { hrs = "0" + hrs }
+    if (min < 10) { min = "0" + min }
+    if (sec < 10) { sec = "0" + sec }
+    clock.innerHTML = d_names[curr_day] + ", " + m_names[curr_month] + " " + curr_date + ", " + curr_year + " " + hrs + ":" + min + " " + don
+    setTimeout("curTime()", 1000)
+}
+
+var XMLHTTP = null;
+
+function LoadXML(url) {
+    if (window.XMLHttpRequest) {
+        XMLHTTP = new XMLHttpRequest();
+    } else {
+        XMLHTTP = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+
+    if (url.indexOf("?") < 0) {
+        url += "?ver=" + new Date().getTime();
+    }
+    else {
+        url += "&ver=" + new Date().getTime();
+    }
+
+    XMLHTTP.onreadystatechange = OnResponse;
+    XMLHTTP.open('GET', url, true);
+    XMLHTTP.send(null);
+}
+
+function OnResponse() {
+
+    //var msgSpecial = 'Couldn\'t retrieve special message for now.';
+    var msgSpecial = '';
+    var contractAmt = '';
+    var msgOpportunities = '';
+    var msgAward = '';
+    var msgStat = '';
+    var msgNewsUp = "";
+    var msgUpEvent = "";
+
+    if (XMLHTTP.readyState != 4) return;
+
+    if (XMLHTTP.status != 200) {
+
+        /*Do Nothing*/
+
+    } else {
+
+        var XMLHTTPDoc;
+        var bgColor;
+
+        XMLHTTPDoc = XMLHTTP.responseXML.documentElement.getElementsByTagName("specialMessage");
+        for (var i = 0; i < XMLHTTPDoc.length; i++) {
+
+            XMLHTTPElement = XMLHTTPDoc[i].getElementsByTagName('Description');
+
+            try {
+                msgSpecial = '<MARQUEE><b>' + XMLHTTPElement[0].firstChild.nodeValue + '</b></MARQUEE>';
+                //msgSpecial = XMLHTTPElement[0].firstChild.nodeValue
+            } catch (er) {
+
+            }
+
+        }
+
+        if (document.getElementById("spMsg")) {
+            document.getElementById("spMsg").innerHTML = msgSpecial;
+        }
+
+
+    }
+
+}
+
+</SCRIPT>
+<style>
+	.bgleft {
+		/*background: url("/images/philgeps_banner1.jpg") no-repeat;
+		width: 531px;
+		height: 104px;
+		*/		
+		background: url("/GEPS/images/philgeps_banner.jpg") no-repeat;
+		height: 75px;
+		width: 587px;
+	}
+	
+	.bgmid {
+		/*
+		background: url("/images/philgeps_banner_bg.jpg") repeat-x;
+		height: 104px;
+		*/
+	}
+	
+	.bgright {
+		/*
+		background: url("/images/philgeps_banner3.jpg") no-repeat;
+		width: 366px;
+		height: 104px;
+		*/
+	}
+</style>
+
+<SCRIPT TYPE="text/javascript">
+<!--
+
+    function newImage(arg) {
+        if (document.images) {
+            rslt = new Image();
+            rslt.src = arg;
+            return rslt;
+        }
+    }
+
+    function changeImages() {
+        if (document.images && (preloadFlag == true)) {
+            for (var i = 0; i < changeImages.arguments.length; i += 2) {
+                document[changeImages.arguments[i]].src = changeImages.arguments[i + 1];
+            }
+        }
+    }
+
+    var preloadFlag = false;
+    function preloadImages() {
+        if (document.images) {
+            log_out_01_log_out_03_over = newImage("/GEPS/images/log-out_01-log-out_03_over.gif");
+	    log_out_02_log_out_03_over = newImage("/GEPS/images/log-out_02-log-out_03_over.gif");
+	    log_out_03_over = newImage("/GEPS/images/log-out_03-over.gif");
+	    log_out_04_log_out_03_over = newImage("/GEPS/images/log-out_04-log-out_03_over.gif");
+	    log_out_05_log_out_03_over = newImage("/GEPS/images/log-out_05-log-out_03_over.gif");
+	    preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+
+    function newImage(arg) {
+        if (document.images) {
+            rslt = new Image();
+            rslt.src = arg;
+            return rslt;
+        }
+    }
+
+    function changeImages() {
+        if (document.images && (preloadFlag == true)) {
+            for (var i = 0; i < changeImages.arguments.length; i += 2) {
+                document[changeImages.arguments[i]].src = changeImages.arguments[i + 1];
+            }
+        }
+    }
+
+    var preloadFlag = false;
+    function preloadImages() {
+        if (document.images) {
+            menu_01_menu_15_over = newImage("/GEPS/images/menu_01-menu_15_over.gif");
+	    menu_01_menu_13_over = newImage("/GEPS/images/menu_01-menu_13_over.gif");
+	    menu_01_menu_11_over = newImage("/GEPS/images/menu_01-menu_11_over.gif");
+	    menu_01_menu_09_over = newImage("/GEPS/images/menu_01-menu_09_over.gif");
+	    menu_01_menu_07_over = newImage("/GEPS/images/menu_01-menu_07_over.gif");
+	    menu_01_menu_05_over = newImage("/GEPS/images/menu_01-menu_05_over.gif");
+	    menu_01_menu_03_over = newImage("/GEPS/images/menu_01-menu_03_over.gif");
+	    menu_02_menu_03_over = newImage("/GEPS/images/menu_02-menu_03_over.gif");
+	    menu_03_over = newImage("/GEPS/images/menu_03-over.gif");
+	    menu_04_menu_05_over = newImage("/GEPS/images/menu_04-menu_05_over.gif");
+	    menu_04_menu_03_over = newImage("/GEPS/images/menu_04-menu_03_over.gif");
+	    menu_05_over = newImage("/GEPS/images/menu_05-over.gif");
+	    menu_06_menu_07_over = newImage("/GEPS/images/menu_06-menu_07_over.gif");
+	    menu_06_menu_05_over = newImage("/GEPS/images/menu_06-menu_05_over.gif");
+	    menu_07_over = newImage("/GEPS/images/menu_07-over.gif");
+	    menu_08_menu_09_over = newImage("/GEPS/images/menu_08-menu_09_over.gif");
+	    menu_08_menu_07_over = newImage("/GEPS/images/menu_08-menu_07_over.gif");
+	    menu_09_over = newImage("/GEPS/images/menu_09-over.gif");
+	    menu_10_menu_11_over = newImage("/GEPS/images/menu_10-menu_11_over.gif");
+	    menu_10_menu_09_over = newImage("/GEPS/images/menu_10-menu_09_over.gif");
+	    menu_11_over = newImage("/GEPS/images/menu_11-over.gif");
+	    menu_12_menu_13_over = newImage("/GEPS/images/menu_12-menu_13_over.gif");
+	    menu_12_menu_11_over = newImage("/GEPS/images/menu_12-menu_11_over.gif");
+	    menu_13_over = newImage("/GEPS/images/menu_13-over.gif");
+	    menu_14_menu_15_over = newImage("/GEPS/images/menu_14-menu_15_over.gif");
+	    menu_14_menu_13_over = newImage("/GEPS/images/menu_14-menu_13_over.gif");
+	    menu_15_over = newImage("/GEPS/images/menu_15-over.gif");
+	    menu_16_menu_15_over = newImage("/GEPS/images/menu_16-menu_15_over.gif");
+	    menu_17_menu_07_over = newImage("/GEPS/images/menu_17-menu_07_over.gif");
+	    menu_17_menu_30_over = newImage("/GEPS/images/menu_17-menu_30_over.gif");
+	    menu_18_menu_09_over = newImage("/GEPS/images/menu_18-menu_09_over.gif");
+	    menu_19_menu_11_over = newImage("/GEPS/images/menu_19-menu_11_over.gif");
+	    menu_20_menu_13_over = newImage("/GEPS/images/menu_20-menu_13_over.gif");
+	    menu_20_menu_34_over = newImage("/GEPS/images/menu_20-menu_34_over.gif");
+	    menu_21_menu_15_over = newImage("/GEPS/images/menu_21-menu_15_over.gif");
+	    menu_22_menu_03_over = newImage("/GEPS/images/menu_22-menu_03_over.gif");
+	    menu_23_menu_05_over = newImage("/GEPS/images/menu_23-menu_05_over.gif");
+	    menu_23_menu_28_over = newImage("/GEPS/images/menu_23-menu_28_over.gif");
+	    menu_25_over = newImage("/GEPS/images/menu_25-over.gif");
+	    menu_27_menu_25_over = newImage("/GEPS/images/menu_27-menu_25_over.gif");
+	    menu_28_over = newImage("/GEPS/images/menu_28-over.gif");
+	    menu_29_menu_28_over = newImage("/GEPS/images/menu_29-menu_28_over.gif");
+	    menu_30_over = newImage("/GEPS/images/menu_30-over.gif");
+	    menu_31_menu_32_over = newImage("/GEPS/images/menu_31-menu_32_over.gif");
+	    menu_31_menu_30_over = newImage("/GEPS/images/menu_31-menu_30_over.gif");
+	    menu_32_over = newImage("/GEPS/images/menu_32-over.gif");
+	    menu_33_menu_34_over = newImage("/GEPS/images/menu_33-menu_34_over.gif");
+	    menu_33_menu_32_over = newImage("/GEPS/images/menu_33-menu_32_over.gif");
+	    menu_34_over = newImage("/GEPS/images/menu_34-over.gif");
+	    menu_35_menu_34_over = newImage("/GEPS/images/menu_35-menu_34_over.gif");
+	    menu_36_menu_25_over = newImage("/GEPS/images/menu_36-menu_25_over.gif");
+	    menu_37_menu_28_over = newImage("/GEPS/images/menu_37-menu_28_over.gif");
+	    menu_38_menu_30_over = newImage("/GEPS/images/menu_38-menu_30_over.gif");
+	    menu_39_menu_32_over = newImage("/GEPS/images/menu_39-menu_32_over.gif");
+	    menu_40_menu_34_over = newImage("/GEPS/images/menu_40-menu_34_over.gif");
+	    preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+<!--
+	Lloyd: 02/19/2013: Perf Tunning
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  ONLOAD="preloadImages();LoadXML('/SplashData.aspx');" >
+-->
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  ONLOAD="preloadImages();" >
+<table width="100%" height="20%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+	<!--
+    <td width="531"><img src="/GEPS/images/philgeps_banner1.jpg" width="531" height="104" /></td>
+	<td background="/GEPS/images/philgeps_banner_bg.jpg">&nbsp;</td>
+	<td width="366"><img src="/GEPS/images/philgeps_banner3.jpg" width="366" height="104" /></td>
+	-->
+	<td nowrap><div class="bgleft"></div></td>
+	<td nowrap><div class="bgmid"></div></td>
+	<td nowrap><div class="bgright"></div></td>
+  </tr>  
+    <td height="55" colspan="3" valign="top"> 
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="127">
+			<a href="/GEPS~/../" onMouseOver="changeImages('menu1', '/GEPS/images/home_over.gif'); return true;" onMouseOut="changeImages('menu1', '/GEPS/images/home_out.gif'); return true;">
+				<img src="/GEPS/images/home_out.gif" align="absbottom" alt="Home" name="menu1" width="128" height="32" border="0" />
+			</a>
+		</td>
+		<td width="127">
+			<a href="/GEPS/announcement/viewAnnoucement.aspx?menuIndex=2" onMouseOver="changeImages('menu3', '/GEPS/images/nav_focus_over.gif'); return true;" onMouseOut="changeImages('menu3', '/GEPS/images/nav_focus_out.gif'); return true;">
+				<img src="/GEPS/images/nav_focus_out.gif" align="absbottom" alt="Announcements" name="menu3" width="128" height="32" border="0" />
+			</a>
+		</td>
+        <td width="127">
+			<img src="/GEPS/images/opp_over.gif" align="absbottom" width="128" height="32" />
+		</td>
+        <td width="127">
+			<a href="http://www.ps-philgeps.gov.ph/home/index.php/what-we-sell/common-use-items" target="_blank" onMouseOver="changeImages('menu_cat', '/GEPS/images/catalogue_over.gif'); return true;" onMouseOut="changeImages('menu_cat', '/GEPS/images/catalogue_out.gif'); return true;">
+				<img src="/GEPS/images/catalogue_out.gif" align="absbottom" alt="Catalogue" name="menu_cat" width="128" height="32" border="0" />
+			</a>
+		</td>
+        <td width="127">
+			<a href="/GEPS/aboutGEPS/aboutGEPS.aspx?menuIndex=5" onMouseOver="changeImages('menu4', '/GEPS/images/aboutus_over.gif'); return true;" onMouseOut="changeImages('menu4', '/GEPS/images/aboutus_%20out.gif'); return true;">
+				<img src="/GEPS/images/aboutus_%20out.gif" align="absbottom" alt="About GEPS" name="menu4" width="128" height="32" border="0" />
+			</a>
+		</td>
+		<td width="127">
+			<a href="/GEPS/SiteAdministration/SplashPage/GovrntListUI_Splash.aspx?menuIndex=6" onMouseOver="changeImages('menu6', '/GEPS/images/govlinks_over.gif'); return true;" onMouseOut="changeImages('menu6', '/GEPS/images/govlinks_%20out.gif'); return true;">
+				<img src="/GEPS/images/govlinks_%20out.gif" align="absbottom" alt="Government Links" name="menu6" width="128" height="32" border="0" />
+			</a>
+		</td>
+        <td width="128">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+	<td>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr height="25">
+				<td colspan="6" style="padding: 0px 1px;">					
+					<div style="background: url(/GEPS/images/inside_nav_bg.gif); height: 25px; line-height: 24px;">
+						<img src="/GEPS/images/spacer.gif" width="20" height="18" border="0" />
+						<a class=NavLink href="/GEPS/Tender/SplashOpenOpportunitiesUI.aspx?ClickFrom=OpenOpp&menuIndex=3">Open Opportunities</a>
+						&nbsp;&nbsp;<span class="NavPipe">|</span>&nbsp;&nbsp;
+						<a class=NavLink href="/GEPS/Tender/RecentAwardNoticeUI.aspx?menuIndex=3">Recent Award</a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="10">
+					<img src="/GEPS/images/inside_nav_label_a.gif" align="top" width="10">
+				</td>
+				<td nowrap align="left" background="/GEPS/images/inside_nav_label_bg.gif">
+					<span id="ctl02_Label1" class="DisplayText5" style="display:none">Tuesday, September 29, 2026</span>&nbsp;&nbsp;<span class="DisplayText5" id="clock"></span>
+				</td>
+				<td nowrap background="/GEPS/images/inside_nav_label_bg.gif" width="100%">
+					<span class="DoubleArrow">»</span>
+					<span id="spMsg" class="NavTxt"></span>
+				</td>
+				<td background="/GEPS/images/inside_nav_label_bg.gif" align="center" nowrap>
+					<span class="DoubleArrow">»</span>
+					<a href="/GEPS/log-in.aspx" class="NavTxtLink">Login</a>
+					<span class="ContentTXT">|</span>
+					<!--<a href="/GEPS/R3/R3_RegisterAs.html" id="register" class="NavTxtLink">Register Now</a>-->
+				</td>
+				<td width="10">
+					<img src="/GEPS/images/inside_nav_label_b.gif" align="top" width="10">
+				</td>
+			</tr>
+			
+		</table>
+	</td>
+  </tr>
+</table>
+    
+    </td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+</body>
+	
+<!-- <div id="ctl01_helpDIV" style="PADDING-RIGHT:16px; DISPLAY:none; PADDING-LEFT:16px; RIGHT:0px; PADDING-BOTTOM:16px; PADDING-TOP:16px; POSITION:absolute; TOP:65px"> </div>-->
+<div id="helpDIV" style="DISPLAY: inline">
+	<a id="ctl01_HelpLink" tabindex="100" class="NavTxtLink" href="javascript:void(window.open(&#39;/GEPS/helppages/public/help_SplashBidNoticeAbstractUI.htm&#39;, &#39;helpWin&#39;, &#39;resizable=yes,toolbar=no,menubar=no,directories=no,status=no,width=480,height=480,scrollbars=yes&#39;));">Help</a>&nbsp;<span class="ContextTXT">|</span>
+</div>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+  <HEAD>
+		<title>SplashBidNoticeAbstractUI</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="../Common/Styles.css" type="text/css" rel="stylesheet">
+		
+</HEAD>
+	<body MS_POSITIONING="FlowLayout">
+		<form name="SplashBidNoticeAbstractUI" method="post" action="./SplashBidNoticeAbstractUI.aspx?menuIndex=3&amp;refID=13217328&amp;Result=3" id="SplashBidNoticeAbstractUI">
+<div>
+
+</div>
+
+			<TABLE id="Table6" cellSpacing="1" cellPadding="1" width="90%" align="center" border="0" >
+				<TR>
+					<TD><span id="lblPgTitleBidNoticeAbstract" class="PageTitle" style="font-weight:bold;">Bid Notice Abstract</span></TD>
+				</TR>
+				<TR>
+					<TD style="HEIGHT: 29px" align="right">&nbsp;
+						&nbsp;
+						&nbsp;
+						</TD>
+				</TR>
+				<TR>
+					<TD class="infobackground" height="20"></TD>
+				</TR>
+				<TR>
+					<TD style="HEIGHT: 18px" align="center"><span id="lblHeader" class="DisplayText6">Invitation to Bid (ITB)</span></TD>
+				</TR>
+				<TR>
+					<TD style="HEIGHT: 100px" vAlign="top">
+						<TABLE class="Table" id="Table1" width="100%" align="center" border="0">
+							<TR>
+								<TD class="DisplayTextBackground" style="WIDTH: 20%">&nbsp;
+									<span id="lblReferenceNo" class="DisplayText4" style="display:inline-block;width:136px;">Reference Number</span></TD>
+								<TD colSpan="2"><span id="lblDisplayReferenceNo" class="DisplayText5">13217328</span></TD>
+							</TR>
+							<TR>
+								<TD class="DisplayTextBackground" style="WIDTH: 20%">&nbsp;
+									<span id="lblProcuringEntity" class="DisplayText4" style="display:inline-block;width:128px;">Procuring Entity</span></TD>
+								<TD colSpan="2"><span id="lblDisplayProcuringEntity" class="DisplayText5">MUNICIPALITY OF TUMAUINI, ISABELA</span></TD>
+							</TR>
+							<TR>
+								<TD class="DisplayTextBackground" style="WIDTH: 20%">&nbsp;
+									<span id="lblTitle" class="DisplayText4" style="display:inline-block;width:80px;">Title</span></TD>
+								<TD colSpan="2"><span id="lblDisplayTitle" class="DisplayText5">Georesistivity Test in Barangays Bantug, Caligayan, Namnama, San Vicente, Camasi, Cumabao and Liwanag Sitio Villa Verde, Tumauini, Isabela propose for Water System</span></TD>
+							</TR>
+							<TR>
+								<TD class="DisplayTextBackground" style="WIDTH: 20%">&nbsp;
+									<span id="lblAOD" class="DisplayText4" style="display:inline-block;width:120px;">Area of Delivery</span></TD>
+								<TD style="WIDTH: 300px"><span id="lblDisplayAOD" class="DisplayText5">Isabela</span></TD>
+								<TD style="HEIGHT: 25px" align="right">&nbsp; <A href=" <A href="<javascript:OpenPrintablePage('13217328');" >
+										<IMG src="../img/printer.jpg" border="0"></A> 
+									<!--<input type="image" name="ImageButton1" id="ImageButton1" src="../img/printer.jpg" style="border-width:0px;" />-->
+									<!--<a id="lbtnPrintVersion" class="A" href="javascript:__doPostBack(&#39;lbtnPrintVersion&#39;,&#39;&#39;)">Printable Version</a>--><A class=A href="javascript:OpenPrintablePage('13217328');" >Printable 
+										Version</A>
+								</TD>
+							</TR>
+							<TR>
+								<TD vAlign="top" colSpan="3">
+									<TABLE class="Table" id="Table7" cellSpacing="0" cellPadding="0" width="100%" border="1"  style="BORDER-COLLAPSE: collapse">
+										<TBODY>
+											<TR>
+												<TD vAlign="top" width="50%" rowSpan="7">
+													<TABLE id="Table15" cellSpacing="1" cellPadding="4" width="100%" border="0">
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label45" class="DisplayText2">Solicitation Number:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplaySolNumber" class="DisplayText5">2026-08-093</span></TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label43" class="DisplayText2">Trade Agreement:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplayTradeAgree" class="DisplayText5">Implementing Rules and Regulations</span></TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label41" class="DisplayText2">Procurement Mode:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplayProcureMode" class="DisplayText5">Public Bidding</span></TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label39" class="DisplayText2">Classification:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplayClass" class="DisplayText5">Consulting Services</span></TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label37" class="DisplayText2">Category:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplayCategory" class="DisplayText5">Surveying Services</span></TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label35" class="DisplayText2">Approved Budget for the Contract:</span></TD>
+															<TD vAlign="top" width="50%"><span id="Label34" class="DisplayText5">PHP</span>&nbsp;<span id="lblDisplayBudget" class="DisplayText5">810,000.00</span></TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label32" class="DisplayText2">Contract Duration:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplayPeriod" class="DisplayText5">90 Day/s</span></TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label30" class="DisplayText2">Client Agency:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplayClient" class="DisplayText5" style="display:inline-block;height:8px;width:220px;"></span></TD>
+														</TR>
+														<TR>
+															<td width="50%" colSpan="2">
+																<hr width="100%">
+															</td>
+														</TR>
+														<TR>
+															<TD vAlign="top" width="50%"><span id="Label16" class="DisplayText2">Contact Person:</span></TD>
+															<TD vAlign="top" width="50%"><span id="lblDisplayContactPerson" class="DisplayText5">[removed from fixture]</span></TD>
+														</TR>
+													</TABLE>
+												</TD>
+												<TD class="DisplayTextBackground" width="25%"><span id="Label28" class="DisplayText4">Status</span></TD>
+												<TD vAlign="top" align="right" width="25%">
+													<P align="center"><span id="lblDisplayStatus" class="DisplayText2" style="display:inline-block;width:5px;">Active</span></P>
+												</TD>
+											</TR>
+											<TR>
+												<TD class="DisplayTextBackground" width="25%"><span id="Label26" class="DisplayText4" style="display:inline-block;width:168px;">Associated Components</span></TD>
+												<TD vAlign="top" align="right" width="25%"><!--<div id="panelLink">
+	
+														
+													
+</div><a id="lbtnNosOfAssoc" class="A" href="javascript:__doPostBack(&#39;lbtnNosOfAssoc&#39;,&#39;&#39;)">Order</a>-->
+													<A class=A href="javascript:showAlert('');" >Order</A>
+													</TD>
+											</TR>
+											<TR>
+												<TD class="DisplayTextBackground"><span id="Label24" class="DisplayText4">Bid Supplements</span></TD>
+												<TD vAlign="top" align="right" width="25%"><div id="panelLabel2">
+	
+<span id="lblDisplayBidSupplements" class="DisplayText5">0</span>
+													
+</div><div id="panelNosOfSupplement">
+	
+
+													
+</div></TD>
+											</TR>
+											<TR>
+												<TD class="DisplayTextBackground" width="25%"><span id="Label22" class="DisplayText4">Document Request List</span></TD>
+												<TD vAlign="top" align="right" width="25%"><div id="Panel3">
+	
+
+<a id="hyLinkNosOfDRL1" class="A" href="ViewDocumentRequestList.aspx"></a>
+													
+</div><div id="panelLabel3">
+	
+<span id="lblDisplayDocReqList" class="DisplayText5">0</span>
+													
+</div></TD>
+											</TR>
+											<TR>
+												<TD class="DisplayTextBackground" width="25%"><span id="Label20" class="DisplayText4">Date Published</span></TD>
+												<TD vAlign="top" align="right" width="25%"><span id="lblDisplayDatePublish" class="DisplayText5">28/09/2026</span></TD>
+											</TR>
+											<TR>
+												<TD class="DisplayTextBackground" width="25%"><span id="Label18" class="DisplayText4">Last Updated / Time</span></TD>
+												<TD vAlign="top" align="right" width="25%"><span id="lblDisplayLastUpdateTime" class="DisplayText5">28/09/2026 12:00 AM</span></TD>
+											</TR>
+											<TR>
+												<TD class="DisplayTextBackground" width="25%"><span id="Label14" class="DisplayText4">Closing Date / Time</span></TD>
+												<TD vAlign="top" align="right" width="25%"><span id="lblDisplayCloseDateTime" class="DisplayText5">12/10/2026 10:00 AM</span></TD>
+											</TR>
+								</TD>
+							</TR>
+							<TR>
+								<TD vAlign="top" width="25%" colSpan="3">
+									<TABLE class="Table" id="Table16" cellSpacing="0" cellPadding="0" width="100%" border="0">
+										<TR>
+											<TD style="WIDTH: 600px" colSpan="3">
+												<P><div id="PanelDesc" style="width:100%;">
+	
+														<TABLE id=Table2 cellSpacing=0 cellPadding=0 
+														width="100%" border=0>
+														<TR>
+															<TD>
+																<span id="lblDesc" class="DisplayText2">Description</span>
+															</TD>
+														</TR>						
+														<!--^^^^^^<tr>nbsp</tr>-->
+														<TR>
+															<TD>
+																<span id="lblAbstractText" class="DisplayText5">Georesistivity Test in Barangays Bantug, Caligayan, Namnama, San Vicente, Camasi, Cumabao and Liwanag Sitio Villa Verde, Tumauini, Isabela propose for Water System</span>
+															</TD>
+														</TR>	
+														</TABLE>
+													
+</div></P>
+											</TD>
+										</TR>
+										<TR>
+											<TD style="WIDTH: 729px" colSpan="3"></TD>
+										</TR>
+										<TR>
+											<TD vAlign="top" align="left" colSpan="3">
+												
+												<TABLE id="Table10" cellSpacing="1" cellPadding="4" width="100%" border="0">
+													<TR>
+														<TD id="preBidTD"><span id="Label12" class="DisplayText2">Pre-bid Conference </span></TD>
+													</TR>
+													<TR>
+														<TD id="dgPreBidTD" width="100%"><TABLE class="GridTable" id="Table18" cellSpacing="1" cellPadding="4" width="100%" border="0">
+																<TR class="GridHeader">
+																	<TD class="GridHeader" style="WIDTH: 29.47%">
+																		<P align="center"><span id="Label11" class="DisplayText2" style="color:White;">Date</span></P>
+																	</TD>
+																	<TD class="GridHeader" style="WIDTH: 31.33%" bgColor="#004080">
+																		<P align="center"><span id="Label10" class="DisplayText2" style="color:White;">Time</span></P>
+																	</TD>
+																	<TD class="GridHeader" bgColor="#004080">
+																		<P align="center"><span id="Label9" class="DisplayText2" style="color:White;">Venue</span></P>
+																	</TD>
+																</TR>
+																<TR>
+																	<TD class="GridItemTD" style="WIDTH: 29.47%"><span id="lblPreBidDate" class="DisplayText5">06/10/2026</span></TD>
+																	<TD class="GridItemTD" style="WIDTH: 31.33%"><span id="lblPreBidTime" class="DisplayText5">10:00 AM</span></TD>
+																	<TD class="GridItemTD"><span id="lblPreBidVenue" class="DisplayText5">Tumauini Municipal Hall</span></TD>
+																</TR>
+															</TABLE>
+														</TD>
+													</TR>
+												</TABLE>
+												
+											</TD>
+										</TR>
+										<TR>
+											<TD colSpan="3">
+												<P align="left"><div id="PanelOtherInfo" style="width:100%;">
+	
+                        <TABLE id=Table3 cellSpacing=0 cellPadding=0 
+                        width="100%" border=0>
+                          <TR>
+                            <TD style="HEIGHT: 22px">
+<span id="lblInfo" class="DisplayText2">Other Information</span></TD></TR>
+                          <TR>
+                            <TD>
+<span id="lblOtherInfo" class="DisplayText5">The BAC shall issue bidding documents upon payment of One Thousand Pesos Only (Php1,000.00) to the disbursing/ collecting officer of the LGU.</span></TD></TR></TABLE>
+													
+</div></P>
+											</TD>
+										</TR> <!--<TR>
+														<TD colSpan="3">
+															<P align="right">&nbsp;</P>
+														</TD>
+													</TR>
+													<TR>
+														<TD align="right" colSpan="3">
+															<P align="right">&nbsp;</P>
+														</TD>
+													</TR>--></TABLE>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+				
+				</TD></TR>
+				
+				<TR>
+					<TD colSpan="3">
+						<TABLE id="Table5" cellSpacing="1" cellPadding="1" width="100%" align="center" border="0">
+							<TR>
+								<TD class="DisplayTextBackground" style="HEIGHT: 15px" width="20%"><span id="lblCreatedBy" class="DisplayText4">Created by</span></TD>
+								<TD class="DisplayTextBackground" style="HEIGHT: 15px"><span id="lblDisplayCreatedBy" class="DisplayText7">[removed from fixture]</span></TD>
+							</TR>
+							<TR>
+								<TD class="DisplayTextBackground" width="20%"><span id="lblDateCreated" class="DisplayText4">Date Created</span></TD>
+								<TD class="DisplayTextBackground"><span id="lblDisplayDateCreated" class="DisplayText7">27/08/2026</span></TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>				
+				<TR>
+					<TD colSpan="3">
+						<P><BR>
+							<div id="panelFail">
+	
+<input type="submit" name="btnBack4" value="Back" id="btnBack4" class="Button" />
+							
+</div></P>
+					</TD>
+				</TR>
+				<TR>
+					<TD colSpan="3"></TD>
+				</TR>
+				<TR>
+					<TD colSpan="3">
+						<P><span id="lblFooter" class="DisplayText5">The PhilGEPS team is not responsible for any typographical errors or misinformation presented in the system. PhilGEPS only displays information provided for by its clients, and any queries regarding the postings should be directed to the contact person/s of the concerned party.</span></P>
+					</TD>
+				</TR>
+			</TABLE>
+			&nbsp; <input name="txtHidden" type="hidden" id="txtHidden" />
+		
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0B0A2256" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="FIXTURE" />
+</div><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="FIXTURE" /></form></TD></TR></TBODY></TABLE>
+	</body>
+</HTML>
+
+
+<!--HEIGHT: expression(document.body.offsetHeight-this.offsetTop-5);"-->
+<TABLE id="TablePageFoot" class="TablePageFoot" style="WIDTH: 100%;"
+	cellSpacing="0" cellPadding="0" border="0" >	
+	<tr>
+	<TD valign="bottom" align="left"></TD>
+</tr>
+
+	<!--<tr id="ctl00_TRThinLine" height="20">
+	<TD valign="bottom" align="left" colspan="4">
+      <HR SIZE=1>
+    </TD>
+</tr>
+
+  <tr id="ctl00_TRContactGEPS" height="20">
+	<TD valign="bottom"><A class=a onclick="javascript:showcontactus('/GEPS/Contact/contactGEPS.aspx')" href="#" ><FONT 
+      style="FONT-SIZE: 8pt"><B 
+      >Contact&nbsp;Us</B></FONT></A>&nbsp;&nbsp; &nbsp; 
+  </TD>
+</tr>
+
+  <tr id="ctl00_TRSitemap" height="20">
+	<TD style="WIDTH: 50%" valign="bottom"><A 
+      class=a href="/GEPS/Sitemap/Sitemap.aspx" 
+      ><FONT style="FONT-SIZE: 8pt"><B 
+      >Sitemap</B></FONT></A></TD>
+</tr>
+ -->
+	<tr id="ctl00_TRCopyRight" bordercolor="#356aa0" bgcolor="#d5e2f2" height="25">
+	<TD width="20" background="/images/inside_nav_label_bg.gif">&nbsp;</TD>
+	<TD valign="middle" align="left" width="50%" background="/images/inside_nav_label_bg.gif">
+			<FONT style="FONT-SIZE: 8pt; COLOR: #000000"><span id="ctl00_copyLBL" class="DisplayText5">&copy;&nbsp2004-2026&nbsp;&nbsp;DBM Procurement Service. All rights reserved.</span></FONT>
+		</TD>
+	<TD valign="middle" align="right" background="/images/inside_nav_label_bg.gif">&nbsp;</TD>
+	<TD valign="middle" align="right" width="300" background="/images/inside_nav_label_bg.gif">
+		
+<!-- <div id="ctl00_Help2_helpDIV" style="PADDING-RIGHT:16px; DISPLAY:none; PADDING-LEFT:16px; RIGHT:0px; PADDING-BOTTOM:16px; PADDING-TOP:16px; POSITION:absolute; TOP:65px"> </div>-->
+<div id="helpDIV" style="DISPLAY: inline">
+	<a id="ctl00_Help2_HelpLink" tabindex="100" class="NavTxtLink" href="javascript:void(window.open(&#39;/GEPS/helppages/public/help_SplashBidNoticeAbstractUI.htm&#39;, &#39;helpWin&#39;, &#39;resizable=yes,toolbar=no,menubar=no,directories=no,status=no,width=480,height=480,scrollbars=yes&#39;));">Help</a>&nbsp;<span class="ContextTXT">|</span>
+</div>
+
+		<A class="NavTxtLink" onclick="javascript:showcontactus('/GEPS/Contact/contactGEPS.aspx')" href="#" style="white-space: nowrap;">Contact Us</A>
+		<span class="ContextTXT">|</span>
+		<A class="NavTxtLink" href="/GEPS/Sitemap/Sitemap.aspx">Sitemap</A>
+		
+		</TD>
+	<TD width="20" background="/images/inside_nav_label_bg.gif">&nbsp;</TD>
+</tr>
+
+</TABLE>
+	
