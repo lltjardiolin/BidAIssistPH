@@ -1,0 +1,1486 @@
+{
+  "corpus_version": "2026-09-28",
+  "verified_against": [
+    "https://www.gppb.gov.ph/resolutions/",
+    "https://www.gppb.gov.ph/circulars/",
+    "https://www.gppb.gov.ph/non-policy-matter/",
+    "https://www.gppb.gov.ph/generic-procurement-manual/",
+    "https://www.gppb.gov.ph/public-advisory-no-09-2026/"
+  ],
+  "status_values": [
+    "CURRENT",
+    "HISTORICAL",
+    "WITHDRAWN",
+    "SUPERSEDED",
+    "PROPOSED",
+    "REFERENCE"
+  ],
+  "authority_levels": {
+    "1": "statute/bill",
+    "2": "IRR",
+    "3": "GPPB resolution/circular/advisory",
+    "4": "GPPB-TSO opinion/official explanatory",
+    "5": "secondary"
+  },
+  "open_items": [
+    "HB 07917 post-filing status (official House record)",
+    "Res. 03-2025 mandatory date 2025-09-21 (confirm in PDF)",
+    "Circ. 01-2025 and 03-2025 dates conflict between GPPB resolutions and circulars pages",
+    "GPPB Res. 09-2026 absent from index (numbering gap)",
+    "Comparative matrix URL",
+    "RA 9184 statute PDF URL",
+    "'prefinal' annexes of Res. 08-2026",
+    "Embedding model + dimension not pinned",
+    "RA 9184 statute PDF URL still missing (2016 IRR PDF now linked)"
+  ],
+  "documents": [
+    {
+      "id": "RA9184",
+      "reference": "RA 9184 — Government Procurement Reform Act",
+      "aliases": [
+        "Republic Act No. 9184",
+        "R.A. 9184",
+        "GPRA"
+      ],
+      "type": "law",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 1,
+      "issuing_body": "Congress",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": "2003-01-26",
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Republic-Act-No.-9184.pdf",
+      "verification": "GPPB-hosted statute PDF (listed on the RA 9184 and 2016 Revised IRR page)",
+      "applies_until": "Governs procurement not yet covered by RA 12009 per Sec. 113 transitory rules; see GPPB-RES-05-2025",
+      "notes": "Do NOT label simply 'repealed'. Transitory treatment is set by Circular 01-2025.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "RA9184-IRR-2016",
+      "reference": "2016 Revised IRR of RA 9184",
+      "aliases": [
+        "2016 Revised IRR",
+        "RIRR",
+        "2016 IRR"
+      ],
+      "type": "irr",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 2,
+      "issuing_body": "GPPB",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2024/07/Updated-2016-Revised-IRR-of-RA-No.-9184-as-of-19-July-2024.pdf",
+      "verification": "PDF linked from GPPB RA 9184 page (updated as of 19 Jul 2024) — confirm in PDF",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ],
+      "index_page": "https://www.gppb.gov.ph/ra-9184-and-2016-revised-irr/"
+    },
+    {
+      "id": "RA12009",
+      "reference": "RA 12009 — New Government Procurement Act",
+      "aliases": [
+        "Republic Act No. 12009",
+        "R.A. 12009",
+        "NGPA",
+        "New Government Procurement Act"
+      ],
+      "type": "law",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 1,
+      "issuing_body": "Congress",
+      "date_approved": "2024-07-20",
+      "date_published": null,
+      "effective_date": "2024-08-13",
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2024/07/New-Government-Procurement-Act-RA-12009.pdf",
+      "verification": "GPPB-hosted certified copy (Malacañang Records Office stamp); scanned, OCR required",
+      "official_page": "https://www.gppb.gov.ph/new-government-procurement-act-republic-act-no-12009/",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "RA12009-IRR-2025",
+      "reference": "IRR of RA 12009 (approved via GPPB Res. 02-2025)",
+      "aliases": [
+        "NGPA IRR",
+        "IRR of the NGPA"
+      ],
+      "type": "irr",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 2,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-02-04",
+      "date_published": "2025-02-10",
+      "effective_date": "2025-02-25",
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2025/02/Implementing-Rules-and-Regulations-of-RA-12009.pdf",
+      "verification": "confirmed by Public Advisory 09-2026",
+      "official_gazette": "https://www.officialgazette.gov.ph/2025/02/10/the-implementing-rules-and-regulations-of-republic-act-no-12009-or-the-new-government-procurement-act",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "RA12009-IRR-2026-03-31-WITHDRAWN",
+      "reference": "IRR of RA 12009 (1st Edition, as of 31 March 2026)",
+      "aliases": [
+        "IRR 1st Edition",
+        "March 2026 IRR",
+        "IRR as of March 2026",
+        "1st Edition IRR",
+        "1st Edition of the IRR",
+        "first edition of the IRR",
+        "IRR first edition",
+        "March 2026 edition"
+      ],
+      "type": "irr",
+      "framework": "RA12009",
+      "status": "WITHDRAWN",
+      "authority_level": 2,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/05/IRR-of-RA-12009-1st-Edition.pdf",
+      "verification": "withdrawal confirmed",
+      "withdrawn_date": "2026-07-31",
+      "withdrawn_by": "GPPB-ADV-09-2026",
+      "index_default": false,
+      "notes": "Archive NOW with sha256 — GPPB directs stakeholders not to disseminate it. Exclude from default retrieval pool.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "HB07917",
+      "reference": "HB 07917 — Act amending RA 12009",
+      "aliases": [
+        "House Bill No. 7917",
+        "HB 7917",
+        "HB No. 7917"
+      ],
+      "type": "bill",
+      "framework": "RA12009",
+      "status": "PROPOSED",
+      "authority_level": 1,
+      "issuing_body": "House of Representatives",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://docs.congress.hrep.online/legisdocs/basic_20/HB07917.pdf",
+      "verification": "bill text verified against official House record (docs.congress.hrep.online); filed/received 23 Feb 2026, 20th Congress 1st Regular Session; post-filing status UNVERIFIED",
+      "date_filed": "2026-02-23",
+      "notes": "Official House bill text (7-page scanned PDF, OCR required). Earlier news reference: https://mb.com.ph/2026/02/24/house-bill-outlaws-public-officials-participation-in-government-projects. May 5 House approval / May 6 Senate transmittal in the brief could NOT be verified — confirm before writing Q28 ground truth. Subject: prohibition on public officials' participation in procurement contracts.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-02-2025",
+      "reference": "GPPB Resolution No. 02-2025 — Approving the IRR of RA 12009",
+      "aliases": [],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-02-04",
+      "date_published": "2025-02-10",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2025/08/GPPB-Resolution-No.-02-2025.pdf",
+      "verification": "index-listed",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-03-2025",
+      "reference": "GPPB Resolution No. 03-2025 — Standard Forms for Procurement under RA 12009",
+      "aliases": [],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-05-14",
+      "date_published": "2025-06-23",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2025/07/GPPB-Resolution-No.-03-2025.pdf",
+      "verification": "dates index-listed; 2025-09-21 mandatory date from secondary source — confirm in PDF",
+      "mandatory_use_date": "2025-09-21",
+      "related_page": "https://www.gppb.gov.ph/ngpa-standard-forms/",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-05-2025",
+      "reference": "GPPB Resolution No. 05-2025 / Circular No. 01-2025 — Sec. 113 Transitory Provision vs Sec. 115 Repealing Clause",
+      "aliases": [
+        "Circular No. 01-2025",
+        "transitory circular"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-09-18",
+      "date_published": "2025-10-08",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2025/10/GPPB-Resolution-No.-05-2025.pdf",
+      "verification": "index-listed; DATE CONFLICT on GPPB site",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/02/GPPB-Resolution-No.-05-2025_circ.pdf",
+      "notes": "GPPB circulars page lists Circ. 01-2025 as approved 31 Jan 2025 / published 20 Feb 2025 — these are Res. 01-2025's dates (likely copy error). Use resolutions-page dates; confirm in PDF.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-08-2025",
+      "reference": "GPPB Resolution No. 08-2025 / Circular No. 02-2025 — Sagip Saka procurement guidelines",
+      "aliases": [
+        "Circular No. 02-2025",
+        "Sagip Saka"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-09-25",
+      "date_published": "2025-10-27",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2025/11/GPPB-Resolution-No.-08-2025.pdf",
+      "verification": "index-listed",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/08/GPPB-Circular-No.-02-2025.pdf",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-09-2025",
+      "reference": "GPPB Resolution No. 09-2025 — Decommissioning PhilGEPS 1.5 / use of Modernized PhilGEPS",
+      "aliases": [],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-09-25",
+      "date_published": "2025-11-21 (posted)",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2025/11/GPPB_Resolution_No._09-2025.pdf",
+      "verification": "index-listed",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-10-2025",
+      "reference": "GPPB Resolution No. 10-2025 / Circular No. 03-2025 — Updated PhilGEPS eMarketplace guidelines",
+      "aliases": [
+        "Circular No. 03-2025",
+        "eMarketplace"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-09-25",
+      "date_published": "2025-12-19",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2025/12/GPPB_Resolution-No.10-2025.pdf",
+      "verification": "index-listed; DATE CONFLICT on GPPB site",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/02/GPPB_Resolution-No.10-2025_circ.pdf",
+      "supersedes_candidate": "GPPB-RES-06-2024",
+      "notes": "Circulars page shows published 23 June 2025 (before its own approval date; = Res. 03-2025's date). Use 19 Dec 2025.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-11-2025",
+      "reference": "GPPB Resolution No. 11-2025 — Beneficial Ownership Information Registry via PhilGEPS",
+      "aliases": [],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-10-06",
+      "date_published": "2026-01-30 (posted)",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/02/GPPB_Resolution_No._11-2025_30012026.gppb_.pdf",
+      "verification": "index-listed",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-12-2025",
+      "reference": "GPPB Resolution No. 12-2025 — Procurement Mode Selection Decision Tree",
+      "aliases": [
+        "Decision Tree"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2025-11-25",
+      "date_published": "2026-01-28",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/01/GPPB-Resolution-No.-12-2025.pdf",
+      "verification": "index-listed",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-10-2026",
+      "reference": "GPPB Resolution No. 10-2026 / Circular No. 06-2026 — Documentary requirements for specific modes under RA 12009",
+      "aliases": [
+        "Circular No. 06-2026"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2026-02-03",
+      "date_published": "2026-06-19",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/06/Approved_GPPB-Resolution-No.-10-2026-Documentary-Requirements.pdf",
+      "verification": "index-listed",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/06/Annex-A-Circular-No.-06-2026.pdf",
+      "notes": "HIGH PRIORITY — directly answers Q09 (procurement modes).",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-04-2026",
+      "reference": "GPPB Resolution No. 04-2026 / Circular No. 01-2026 — Direct Procurement for Science, Technology & Innovation",
+      "aliases": [
+        "Circular No. 01-2026",
+        "STI procurement"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2026-01-15",
+      "date_published": "2026-03-20",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/03/Approved-GPPB-Resolution-No.-04-2026-STI.pdf",
+      "verification": "index-listed",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/03/CIRCULAR-NO.-01-2026.pdf",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-08-2026",
+      "reference": "GPPB Resolution No. 08-2026 / Circulars 02–05-2026 — Bid docs fees, printing, tie-breaking, BAC legal assistance",
+      "aliases": [
+        "Circular No. 04-2026",
+        "tie-breaking"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2026-02-19",
+      "date_published": "2026-07-03",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/Approved-GPPB-Resolution-No.-08-2026-Updated-guidelines_01072026.pdf",
+      "verification": "index-listed",
+      "circular_urls": {
+        "02-2026": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/Annex-A_Circular-Bid-Docs-Fees_15052026.pdf",
+        "03-2026": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/Annex-B_Circular-Printing-Services_15052026.pdf",
+        "04-2026": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/Annex-C_Circular-Tie-Break_prefinal.pdf",
+        "05-2026": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/Annex-D_Circular-Legal-Asst-prefinal.pdf"
+      },
+      "notes": "Version trap: tie-breaking under RA 9184 was GPPB Circular 06-2005.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ],
+      "release_note": "Circular 04-2026 and 05-2026 file names say 'prefinal'; confirm they are the final issued text"
+    },
+    {
+      "id": "GPPB-RES-12-2026",
+      "reference": "GPPB Resolution No. 12-2026 / Circular No. 07-2026 — Framework Agreement under RA 12009",
+      "aliases": [
+        "Circular No. 07-2026",
+        "framework agreement"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2026-07-23",
+      "date_published": "2026-08-07",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/08/FNL-Approved-GPPB-Resolution-No.-12-2026_30072026_7797.pdf",
+      "verification": "index-listed",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/08/Annex-A-FNL-Approved-GPPB-Resolution-No.-12-2026.pdf",
+      "notes": "Version trap: RA 9184-era framework agreement guidelines = GPPB-RES-27-2019.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-17-2026",
+      "reference": "GPPB Resolution No. 17-2026 / Circular No. 08-2026 — Disaster-related procurement guidelines",
+      "aliases": [
+        "Circular No. 08-2026",
+        "emergency procurement"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2026-08-14",
+      "date_published": "2026-09-10",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/Final_GPPB-Resolution-No.-17-2026-EP_09092026.pdf",
+      "verification": "index-listed",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/Final_Annex-A-EP-Guidelines_09092026.pdf",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-20-2026",
+      "reference": "GPPB Resolution No. 20-2026 / Circular No. 09-2026 — Procurement during 2 Nov 2026 BSKE election period",
+      "aliases": [
+        "Circular No. 09-2026",
+        "BSKE"
+      ],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2026-08-14",
+      "date_published": "2026-09-26",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/GPPB-Resolution-No.-20-2026-Conduct-of-Proc.-Act.-2026-BSKE-with-Annex.sec-2.pdf",
+      "verification": "index-listed; election period 3 Oct – 9 Nov 2026 read from the text of Circular No. 09-2026 (item 1.1) — confirm in PDF",
+      "circular_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/Annex-A_Guidelines-on-Conduct-of-Procurement-Activities-BSKE_25082026.pdf",
+      "notes": "Published 2 days before corpus date — time-bound; mark expiry after the election period.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ],
+      "applies_from": "2026-10-03",
+      "expires_at": "2026-11-09"
+    },
+    {
+      "id": "GPPB-RES-01-2026",
+      "reference": "GPPB Resolution No. 01-2026 — Negotiated procurement for international events hosted by PH",
+      "aliases": [],
+      "type": "resolution",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2026-01-07",
+      "date_published": "2026-01-10",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/01/GPPB-Resolution-No.-01-2026.pdf",
+      "verification": "index-listed",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-ADV-09-2026",
+      "reference": "GPPB-TSO Public Advisory No. 09-2026 — Withdrawal of IRR 1st Edition",
+      "aliases": [],
+      "type": "advisory",
+      "framework": "RA12009",
+      "status": "CURRENT",
+      "authority_level": 3,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/public-advisory-no-09-2026/",
+      "verification": "source confirmed",
+      "date_issued": "2026-07-31",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-NGPA-FAQ",
+      "reference": "Procure Smart: NGPA Questions Answered",
+      "aliases": [],
+      "type": "faq",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/procure-smart-ngpa-questions-answered/",
+      "verification": "index-listed",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-2026",
+      "reference": "GPPB-TSO Non-Policy Matter Opinions, 2026 series (NPM 001–032-2026)",
+      "aliases": [],
+      "type": "opinion_collection",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/non-policy-matter/",
+      "verification": "index-listed",
+      "notes": "Ingest per-opinion (one document each). These are TSO opinions, not Board issuances — cite as interpretive only. Good for practical Q&A (e.g. NPM 004-2026 direct acquisition; 001-2026 transitory provision). Child entries GPPB-NPM-NNN-2026 added from the archived index page (028 and 030 not posted).",
+      "ingest": false,
+      "ingest_blocker": "collection index page; opinions are ingested via child entries GPPB-NPM-NNN-2026",
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RA9184-RA12009-COMP",
+      "reference": "RA 9184 vs RA 12009 Comparative Matrix",
+      "aliases": [],
+      "type": "comparison",
+      "framework": "BOTH",
+      "status": "REFERENCE",
+      "authority_level": 5,
+      "issuing_body": "GPPB",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": null,
+      "verification": "URL NOT FOUND — locate or drop",
+      "ingest": false,
+      "ingest_blocker": "no source URL; locate official copy or drop",
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-27-2019",
+      "reference": "GPPB Resolution No. 27-2019 — Framework Agreement guidelines (RA 9184)",
+      "aliases": [],
+      "type": "resolution",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2019-12-10",
+      "date_published": "2019-12-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/05/GPPB-Resolution-No.-27-2019.pdf",
+      "verification": "index-listed",
+      "counterpart": "GPPB-RES-12-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-RES-06-2024",
+      "reference": "GPPB Resolution No. 06-2024 — Pilot eMarketplace guidelines",
+      "aliases": [],
+      "type": "resolution",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "GPPB",
+      "date_approved": "2024-10-04",
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2024/11/GPPB-Resolution-No.-06-2024.pdf",
+      "verification": "index-listed",
+      "counterpart": "GPPB-RES-10-2025",
+      "notes": "Mark SUPERSEDED only if Res. 10-2025 text says so.",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "circular_url",
+        "circular_urls",
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-GPM-2017",
+      "reference": "Generic Procurement Manuals, 2nd Edition (Vols 1–4) + LGU Manual",
+      "aliases": [
+        "GPM",
+        "Generic Procurement Manual"
+      ],
+      "type": "manual",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 4,
+      "issuing_body": "GPPB",
+      "date_approved": "2017-07-31",
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/generic-procurement-manual/",
+      "verification": "index-listed",
+      "volume_urls": [
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/GPM-Volume-1.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/GPM-Volume-2.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/GPM-Volume-3.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/GPM-Volume-4.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/LocalGovUnitsProcManual.pdf"
+      ],
+      "notes": "Listed under GPPB's RA 9184 menu; approved via Res. 27-2017 (confirmed Res. 34-2017). Never answer current-rule questions from it.",
+      "ingest": true,
+      "ingest_fields": [
+        "volume_urls"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-001-2026",
+      "reference": "GPPB-TSO NPM No. 001-2026 — Interpretation and Implementation of Certain Provisions of the New Government Procurement Act: Declaration of Policy, Eligibility of Documents, Single Largest Completed Contract Requirements, Posting of Bid Bulletin, Bid Security, Request for Reconsideration, Transitory Provision",
+      "aliases": [
+        "NPM 001-2026",
+        "NPM No. 001-2026",
+        "NPM 1-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/02/NPM-No.-001-2026_Redacted-1.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-002-2026",
+      "reference": "GPPB-TSO NPM No. 002-2026 — Clarification on the Requirement of Performance Security for Lease Contracts",
+      "aliases": [
+        "NPM 002-2026",
+        "NPM No. 002-2026",
+        "NPM 2-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/02/Non-Policy_Matter_Opinion_No._002-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-003-2026",
+      "reference": "GPPB-TSO NPM No. 003-2026 — Request for Guidance and Confirmation on the Modality for the Procurement of a New Administrative Office Building",
+      "aliases": [
+        "NPM 003-2026",
+        "NPM No. 003-2026",
+        "NPM 3-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/03/2026-_AD-0003008-C-LR_DILG_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-004-2026",
+      "reference": "GPPB-TSO NPM No. 004-2026 — Interpretation and Application of Direct Acquisition under Section 32 of the Implementing Rules and Regulations of Republic Act No. 12009",
+      "aliases": [
+        "NPM 004-2026",
+        "NPM No. 004-2026",
+        "NPM 4-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/04/NPM_004-2026-Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-005-2026",
+      "reference": "GPPB-TSO NPM No. 005-2026 — Clarification on the Imposable Rate of Liquidated Damages for Procurement of Goods",
+      "aliases": [
+        "NPM 005-2026",
+        "NPM No. 005-2026",
+        "NPM 5-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/04/NPM-005-2026-Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-006-2026",
+      "reference": "GPPB-TSO NPM No. 006-2026 — Clarification on the Rules Governing Contract Extension and Renewal for Regular and Recurring Services under Republic Act No. 12009 and its Implementing Rules and Regulations",
+      "aliases": [
+        "NPM 006-2026",
+        "NPM No. 006-2026",
+        "NPM 6-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/05/NPM_006-2026-Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-007-2026",
+      "reference": "GPPB-TSO NPM No. 007-2026 — Request for Clarification on Second Contract Extension and Applicability of Negotiated Procurement",
+      "aliases": [
+        "NPM 007-2026",
+        "NPM No. 007-2026",
+        "NPM 7-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/05/NPM-No.-007-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-008-2026",
+      "reference": "GPPB-TSO NPM No. 008-2026 — Inquiry on the Proposed Installation of an Oxygen Generating Plant in a Hospital under a Lease-to-Own Mechanism",
+      "aliases": [
+        "NPM 008-2026",
+        "NPM No. 008-2026",
+        "NPM 8-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/05/NPM_08-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-009-2026",
+      "reference": "GPPB-TSO NPM No. 009-2026 — Request for Clarification on the Implementation of Particular Provisions for Republic Act No. 12009 and its Implementing Rules and Regulations",
+      "aliases": [
+        "NPM 009-2026",
+        "NPM No. 009-2026",
+        "NPM 9-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/05/NPM-No.-09-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-010-2026",
+      "reference": "GPPB-TSO NPM No. 010-2026 — Clarification on Issues Encountered during Procurement Activity",
+      "aliases": [
+        "NPM 010-2026",
+        "NPM No. 010-2026",
+        "NPM 10-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/06/NPM-No.-10-2026-Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-011-2026",
+      "reference": "GPPB-TSO NPM No. 011-2026 — Clarification on the Applicable Mode of Procurement for the Procurement of Rice by the Local Government Units Under the Local Government Support Fund",
+      "aliases": [
+        "NPM 011-2026",
+        "NPM No. 011-2026",
+        "NPM 11-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/06/NPM-No.-011-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-012-2026",
+      "reference": "GPPB-TSO NPM No. 012-2026 — Request for Extension of the Procurement Timeline for the Kalibo International Airport Development Project",
+      "aliases": [
+        "NPM 012-2026",
+        "NPM No. 012-2026",
+        "NPM 12-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/NPM-012-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-013-2026",
+      "reference": "GPPB-TSO NPM No. 013-2026 — Delegation of Procurement Functions to the Procurement Department in the Absence of a Duly Constituted Bids and Awards Committee",
+      "aliases": [
+        "NPM 013-2026",
+        "NPM No. 013-2026",
+        "NPM 13-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/NPM-013-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-014-2026",
+      "reference": "GPPB-TSO NPM No. 014-2026 — Request for Guidance on the Participation of Board Members as Bids and Awards Committee Observers",
+      "aliases": [
+        "NPM 014-2026",
+        "NPM No. 014-2026",
+        "NPM 14-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/NPM-014-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-015-2026",
+      "reference": "GPPB-TSO NPM No. 015-2026 — Request for Guidance on the Treatment of PCAB Certifications submitted in lieu of PCAB Licenses in Relation to Procurement Eligibility Requirements",
+      "aliases": [
+        "NPM 015-2026",
+        "NPM No. 015-2026",
+        "NPM 15-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/NPM-015-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-016-2026",
+      "reference": "GPPB-TSO NPM No. 016-2026 — Application of Section 9 of Republic Act No. 11917 in Relation to Republic Act No. 9184 (RA No. 12009)",
+      "aliases": [
+        "NPM 016-2026",
+        "NPM No. 016-2026",
+        "NPM 16-2026"
+      ],
+      "type": "opinion",
+      "framework": "BOTH",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/07/NPM-016-2026_Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-017-2026",
+      "reference": "GPPB-TSO NPM No. 017-2026 — Request for Extension of Procurement Process",
+      "aliases": [
+        "NPM 017-2026",
+        "NPM No. 017-2026",
+        "NPM 17-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-17-2026-_-Extension.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-018-2026",
+      "reference": "GPPB-TSO NPM No. 018-2026 — Head of Procuring Entity’s Disapproval of BAC Recommendation for Award under R.A. No. 12009 and its IRR",
+      "aliases": [
+        "NPM 018-2026",
+        "NPM No. 018-2026",
+        "NPM 18-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-18-2026-_-HoPE-Disapproval.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-019-2026",
+      "reference": "GPPB-TSO NPM No. 019-2026 — Guidance on the Applicability of Direct Acquisition to Customized Goods",
+      "aliases": [
+        "NPM 019-2026",
+        "NPM No. 019-2026",
+        "NPM 19-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-19-2026-_-DA_Customized-Items.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-020-2026",
+      "reference": "GPPB-TSO NPM No. 020-2026 — Authority of the Procuring Entity to Prescribe Documentary Requirements in the Bidding Documents and Checklist",
+      "aliases": [
+        "NPM 020-2026",
+        "NPM No. 020-2026",
+        "NPM 20-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-20-2026_Prescribed-Documentary-Requirements.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-021-2026",
+      "reference": "GPPB-TSO NPM No. 021-2026 — Proper Context of the Phrase “Exclusive Dealer or Manufacturer” in Section 31 (c) of Republic Act No. 12009, or the “New Government Procurement Act”",
+      "aliases": [
+        "NPM 021-2026",
+        "NPM No. 021-2026",
+        "NPM 21-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-021-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-022-2026",
+      "reference": "GPPB-TSO NPM No. 022-2026 — Request for Price Adjustment under RA No. 12009",
+      "aliases": [
+        "NPM 022-2026",
+        "NPM No. 022-2026",
+        "NPM 22-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-022-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-023-2026",
+      "reference": "GPPB-TSO NPM No. 023-2026 — Request for Clarification on PhilGEPS Platinum Membership Requirement During Eligibility Checking",
+      "aliases": [
+        "NPM 023-2026",
+        "NPM No. 023-2026",
+        "NPM 23-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-023-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-024-2026",
+      "reference": "GPPB-TSO NPM No. 024-2026 — Request for Clarification on Termination of Breach of Contract under Section 71.4.1 of the IRR of RA No. 12009",
+      "aliases": [
+        "NPM 024-2026",
+        "NPM No. 024-2026",
+        "NPM 24-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-024-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-025-2026",
+      "reference": "GPPB-TSO NPM No. 025-2026 — Clarification on Eligibility Document Requirements for Negotiated Procurement under RA 12009",
+      "aliases": [
+        "NPM 025-2026",
+        "NPM No. 025-2026",
+        "NPM 25-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM_025-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-026-2026",
+      "reference": "GPPB-TSO NPM No. 026-2026 — Financial Eligibility of Joint Venture Partner with Net Losses",
+      "aliases": [
+        "NPM 026-2026",
+        "NPM No. 026-2026",
+        "NPM 26-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-No.-026-2026-Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-027-2026",
+      "reference": "GPPB-TSO NPM No. 027-2026 — Request for Clarification on Required Number of Copies of Bids to be Submitted under Republic Act No. 12009",
+      "aliases": [
+        "NPM 027-2026",
+        "NPM No. 027-2026",
+        "NPM 27-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-27-2026_Bid-Submission-Copy-Redacted.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-029-2026",
+      "reference": "GPPB-TSO NPM No. 029-2026 — Request for Legal Opinion Regarding the Delegation of Authority to Approve Annual Procurement Plan",
+      "aliases": [
+        "NPM 029-2026",
+        "NPM No. 029-2026",
+        "NPM 29-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-029-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-031-2026",
+      "reference": "GPPB-TSO NPM No. 031-2026 — Request for Clarification on PhilGEPS Posting Requirement for Community Participation",
+      "aliases": [
+        "NPM 031-2026",
+        "NPM No. 031-2026",
+        "NPM 31-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-031-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    },
+    {
+      "id": "GPPB-NPM-032-2026",
+      "reference": "GPPB-TSO NPM No. 032-2026 — Grounds for Post-Disqualification under Section 63 of the Implementing Rules and Regulations of Republic Act No. 12009",
+      "aliases": [
+        "NPM 032-2026",
+        "NPM No. 032-2026",
+        "NPM 32-2026"
+      ],
+      "type": "opinion",
+      "framework": "RA12009",
+      "status": "REFERENCE",
+      "authority_level": 4,
+      "issuing_body": "GPPB-TSO",
+      "date_approved": null,
+      "date_published": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2026/09/NPM-No.032-2026.pdf",
+      "verification": "index-listed (GPPB non-policy-matter page)",
+      "parent_id": "GPPB-NPM-2026",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url"
+      ]
+    }
+  ],
+  "project": "BidAIssistPH",
+  "corpus_mode": "closed-corpus",
+  "runtime_web_retrieval": false
+}

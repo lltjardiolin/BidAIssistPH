@@ -1,0 +1,106 @@
+{
+  "feed": {
+    "kind": "sample",
+    "label": "Sample data",
+    "note": "No PhilGEPS feed is connected. These notices are invented to show the layout; they are not real postings.",
+    "lastSync": null
+  },
+  "notices": [
+    {
+      "refNo": "SAMPLE-2026-001",
+      "title": "Sample: Supply and delivery of office equipment",
+      "procuringEntity": "Sample Agency A (fictional)",
+      "region": "Region IV-A",
+      "category": "Goods",
+      "mode": "Competitive Bidding",
+      "abc": 4800000,
+      "publishedAt": "2026-09-21",
+      "closingAt": "2026-10-14",
+      "status": "OPEN"
+    },
+    {
+      "refNo": "SAMPLE-2026-002",
+      "title": "Sample: Rehabilitation of a municipal access road",
+      "procuringEntity": "Sample Municipality B (fictional)",
+      "region": "Region VI",
+      "category": "Infrastructure",
+      "mode": "Competitive Bidding",
+      "abc": 27500000,
+      "publishedAt": "2026-09-18",
+      "closingAt": "2026-10-20",
+      "status": "OPEN"
+    },
+    {
+      "refNo": "SAMPLE-2026-003",
+      "title": "Sample: Lease of venue for a regional conference",
+      "procuringEntity": "Sample Bureau C (fictional)",
+      "region": "NCR",
+      "category": "Goods",
+      "mode": "Negotiated Procurement",
+      "abc": 650000,
+      "publishedAt": "2026-09-24",
+      "closingAt": "2026-10-01",
+      "status": "OPEN"
+    },
+    {
+      "refNo": "SAMPLE-2026-004",
+      "title": "Sample: Janitorial services under a framework agreement",
+      "procuringEntity": "Sample State University D (fictional)",
+      "region": "Region VII",
+      "category": "Goods",
+      "mode": "Framework Agreement",
+      "abc": 9200000,
+      "publishedAt": "2026-09-15",
+      "closingAt": "2026-10-08",
+      "status": "OPEN"
+    },
+    {
+      "refNo": "SAMPLE-2026-005",
+      "title": "Sample: Laboratory instruments for a research programme",
+      "procuringEntity": "Sample Research Institute E (fictional)",
+      "region": "Region III",
+      "category": "Goods",
+      "mode": "Direct Procurement for STI",
+      "abc": 3100000,
+      "publishedAt": "2026-09-22",
+      "closingAt": "2026-11-16",
+      "status": "OPEN"
+    },
+    {
+      "refNo": "SAMPLE-2026-006",
+      "title": "Sample: Consulting services for a feasibility study",
+      "procuringEntity": "Sample Authority F (fictional)",
+      "region": "Region XI",
+      "category": "Consulting",
+      "mode": "Competitive Bidding",
+      "abc": 5400000,
+      "publishedAt": "2026-09-10",
+      "closingAt": "2026-09-30",
+      "status": "OPEN"
+    },
+    {
+      "refNo": "SAMPLE-2026-007",
+      "title": "Sample: Printer consumables",
+      "procuringEntity": "Sample Office G (fictional)",
+      "region": "CAR",
+      "category": "Goods",
+      "mode": "Small Value Procurement",
+      "abc": 180000,
+      "publishedAt": "2026-09-25",
+      "closingAt": "2026-10-05",
+      "status": "OPEN"
+    },
+    {
+      "refNo": "SAMPLE-2026-008",
+      "title": "Sample: Replacement parts from a known supplier",
+      "procuringEntity": "Sample Hospital H (fictional)",
+      "region": "Region X",
+      "category": "Goods",
+      "mode": "Direct Acquisition",
+      "abc": 95000,
+      "publishedAt": "2026-09-12",
+      "closingAt": "2026-09-26",
+      "status": "CLOSED"
+    }
+  ]
+}

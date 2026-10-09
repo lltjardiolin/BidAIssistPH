@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BidAIssistPH Corpus Lock",
+  "type": "object",
+  "required": ["corpus_version", "generated_at", "artifacts"],
+  "properties": {
+    "corpus_version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["document_id", "source_url", "local_path", "sha256", "retrieved_at", "bytes", "content_type"],
+        "properties": {
+          "document_id": {"type": "string"},
+          "source_field": {"type": "string"},
+          "variant": {"type": ["string","null"]},
+          "source_url": {"type": "string"},
+          "local_path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "retrieved_at": {"type": "string"},
+          "bytes": {"type": "integer", "minimum": 1},
+          "content_type": {"type": "string"},
+          "http_status": {"type": "integer"},
+          "verified_for_ingest": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}
