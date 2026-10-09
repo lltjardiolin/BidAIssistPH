@@ -1,0 +1,26 @@
+node_modules/
+.next/
+.env*
+!.env.example
+storage/logs/*
+# Raw corpus may be committed only if licensing/size policy allows; otherwise preserve via controlled storage.
+storage/processed/*
+!storage/processed/.gitkeep
+*.tsbuildinfo
+next-env.d.ts
+# Archived source files stay out of git by default (about 70 MB, and one is a withdrawn edition GPPB asks not to disseminate).
+corpus/archive/*
+!corpus/archive/README.md
+storage/logs/*
+!storage/logs/.gitkeep
+storage/backups/*
+# Logfire SDK credentials
+.logfire/
+# Coding-agent files and tooling state (local only)
+AGENTS.md
+CLAUDE.md
+.gstack/
+# UI handoff screenshots stay local
+docs/ui-handoff/
+# Design spec stays local (it predates the hosted stack)
+docs/BidAIssistPH_PDR_Build_Spec_v3.1.md

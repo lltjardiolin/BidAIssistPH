@@ -1,0 +1,45 @@
+/* Design tokens. The page is a sheet of bond paper on a desk blotter; the accent is stamp-pad violet,
+   the ink of office rubber stamps. Status colours are stamp inks. Every text pair is at least 4.5:1. */
+@theme {
+  --color-paper: #eceaf2;          /* the desk */
+  --color-surface: #ffffff;        /* the sheet */
+  --color-raised: #f7f6fa;
+  --color-sunk: #f1eff6;
+  --color-ink: #1b1830;
+  --color-ink-2: #3d3a55;
+  --color-muted: #5f5c78;
+  --color-line: #d9d6e3;
+  --color-line-strong: #bdb9cf;
+  --color-line-soft: #eceaf2;
+  --color-accent: #5b2a86;
+  --color-accent-hover: #43206a;
+  --color-accent-tint: #efe7f7;
+
+  --color-status-current-bg: #e3f1e9;
+  --color-status-current-fg: #17603f;
+  --color-status-historical-bg: #e8e8ee;
+  --color-status-historical-fg: #3d3a55;
+  --color-status-withdrawn-bg: #fbe5e2;
+  --color-status-withdrawn-fg: #9f1f14;
+  --color-status-superseded-bg: #f8ebcb;
+  --color-status-superseded-fg: #7a4b00;
+  --color-status-proposed-bg: #e1e8fa;
+  --color-status-proposed-fg: #1e3a8a;
+  --color-status-reference-bg: #efe7f7;
+  --color-status-reference-fg: #5b2a86;
+
+  --font-display: var(--font-literata), Georgia, serif;
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+  /* Identifiers and figures: the same sans with figures of equal width, not a second typeface. */
+  --font-mono: var(--font-hanken), system-ui, sans-serif;
+
+  --radius-badge: 3px;
+  --radius-control: 6px;
+  --radius-card: 4px;
+  --radius-panel: 3px;
+
+  --shadow-sheet: 0 -8px 24px rgba(27, 24, 48, 0.1);
+
+  --breakpoint-md: 768px;
+  --breakpoint-xl: 1100px;
+}

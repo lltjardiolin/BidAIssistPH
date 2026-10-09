@@ -1,0 +1,190 @@
+@import 'tailwindcss';
+@import '../styles/tokens.css';
+
+html {
+  scroll-padding-bottom: 180px;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+button,
+a,
+[role='tab'] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.font-mono {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-weight: 500;
+}
+
+/* A quiet label. Sentence case: capitals are kept for the stamps. */
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+/* ---- The stamp: the one loud thing on the page ---------------------------------------------------- */
+.stamp {
+  --tilt: -2deg;
+  display: inline-block;
+  padding: 4px 10px 3px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 2px var(--color-surface), inset 0 0 0 3px currentColor;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(var(--tilt));
+  transform-origin: left center;
+  filter: url(#stamp-ink);
+}
+.stamp[data-flat] {
+  transform: none;
+}
+.stamp[data-status='CURRENT'] { color: var(--color-status-current-fg); --tilt: -2deg; }
+.stamp[data-status='HISTORICAL'] { color: var(--color-status-historical-fg); --tilt: 1.5deg; }
+.stamp[data-status='WITHDRAWN'] { color: var(--color-status-withdrawn-fg); --tilt: -3.5deg; }
+.stamp[data-status='SUPERSEDED'] { color: var(--color-status-superseded-fg); --tilt: 2.5deg; }
+.stamp[data-status='PROPOSED'] { color: var(--color-status-proposed-fg); --tilt: -1.5deg; }
+.stamp[data-status='REFERENCE'] { color: var(--color-status-reference-fg); --tilt: 2deg; }
+
+@keyframes stamp-press {
+  from {
+    opacity: 0;
+    transform: rotate(var(--tilt)) scale(1.35);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(var(--tilt)) scale(1);
+  }
+}
+.stamp[data-fresh] {
+  animation: stamp-press 170ms cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+
+/* ---- The answer: a page of text with notes in its margin ------------------------------------------ */
+.leaf {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.leaf > .margin {
+  padding: 2px 0 18px 16px;
+  margin: 0 0 6px 4px;
+  border-left: 2px solid var(--color-line);
+}
+@media (min-width: 1100px) {
+  .leaf {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    column-gap: 40px;
+  }
+  .leaf > .margin {
+    margin: 0;
+    padding: 4px 0 22px 24px;
+    border-left: 1px solid var(--color-line);
+  }
+}
+
+.answer {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.72;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+  max-width: 68ch;
+  padding-bottom: 18px;
+}
+.answer > * + * {
+  margin-top: 14px;
+}
+.answer h1,
+.answer h2,
+.answer h3,
+.answer h4 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.answer ul,
+.answer ol {
+  padding-left: 24px;
+}
+.answer ul {
+  list-style: disc;
+}
+.answer ol {
+  list-style: decimal;
+}
+.answer li + li {
+  margin-top: 6px;
+}
+.answer strong {
+  font-weight: 600;
+}
+.answer blockquote {
+  border-left: 3px solid var(--color-line-strong);
+  padding-left: 16px;
+  color: var(--color-ink-2);
+}
+.answer code {
+  font-family: var(--font-sans);
+  font-size: 0.9em;
+  background: var(--color-sunk);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.answer .table-wrap {
+  position: relative;
+  overflow-x: auto;
+  font-family: var(--font-sans);
+}
+.answer table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.answer th {
+  text-align: left;
+  font-weight: 600;
+  padding: 8px 12px 8px 0;
+  border-bottom: 2px solid var(--color-ink);
+}
+.answer td {
+  padding: 10px 12px 10px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

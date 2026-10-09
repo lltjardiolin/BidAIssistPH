@@ -1,0 +1,121 @@
+{
+  "project": "BidAIssistPH",
+  "version": "3.2",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 323,
+      "sha256": "b75cacc75a2cd464feb17dd15f8cbd4316a5064a6236c03fe638f28b6c058843"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 167,
+      "sha256": "d76f69bc8ff497860d99903c3ca3ee5d04c8f11a2f9355002cc77b8f5a37dc0c"
+    },
+    {
+      "path": "CHANGES_v3.2.md",
+      "bytes": 3423,
+      "sha256": "1b86e718e1c04cdfac10b9d697a7fd5b3953114957b7cd48f7887f517a4ae712"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 1718,
+      "sha256": "aa9ffe73e127ae8eff8fb3650a2e51ced2f647613afa3c8f4c417e99e310ad41"
+    },
+    {
+      "path": "corpus/archive/README.md",
+      "bytes": 575,
+      "sha256": "bce81fd10000e302bceb2c5b665d9a3f79a8c573e75f322b629261eaf07a0071"
+    },
+    {
+      "path": "corpus/manifest.json",
+      "bytes": 27135,
+      "sha256": "e0d9f3ef0aec1944d21546080b9b338c30b88cbdac5c793b144ca5b300ca25ed"
+    },
+    {
+      "path": "corpus/manifest.lock.schema.json",
+      "bytes": 1083,
+      "sha256": "e1a747c08737e08ee2bbaf35b431add62aa7c9643f74401291f20f2e5511aed1"
+    },
+    {
+      "path": "corpus/source_registry/source_urls.csv",
+      "bytes": 10109,
+      "sha256": "37b7f582af7785b07b9ef0c438132f6ace1f32b5920ef1beead9fab272e5effd"
+    },
+    {
+      "path": "db/001_schema.sql",
+      "bytes": 2988,
+      "sha256": "4e9c8cba7dfed660ff8534e841d8049acc6e569013e3869eea0344ba9e3fea70"
+    },
+    {
+      "path": "docs/BIDAssist_PH_v3_ORIGINAL.md",
+      "bytes": 59566,
+      "sha256": "a6b3a25df8d1d32094ab9eba73803f651fee6a880d18ec54c47f0317f5e0e789"
+    },
+    {
+      "path": "docs/BidAIssistPH_PDR_Build_Spec_v3.1.md",
+      "bytes": 63155,
+      "sha256": "fa2e953cae2beb0c7f1cebd3175491be05ccc7a554c3c0ecefc0cdb9d05c45d9"
+    },
+    {
+      "path": "docs/Mini_Project_14.3_Ship_Your_Own_RAG.pdf",
+      "bytes": 181142,
+      "sha256": "32b7f64327fdb9067093acaddd06834f7b4c8f7191f832ea8dace5d5775d83e3"
+    },
+    {
+      "path": "engineering/CORPUS_RELEASE_CHECKLIST.md",
+      "bytes": 937,
+      "sha256": "57ab81beffb4f123f90b5729d901b0c120011c72ed2997677ed094a34f8d2ee7"
+    },
+    {
+      "path": "engineering/ENGINEERING_HANDOFF.md",
+      "bytes": 2129,
+      "sha256": "5eb3412ac31564a83d519e591ee8147adfc6c7995406da302c43f2c9209c74a5"
+    },
+    {
+      "path": "evaluation/evaluation.template.csv",
+      "bytes": 245,
+      "sha256": "d197f59eec83b093c424c0024b019b429eda52a285ff97d589481ac352a7cdf2"
+    },
+    {
+      "path": "lib/evidence-policy.ts",
+      "bytes": 3151,
+      "sha256": "8bc52c2ec8485279cd4a8dfa6d7414703be5a2ee48f8518f9e021a0e5d2553c0"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1187,
+      "sha256": "de259e945bd14ee906f886155952fee769376a9b5898fe0264514e71a5fd1805"
+    },
+    {
+      "path": "scripts/approve-sources.mjs",
+      "bytes": 1707,
+      "sha256": "98b8d6e17f7a30b213a337d8ee17770ab43ac94772ac02ad8680f70d1c2a7edf"
+    },
+    {
+      "path": "scripts/download-corpus.mjs",
+      "bytes": 4959,
+      "sha256": "0958df689b995af52cd24793f557a4f00b56a692109286902c32d697c915b096"
+    },
+    {
+      "path": "scripts/validate-corpus.mjs",
+      "bytes": 3504,
+      "sha256": "cbe26fcd00f391a06f5bbd8acb389b8f8669876aa2ef6ee580bce3186e71a3fc"
+    },
+    {
+      "path": "storage/logs/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "storage/processed/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "storage/raw/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

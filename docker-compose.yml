@@ -1,0 +1,17 @@
+# Postgres + pgvector for BidAIssistPH. Bound to localhost only; the app is the only client.
+# On this server the container was created with `docker run`; this file documents the same setup
+# for a fresh machine: POSTGRES_PASSWORD=... docker compose up -d
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: bidaissist-pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bidaissist
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - bidaissist-pgdata:/var/lib/postgresql/data
+volumes:
+  bidaissist-pgdata:
