@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      # Manifest integrity: statuses, replacement links, default-pool rule. The lockfile is checked when present.
+      - run: node scripts/validate-corpus.mjs --manifest-only
+      - run: npm run build
+        env:
+          DATABASE_URL: postgres://build:build@localhost:5432/build
