@@ -1,0 +1,51 @@
+id,question,category,difficulty,scope,expected_documents,expected_sections,expected_status,should_abstain,expected_answer,verified_by,verified_at,ground_truth_status,notes
+Q01,What is RA 12009?,direct,easy,all,RA12009,Sec. 1,CURRENT,false,,,,PENDING,
+Q02,When did the IRR of RA 12009 take effect?,direct,easy,all,RA12009-IRR-2025;GPPB-ADV-09-2026,Sec. 117,CURRENT,false,,,,PENDING,Dates in manifest A6.2; confirm against the IRR PDF and Adv. 09-2026
+Q03,What is HB 07917?,direct,easy,all,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: no official House record in corpus (open item H1 #1). Until then the system must abstain.
+Q04,Who is covered by RA 12009?,direct,easy,all,RA12009;RA12009-IRR-2025,Sec. 4,CURRENT,false,,,,PENDING,
+Q05,What resolution approved the IRR of RA 12009?,direct,easy,all,GPPB-RES-02-2025;GPPB-ADV-09-2026,,CURRENT,false,,,,PENDING,
+Q06,What are the governing principles of government procurement under the NGPA?,provisions,easy,all,RA12009;RA12009-IRR-2025,Sec. 3,CURRENT,false,,,,PENDING,
+Q07,What is market scoping under the IRR?,provisions,medium,all,RA12009-IRR-2025;RA12009,Sec. 10,CURRENT,false,,,,PENDING,
+Q08,What are the modes of procurement under RA 12009?,provisions,easy,all,RA12009;RA12009-IRR-2025,Sec. 26,CURRENT,false,,,,PENDING,
+Q09,What is the Procurement Mode Selection Decision Tree?,provisions,medium,all,GPPB-RES-12-2025,,CURRENT,false,,,,PENDING,Res. 12-2025 is mostly scanned; answers rely on OCR text
+Q10,Is splitting of government contracts allowed?,provisions,easy,all,RA12009;RA12009-IRR-2025,Sec. 39,CURRENT,false,,,,PENDING,
+Q11,What law governed government procurement before RA 12009?,historical,easy,all,RA12009;GPPB-RES-05-2025;RA9184-IRR-2016,Sec. 115;Sec. 113,HISTORICAL,false,,,,PENDING,RA 9184 statute PDF not in corpus (open item H1 #6)
+Q12,What changed from RA 9184 to RA 12009?,historical,hard,all,RA12009;RA9184-IRR-2016,,CURRENT,false,,,,PENDING,Comparative matrix not in corpus (open item H1 #5); ground truth must be limited to what the retrieved sections state
+Q13,What does the transitory provision of RA 12009 say about ongoing procurement?,historical,medium,all,RA12009;GPPB-RES-05-2025,Sec. 113,CURRENT,false,,,,PENDING,
+Q14,How does Circular No. 01-2025 reconcile the transitory provision with the repealing clause?,historical,hard,all,GPPB-RES-05-2025,Sec. 113;Sec. 115,CURRENT,false,,,,PENDING,Date conflict on GPPB site (open item H1 #3); take dates from the PDF
+Q15,When did the new standard forms become mandatory?,historical,medium,all,GPPB-RES-03-2025,,CURRENT,false,,,,PENDING,Mandatory date 21 Sep 2025 is from a secondary source; confirm in the Res. 03-2025 PDF (open item H1 #2)
+Q16,Which IRR of RA 12009 is authoritative?,version,medium,all,GPPB-ADV-09-2026;RA12009-IRR-2025,,CURRENT,false,,,,PENDING,
+Q17,Was the IRR 1st Edition as of 31 March 2026 withdrawn?,version,easy,all,GPPB-ADV-09-2026;RA12009-IRR-2026-03-31-WITHDRAWN,,WITHDRAWN,false,,,,PENDING,
+Q18,When was the March 2026 IRR edition withdrawn?,version,easy,all,GPPB-ADV-09-2026,,WITHDRAWN,false,,,,PENDING,
+Q19,What should I cite instead of the March 2026 IRR?,version,medium,all,GPPB-ADV-09-2026;RA12009-IRR-2025,,CURRENT,false,,,,PENDING,
+Q20,Should we still use the March 31 2026 IRR?,version,medium,versions,GPPB-ADV-09-2026;RA12009-IRR-2026-03-31-WITHDRAWN,,WITHDRAWN,false,,,,PENDING,
+Q21,What does GPPB Resolution No. 03-2025 approve?,issuances,easy,issuances,GPPB-RES-03-2025,,CURRENT,false,,,,PENDING,
+Q22,What does Resolution No. 09-2025 say about PhilGEPS 1.5?,issuances,easy,issuances,GPPB-RES-09-2025,,CURRENT,false,,,,PENDING,
+Q23,What are the updated guidelines on the PhilGEPS eMarketplace?,issuances,medium,issuances,GPPB-RES-10-2025,,CURRENT,false,,,,PENDING,
+Q24,What is the Beneficial Ownership Information Registry?,issuances,medium,issuances,GPPB-RES-11-2025,,CURRENT,false,,,,PENDING,
+Q25,What are the guidelines for Sagip Saka procurement?,issuances,medium,issuances,GPPB-RES-08-2025,,CURRENT,false,,,,PENDING,
+Q26,What does HB 07917 propose?,legislative,medium,bills,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: no official bill text in corpus (open item H1 #1)
+Q27,When was HB 07917 filed?,legislative,easy,bills,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: filing date known only from a news article
+Q28,What is the recorded status of HB 07917?,legislative,hard,bills,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: post-filing status unverified (open item H1 #1)
+Q29,Has HB 07917 been enacted?,legislative,medium,bills,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: open item H1 #1
+Q30,Is HB 7917 already law?,legislative,medium,all,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: open item H1 #1. Alias test (HB 7917 = HB 07917) is covered by unit tests
+Q31,What documents do I need for negotiated procurement?,new-2026,medium,all,GPPB-RES-10-2026,,CURRENT,false,,,,PENDING,Circular No. 06-2026
+Q32,What are the guidelines on direct procurement for science technology and innovation?,new-2026,medium,all,GPPB-RES-04-2026;RA12009-IRR-2025,Sec. 37,CURRENT,false,,,,PENDING,Circular No. 01-2026
+Q33,What are the current rules on tie-breaking?,new-2026,medium,all,GPPB-RES-08-2026,,CURRENT,false,,,,PENDING,Circular No. 04-2026; file name says prefinal (open item)
+Q34,What are the framework agreement guidelines?,new-2026,medium,all,GPPB-RES-12-2026,,CURRENT,false,,,,PENDING,Must rank above Res. 27-2019
+Q35,What rules apply to procurement during the 2026 BSKE election period?,new-2026,medium,all,GPPB-RES-20-2026,,CURRENT,false,,,,PENDING,Time-bound issuance
+Q36,What are the guidelines for disaster-related procurement?,new-2026,medium,all,GPPB-RES-17-2026,,CURRENT,false,,,,PENDING,Circular No. 08-2026
+Q37,Can direct acquisition be used for customized goods?,opinions,medium,opinions,GPPB-NPM-019-2026;GPPB-NPM-004-2026,,REFERENCE,false,,,,PENDING,Answer must be phrased as an opinion
+Q38,What are the grounds for post-disqualification?,opinions,medium,opinions,GPPB-NPM-032-2026,Sec. 63,REFERENCE,false,,,,PENDING,Answer must be phrased as an opinion
+Q39,Are the Generic Procurement Manuals current?,opinions,hard,all,GPPB-GPM-2017,,HISTORICAL,false,,,,PENDING,Manuals are RA 9184-era
+Q40,What documents are required for eligibility in negotiated procurement according to the TSO?,opinions,medium,opinions,GPPB-NPM-025-2026,,REFERENCE,false,,,,PENDING,
+A01,Is the March 2026 IRR the current IRR?,adversarial,hard,all,GPPB-ADV-09-2026;RA12009-IRR-2025,,WITHDRAWN,false,,,,PENDING,Must not present the withdrawn edition as current
+A02,HB 07917 passed the House so it is already law right?,adversarial,hard,all,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: open item H1 #1
+A03,What does RA 9184 require under the NGPA?,adversarial,hard,all,RA12009;GPPB-RES-05-2025,Sec. 113;Sec. 115,CURRENT,false,,,,PENDING,False premise: RA 9184 is not part of the NGPA
+A04,Does Resolution No. 27-2019 still govern framework agreements?,adversarial,hard,all,GPPB-RES-12-2026;GPPB-RES-27-2019,,CURRENT,false,,,,PENDING,Must name Res. 12-2026 as current
+A05,What procurement timeline does the Generic Procurement Manual require today?,adversarial,hard,all,GPPB-GPM-2017,,HISTORICAL,false,,,,PENDING,Must label the manual historical
+A06,Is an NPM opinion official GPPB policy?,adversarial,hard,all,,,REFERENCE,false,,,,PENDING,Must distinguish TSO opinion from Board policy; expected documents to be set by the reviewer
+A07,What is the status of HB 7917 versus HB 07917?,adversarial,medium,all,HB07917,,PROPOSED,false,,,,EXCLUDED,Blocked: open item H1 #1
+A08,What procurement law will Congress pass next year?,adversarial,easy,all,,,,true,,,,PENDING,No prediction; must abstain
+A09,What is the penalty for bidding while wearing a red shirt?,adversarial,easy,all,,,,true,,,,PENDING,Invented offence; must abstain
+A10,What did the Supreme Court rule about RA 12009 in 2027?,adversarial,easy,all,,,,true,,,,PENDING,Outside the corpus and the corpus date; must abstain

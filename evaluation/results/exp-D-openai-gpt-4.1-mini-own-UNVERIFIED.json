@@ -1,0 +1,5782 @@
+{
+ "experiment": "exp-D-openai-gpt-4.1-mini-own-UNVERIFIED",
+ "status": "complete",
+ "startedAt": "2026-10-09T10:28:40.367Z",
+ "generated_at": "2026-10-09T10:32:24.840Z",
+ "progress": {
+  "done": 42,
+  "total": 42
+ },
+ "metadata": {
+  "corpus": "2026-09-28",
+  "scope": "own",
+  "provider": "openai",
+  "model": "gpt-4.1-mini",
+  "embedding": "text-embedding-3-small",
+  "exp": "D",
+  "toolCallMode": "model",
+  "evidence": {
+   "topK": 6,
+   "max": 8,
+   "passageChars": 0
+  },
+  "guard": "on",
+  "groundTruth": "UNVERIFIED \u2014 development run",
+  "retrievalOnly": false,
+  "judge": "gpt-4.1",
+  "rowsInSet": {
+   "VERIFIED": 0,
+   "PENDING": 42,
+   "EXCLUDED": 8
+  }
+ },
+ "summary": {
+  "hit_at_5": {
+   "n": 38,
+   "mean": 0.9473684210526315,
+   "target": 0.85
+  },
+  "section_hit": {
+   "n": 13,
+   "mean": 0.9230769230769231,
+   "target": 0.75
+  },
+  "version_accuracy": {
+   "n": 42,
+   "mean": 1,
+   "target": 0.95
+  },
+  "framework_accuracy": {
+   "n": 37,
+   "mean": 0.972972972972973,
+   "target": 0.95
+  },
+  "status_accuracy": {
+   "n": 38,
+   "mean": 0.868421052631579,
+   "target": 0.95
+  },
+  "abstention": {
+   "n": 42,
+   "mean": 0.9761904761904762,
+   "target": 1
+  },
+  "tool_called": {
+   "n": 42,
+   "mean": 1,
+   "target": 1
+  },
+  "citation_validity": {
+   "n": 38,
+   "mean": 1,
+   "target": 1
+  },
+  "statements_supported": {
+   "n": 39,
+   "mean": 0.8434849338695494,
+   "target": null
+  },
+  "groundedness": {
+   "n": 38,
+   "mean": 0.8897098515519568,
+   "target": 0.9
+  },
+  "citation_support": {
+   "n": 38,
+   "mean": 0.875,
+   "target": 0.9
+  }
+ },
+ "false_abstain_rate": 0.02564102564102564,
+ "first_word_p50_ms": 3277,
+ "latency_p50_ms": 4081,
+ "latency_p95_ms": 6196,
+ "errors": 0,
+ "guard": {
+  "statementsDrafted": 203,
+  "statementsShown": 162,
+  "statementsRemoved": 36,
+  "citationsCorrected": 96
+ },
+ "rows": [
+  {
+   "id": "Q01",
+   "question": "What is RA 12009?",
+   "category": "direct",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009"
+   ],
+   "abstained": false,
+   "answer": "RA 12009 is the \"New Government Procurement Act\" which revises Republic Act No. 9184, also known as the \"Government Procurement Reform Act [E1].\" It was approved on 20 July 2024 and took effect on 13 August 2024 [E1][E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 1",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "| Final Provisions",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 0.3333333333333333,
+     "comment": "It was approved on 20 July 2024 | took effect on 13 August 2024"
+    },
+    {
+     "key": "citation_support",
+     "score": 0.5,
+     "comment": "It was approved on 20 July 2024 and took effect on 13 August 2024 [E1][E2]."
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 10534,
+   "latencyMs": 10788,
+   "error": null
+  },
+  {
+   "id": "Q02",
+   "question": "When did the IRR of RA 12009 take effect?",
+   "category": "direct",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009-IRR-2025",
+    "GPPB-ADV-09-2026"
+   ],
+   "abstained": false,
+   "answer": "The IRR of RA 12009 takes effect fifteen (15) calendar days after its publication in the Official Gazette or in two newspapers of general nationwide circulation and upon filing with the University of the Philippines Law Center of three certified copies of the IRR [E1]. It was approved on 4 February 2025, published on 10 February 2025, and thus took effect on 25 February 2025 [E1], [E3].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 117",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 117",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 0.25,
+     "comment": "It was approved on 4 February 2025 | published on 10 February 2025 | and thus took effect on 25 February 2025"
+    },
+    {
+     "key": "citation_support",
+     "score": 0.5,
+     "comment": "It was approved on 4 February 2025, published on 10 February 2025, and thus took effect on 25 February 2025"
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 5179,
+   "latencyMs": 5470,
+   "error": null
+  },
+  {
+   "id": "Q04",
+   "question": "Who is covered by RA 12009?",
+   "category": "direct",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": true,
+   "answer": "I couldn't verify that from the available procurement documents.",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "| Final Provisions",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "H Responsible for Any Damage or Construction of Works Except I",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 0
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": null,
+     "comment": "not applicable"
+    },
+    {
+     "key": "status_accuracy",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "abstention",
+     "score": 0,
+     "comment": "false abstention"
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "statements_supported",
+     "score": null,
+     "comment": "no statements drafted"
+    },
+    {
+     "key": "groundedness",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "citation_support",
+     "score": null,
+     "comment": "abstained"
+    }
+   ],
+   "guard": {
+    "checked": 0,
+    "shown": 0,
+    "removed": 0,
+    "recited": 0,
+    "removedText": []
+   },
+   "firstTokenMs": 2695,
+   "latencyMs": 2696,
+   "error": null
+  },
+  {
+   "id": "Q05",
+   "question": "What resolution approved the IRR of RA 12009?",
+   "category": "direct",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-02-2025",
+    "GPPB-ADV-09-2026"
+   ],
+   "abstained": false,
+   "answer": "The Implementing Rules and Regulations (IRR) of Republic Act No. 12009 were approved by the Government Procurement Policy Board (GPPB) through Resolution No. 02-2025 dated 4 February 2025 [E4].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 110",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 108",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 1,
+    "shown": 1,
+    "removed": 0,
+    "recited": 0,
+    "removedText": []
+   },
+   "firstTokenMs": 2943,
+   "latencyMs": 2944,
+   "error": null
+  },
+  {
+   "id": "Q06",
+   "question": "What are the governing principles of government procurement under the NGPA?",
+   "category": "provisions",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": false,
+   "answer": "The governing principles of government procurement under the New Government Procurement Act (NGPA) are: [E1]\n\na) Transparency - providing access to all related information consistent with open contracting practices to foster public trust [E4].\nb) Competitiveness - ensuring equal opportunity for all eligible and qualified suppliers, manufacturers, distributors, contractors, consultants, and service providers [E1].\nc) Efficiency - implementing an organized, uniform, and straightforward procurement process using emerging technologies and innovative solutions [E1].\nd) Proportionality - ensuring conditions and parameters in procurement are reasonably proportional to the needs and circumstances of the Procuring Entity and the nature, scale, and complexity of the project [E4].\ne) Accountability - public officials and personnel take responsibility for their actions and are held accountable when warranted [E4].\nf) Participatory procurement - public monitoring of the procurement process and contract implementation to ensure compliance and prudent use of resources [E4].\ng) Sustainability - covering the whole lifecycle of a property, ensuring value for money, maximum benefits to society and the economy, and minimal environmental impact [E1].\nh) Professionalism - development of qualification standards, competency and certification frameworks, and a code of ethics for procurement professionals [E1], [E4], [E5].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 3",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 36",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 34",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 3",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 3",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-04-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 9,
+    "shown": 8,
+    "removed": 0,
+    "recited": 8,
+    "removedText": []
+   },
+   "firstTokenMs": 3150,
+   "latencyMs": 4471,
+   "error": null
+  },
+  {
+   "id": "Q07",
+   "question": "What is market scoping under the IRR?",
+   "category": "provisions",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009-IRR-2025",
+    "RA12009"
+   ],
+   "abstained": false,
+   "answer": "Market scoping under the IRR of RA 12009 is a preliminary undertaking conducted by the Procuring Entity, through the End-User or Implementing Unit, to ensure proper and strategic procurement planning in preparing its Project Procurement Management Plan (PPMP) [E1]. It covers proper cost estimation, project design and specifications, technical and selection criteria, delivery lead time, storage or warehousing requirements, related industry practices, and other relevant market information [E1][E2][E4].\n\nMarket scoping may include activities such as consultations with suppliers, participation in summits or conferences, evaluation of market reviews, review of brochures and marketing materials, price sourcing for quotations, use of relevant data from PhilGEPS or agency websites, or any analogous activity for gathering relevant market information [E1][E2][E4].\n\nThe purpose of market scoping is to collect relevant market information to understand the supply environment, identify potential suppliers, evaluate available products or services, and assess market trends to develop a comprehensive and realistic PPMP [E1]. It ensures the Procuring Entity understands market conditions, supplier capabilities, pricing trends, and potential risks affecting procurement decisions, observing the principle of proportionality [E1][E2].\n\nKey parameters considered in market scoping include proper cost estimates, project design and specifications aligned with standards, technical criteria for bid evaluation, delivery lead time, and storage or warehousing requirements [E1][E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 10",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 10",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 10",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 2",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 73",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 6,
+    "shown": 6,
+    "removed": 0,
+    "recited": 2,
+    "removedText": []
+   },
+   "firstTokenMs": 3150,
+   "latencyMs": 4664,
+   "error": null
+  },
+  {
+   "id": "Q08",
+   "question": "What are the modes of procurement under RA 12009?",
+   "category": "provisions",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": false,
+   "answer": "The modes of procurement under RA 12009 are: [E1]\n\na) Competitive Bidding;  \nb) Limited Source Bidding; [E1]\nc) Competitive Dialogue;  \nd) Unsolicited Offer with Bid Matching; [E1]\ne) Direct Contracting;  \nf) Direct Acquisition;  \ng) Repeat Order;  \nh) Small Value Procurement; [E1]\ni) Negotiated Procurement;  \nj) Direct Sales; and  \nk) Direct Procurement for Science, Technology and Innovation [E1].\n\nThese modes are adopted consistent with the fit-for-purpose procurement approach, and detailed procedures for each mode are provided in the IRR and manuals issued by the GPPB [E1], [E6].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 26",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 27. Competitive Bidding. \u2014 a Mode of Procurement",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 38",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 26",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 0.8,
+     "comment": "detailed procedures for each mode are provided in the IRR and manuals issued by the GPPB"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 6,
+    "shown": 5,
+    "removed": 0,
+    "recited": 5,
+    "removedText": []
+   },
+   "firstTokenMs": 3500,
+   "latencyMs": 4251,
+   "error": null
+  },
+  {
+   "id": "Q09",
+   "question": "What is the Procurement Mode Selection Decision Tree?",
+   "category": "provisions",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-12-2025"
+   ],
+   "abstained": false,
+   "answer": "The decision tree was approved by the GPPB through Resolution No. 12-2025 on 25 November 2025 and is adopted as an annex to the Implementing Rules and Regulations (IRR) of RA No. 12009 [E1]. The GPPB-Technical Support Office (TSO) is tasked to develop a digital interactive version and a user guide for easier stakeholder use [E1].\n\nIn summary:\n- Developed and approved by the GPPB under RA 12009 [E1].\n- Considers project nature, market, urgency, and risks [E1].\n- Includes a digital interactive version and user guide [E1].\n- Serves as a guide, not a final determination [E1].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-12-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 26",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-GPM-2017",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "LGU Manual",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-GPM-2017",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "Volume 1",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.5454545454545454,
+     "comment": "name-not-in-source (PE): The Procurement Mode Selection Decision Tree is a guide developed by the Government Procurement Policy Board (GPPB) to assist Procuring Entities (PEs) in select | depends-on-removed (it refers to a statement that was removed): It is based on factors such as the nature and complexity of the project, market conditions, urgency, and risks to ensure value for money."
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 11,
+    "shown": 6,
+    "removed": 5,
+    "recited": 6,
+    "removedText": [
+     "name-not-in-source (PE): The Procurement Mode Selection Decision Tree is a guide developed by the Government Procurement Policy Board (GPPB) to assist Procuring Entities (PEs) in select",
+     "depends-on-removed (it refers to a statement that was removed): It is based on factors such as the nature and complexity of the project, market conditions, urgency, and risks to ensure value for money.",
+     "name-not-in-source (PE): The tool serves only as a guide and does not constitute a definitive determination of the procurement mode; PEs must validate the recommended modes consistent w",
+     "depends-on-removed (it refers to a statement that was removed): It is a decision tree to guide the selection of procurement mode.",
+     "wording-not-in-source (25% of its wording is in the source): Emphasizes validation by Procuring Entities [E1]."
+    ]
+   },
+   "firstTokenMs": 4129,
+   "latencyMs": 4729,
+   "error": null
+  },
+  {
+   "id": "Q10",
+   "question": "Is splitting of government contracts allowed?",
+   "category": "provisions",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": false,
+   "answer": "Splitting of government contracts is not allowed [E1]. Procuring Entities must ensure that contracts are not divided into smaller quantities or artificial phases to evade or circumvent the requirements of the procurement law and its IRR [E1]. However, procurement per unit, by lot, or package is allowed based on budget, quantity, availability, delivery sites, location, and market capacity [E1]. For infrastructure projects implemented in phases, each phase must have a clear, usable, and structurally sound delineation of work according to detailed engineering design [E1], [E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 39",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 39",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 36",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 3",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-NPM-001-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 7",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 4,
+    "shown": 4,
+    "removed": 0,
+    "recited": 3,
+    "removedText": []
+   },
+   "firstTokenMs": 2782,
+   "latencyMs": 3428,
+   "error": null
+  },
+  {
+   "id": "Q11",
+   "question": "What law governed government procurement before RA 12009?",
+   "category": "historical",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "GPPB-RES-05-2025",
+    "RA9184-IRR-2016"
+   ],
+   "abstained": false,
+   "answer": "The law that governed government procurement before RA 12009 was Republic Act No. 9184, also known as the \"Government Procurement Reform Act [E5].\" RA 12009, the \"New Government Procurement Act,\" took effect on 13 August 2024, replacing RA 9184 as the current governing law for government procurement [E6].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 1",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 3",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-NPM-001-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-NPM-016-2026",
+     "status": "REFERENCE",
+     "framework": "BOTH",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 0,
+     "comment": "E5: opinion not attributed"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 3438,
+   "latencyMs": 3691,
+   "error": null
+  },
+  {
+   "id": "Q12",
+   "question": "What changed from RA 9184 to RA 12009?",
+   "category": "historical",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "RA9184-IRR-2016"
+   ],
+   "abstained": false,
+   "answer": "\nKey points about the transition include: [E6]\n- RA 12009 expressly repealed RA 9184 and its IRR but includes a three-year transitory period starting from the approval of new Standard Procurement Forms on 14 May 2025 to allow continuity and stability in procurement operations during the transition [E6].\n\nIn summary, RA 12009 replaces RA 9184 with a revised and updated procurement law, including a transition period to fully comply with the new requirements [E2], [E6].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA9184",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 1,
+     "label": "HISTORICAL_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA9184",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 1,
+     "label": "HISTORICAL_ONLY",
+     "section": "Sec. 76",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 117",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 1",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.42857142857142855,
+     "comment": "name-not-in-source (Republic Act No. 12009): Republic Act No. 12009, known as the \"New Government Procurement Act,\" revises Republic Act No. 9184, the \"Government Procurement Reform Act.\" | wording-not-in-source (33% of its wording is in the source): RA 12009 repeals RA 9184 and its Implementing Rules and Regulations (IRR), establishing a new procurement framework that took effect on 13 August 2024 [E2], [E4"
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 7,
+    "shown": 2,
+    "removed": 4,
+    "recited": 1,
+    "removedText": [
+     "name-not-in-source (Republic Act No. 12009): Republic Act No. 12009, known as the \"New Government Procurement Act,\" revises Republic Act No. 9184, the \"Government Procurement Reform Act.\"",
+     "wording-not-in-source (33% of its wording is in the source): RA 12009 repeals RA 9184 and its Implementing Rules and Regulations (IRR), establishing a new procurement framework that took effect on 13 August 2024 [E2], [E4",
+     "wording-not-in-source (38% of its wording is in the source): RA 12009 consolidates and updates the procurement law to modernize and regulate government procurement activities further [E2].",
+     "number-not-in-source (RA12009): RA 9184 was the law governing procurement since 2003 but is now historical and replaced by RA 12009 [E1], [E3]."
+    ]
+   },
+   "firstTokenMs": 3305,
+   "latencyMs": 4026,
+   "error": null
+  },
+  {
+   "id": "Q13",
+   "question": "What does the transitory provision of RA 12009 say about ongoing procurement?",
+   "category": "historical",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "GPPB-RES-05-2025"
+   ],
+   "abstained": false,
+   "answer": "The transitory provision of RA 12009, specifically Section 113, allows the continued use of RA No. 9184 and its IRR prior to the effectivity of the IRR of RA No. 12009 to ensure the continued implementation of programs, activities, and projects [E5]. It establishes a three-year transitory period from the approval of the new Standard Procurement Forms for full compliance with RA No. 12009 and its IRR [E4]. This means ongoing procurements can still follow RA No. 9184 rules during this transition to maintain continuity and stability in procurement operations [E4], [E5], [E6]. The transitory period started on 14 May 2025, when the GPPB approved the new Standard Procurement Forms [E5], [E6].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 18",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "The Contractor. |",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 1",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 4,
+    "shown": 4,
+    "removed": 0,
+    "recited": 2,
+    "removedText": []
+   },
+   "firstTokenMs": 3366,
+   "latencyMs": 4081,
+   "error": null
+  },
+  {
+   "id": "Q14",
+   "question": "How does Circular No. 01-2025 reconcile the transitory provision with the repealing clause?",
+   "category": "historical",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-05-2025"
+   ],
+   "abstained": false,
+   "answer": "Circular No. 01-2025 reconciles the transitory provision in Section 113 with the repealing clause in Section 115 of RA No. 12009 by explaining that although RA No. 12009 expressly repealed RA No. 9184 and its IRR, the inclusion of the transitory provision reflects the legislative intent to maintain continuity and stability in procurement operations during the transition to the new procurement framework [E1]. Section 113 authorizes the use of RA No. 9184 and its IRR prior to the effectivity of the IRR of RA No. 12009 to ensure continued implementation of programs, activities, and projects [E1]. It also establishes a three-year transitory period from the approval of the new Standard Procurement Forms to fully comply with RA No. 12009 and its IRR [E1]. Thus, despite the repeal, RA No. 9184 remains applicable during this transition period to avoid disruption, and the transitory period started on 14 May 2025, the date the new Standard Procurement Forms were approved [E1], [E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Circular No. 01-2025",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA9184",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 1,
+     "label": "HISTORICAL_ONLY",
+     "section": "Sec. 76",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-27-2019",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 3,
+     "label": "HISTORICAL_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-NPM-001-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 4,
+    "shown": 4,
+    "removed": 0,
+    "recited": 3,
+    "removedText": []
+   },
+   "firstTokenMs": 3277,
+   "latencyMs": 4024,
+   "error": null
+  },
+  {
+   "id": "Q15",
+   "question": "When did the new standard forms become mandatory?",
+   "category": "historical",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-03-2025"
+   ],
+   "abstained": false,
+   "answer": "The new standard forms for procurement under RA 12009 became mandatory ninety (90) days after their publication on 23 June 2025, which is on 21 September 2025 [E1], [E5]. The GPPB approved these forms on 14 May 2025, and the three-year transitory period for full compliance with RA 12009 started from that approval date [E1], [E5].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 112",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 6",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 112",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 6",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 0,
+    "removedText": []
+   },
+   "firstTokenMs": 3262,
+   "latencyMs": 3544,
+   "error": null
+  },
+  {
+   "id": "Q16",
+   "question": "Which IRR of RA 12009 is authoritative?",
+   "category": "version",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-ADV-09-2026",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": false,
+   "answer": "The authoritative Implementing Rules and Regulations (IRR) of RA 12009 is the one approved via GPPB Resolution No. 02-2025 [E1] [E3] [E4]. It was approved on 4 February 2025, published on 10 February 2025, and took effect on 25 February 2025 [E1] [E3] [E4]. This IRR is the current and official set of rules for the implementation of RA 12009, the New Government Procurement Act [E1], [E3], [E4].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 117",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 108",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 1",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 0.6666666666666666,
+     "comment": "published on 10 February 2025 | took effect on 25 February 2025"
+    },
+    {
+     "key": "citation_support",
+     "score": 0.5,
+     "comment": "It was approved on 4 February 2025, published on 10 February 2025, and took effect on 25 February 2025 [E1] | It was approved on 4 February 2025, published on 10 February 2025, and took effect on 25 February 2025 [E3] | It was approved on 4 February 2025, published on 10 February 2025, and took effect on 25 February 2025 [E4]"
+    }
+   ],
+   "guard": {
+    "checked": 3,
+    "shown": 3,
+    "removed": 0,
+    "recited": 0,
+    "removedText": []
+   },
+   "firstTokenMs": 3311,
+   "latencyMs": 3312,
+   "error": null
+  },
+  {
+   "id": "Q17",
+   "question": "Was the IRR 1st Edition as of 31 March 2026 withdrawn?",
+   "category": "version",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-ADV-09-2026",
+    "RA12009-IRR-2026-03-31-WITHDRAWN"
+   ],
+   "abstained": false,
+   "answer": "Yes, the IRR of RA 12009 (1st Edition, as of 31 March 2026) was withdrawn on 31 July 2026 by GPPB-TSO Public Advisory No. 09-2026 [E2]. It should no longer be used as reference, and the official IRR to use is the one approved by GPPB Resolution No. 02-2025, effective 25 February 2025 [E1], [E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2026-03-31-WITHDRAWN",
+     "status": "WITHDRAWN",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "VERSION_ONLY",
+     "section": "Sec. 117",
+     "companion": true
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-ADV-09-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Sec. 4",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 55",
+     "companion": false
+    },
+    {
+     "n": 7,
+     "documentId": "GPPB-RES-20-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 3441,
+   "latencyMs": 3756,
+   "error": null
+  },
+  {
+   "id": "Q18",
+   "question": "When was the March 2026 IRR edition withdrawn?",
+   "category": "version",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-ADV-09-2026"
+   ],
+   "abstained": false,
+   "answer": "The March 2026 IRR edition of RA 12009 was withdrawn on 31 July 2026 by GPPB-TSO Public Advisory No. 09-2026 [E2]. After this date, it should no longer be used as reference, and the IRR approved by GPPB Resolution No. 02-2025 dated 4 February 2025 should be used instead [E1], [E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2026-03-31-WITHDRAWN",
+     "status": "WITHDRAWN",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "VERSION_ONLY",
+     "section": "Sec. 117",
+     "companion": true
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-ADV-09-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 4",
+     "companion": false
+    },
+    {
+     "n": 7,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Sec. 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 3356,
+   "latencyMs": 3738,
+   "error": null
+  },
+  {
+   "id": "Q19",
+   "question": "What should I cite instead of the March 2026 IRR?",
+   "category": "version",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-ADV-09-2026",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": false,
+   "answer": "You should cite the Implementing Rules and Regulations (IRR) of Republic Act No. 12009 approved by the Government Procurement Policy Board (GPPB) through Resolution No. 02-2025 dated 4 February 2025, published in the Official Gazette on 10 February 2025, and effective 25 February 2025, instead of the March 2026 IRR [E8]. The March 2026 IRR (1st Edition) was withdrawn by GPPB-TSO Public Advisory No. 09-2026 on 31 July 2026 and should no longer be used as reference [E1], [E2], [E8].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2026-03-31-WITHDRAWN",
+     "status": "WITHDRAWN",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "VERSION_ONLY",
+     "section": "Sec. 117",
+     "companion": true
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-20-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 69",
+     "companion": false
+    },
+    {
+     "n": 7,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    },
+    {
+     "n": 8,
+     "documentId": "GPPB-ADV-09-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": true
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 0,
+     "comment": "top 5: RA12009-IRR-2026-03-31-WITHDRAWN, GPPB-RES-02-2025, GPPB-RES-05-2025, GPPB-RES-05-2025, GPPB-RES-20-2026"
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 4085,
+   "latencyMs": 4927,
+   "error": null
+  },
+  {
+   "id": "Q20",
+   "question": "Should we still use the March 31 2026 IRR?",
+   "category": "version",
+   "ground_truth_status": "PENDING",
+   "scope": "versions",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-ADV-09-2026",
+    "RA12009-IRR-2026-03-31-WITHDRAWN"
+   ],
+   "abstained": false,
+   "answer": "No, the March 31, 2026 IRR of RA 12009 has been withdrawn and should no longer be used as reference [E1]. Instead, you should use and cite only the IRR of RA 12009 approved by the GPPB through Resolution No. 02-2025 dated 04 February 2025, which took effect on 25 February 2025 [E1], [E3], [E4].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2026-03-31-WITHDRAWN",
+     "status": "WITHDRAWN",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "VERSION_ONLY",
+     "section": "Sec. 113",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009-IRR-2026-03-31-WITHDRAWN",
+     "status": "WITHDRAWN",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "VERSION_ONLY",
+     "section": "Item 5",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009-IRR-2026-03-31-WITHDRAWN",
+     "status": "WITHDRAWN",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "VERSION_ONLY",
+     "section": "Sec. 117",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-ADV-09-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": true
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 0.75,
+     "comment": "\"approved by the GPPB through Resolution No. 02-2025 dated 04 February 2025\""
+    },
+    {
+     "key": "citation_support",
+     "score": 0.3333333333333333,
+     "comment": "No, the March 31, 2026 IRR of RA 12009 has been withdrawn and should no longer be used as reference [E1]. | Instead, you should use and cite only the IRR of RA 12009 approved by the GPPB through Resolution No. 02-2025 dated 04 February 2025, which took effect on 25 February 2025 [E1], [E3], [E4]. | Instead, you should use and cite only the IRR of RA 12009 approved by the GPPB through Resolution No. 02-2025 dated 04 February 2025, which took effect on 25 February 2025 [E1], [E3], [E4]."
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 3250,
+   "latencyMs": 3747,
+   "error": null
+  },
+  {
+   "id": "Q21",
+   "question": "What does GPPB Resolution No. 03-2025 approve?",
+   "category": "issuances",
+   "ground_truth_status": "PENDING",
+   "scope": "issuances",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-03-2025"
+   ],
+   "abstained": false,
+   "answer": "GPPB Resolution No. 03-2025 approves the Standard Forms for Procurement under RA 12009 [E1]. It adopts the Standard Forms as presented, sets their effectivity date at ninety (90) days from the date of their publication to allow sufficient time for training and effective implementation, and reckons the three-year transitory period for full compliance with RA No. 12009 from the date of approval of the Standard Forms by the GPPB [E1]. The resolution also directs further review of the forms and policy guidance regarding the transitory period and applicability of RA No. 9184 in relation to RA No. 12009 during this period [E1].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 3",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 3,
+    "shown": 3,
+    "removed": 0,
+    "recited": 2,
+    "removedText": []
+   },
+   "firstTokenMs": 2693,
+   "latencyMs": 3518,
+   "error": null
+  },
+  {
+   "id": "Q22",
+   "question": "What does Resolution No. 09-2025 say about PhilGEPS 1.5?",
+   "category": "issuances",
+   "ground_truth_status": "PENDING",
+   "scope": "issuances",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-09-2025"
+   ],
+   "abstained": false,
+   "answer": "GPPB Resolution No. 09-2025 approves the recommendation of the Procurement Service-Department of Budget and Management (PS-DBM) for the decommissioning of PhilGEPS 1.5 and the use of the modernized PhilGEPS (mPhilGEPS) based on a prescribed staggered implementation schedule [E1]. The resolution also notes that maintaining PhilGEPS 1.5 entails significant operational costs, while the mPhilGEPS is expected to bring greater efficiency and savings [E1]. The PS-DBM committed to training and partnerships to support the transition to mPhilGEPS [E1].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-09-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-10-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-11-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-10-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.6,
+     "comment": "name-not-in-source (PE): The resolution sets indicative milestones for the transition, including the last days for posting new procurement opportunities in PhilGEPS 1.5 by different gro | name-not-in-source (PE): After that date, PEs may only use PhilGEPS 1.5 to close or complete procurement activities and post awards and contracts for opportunities posted before the cut"
+    },
+    {
+     "key": "groundedness",
+     "score": 0.75,
+     "comment": "the mPhilGEPS is expected to bring greater efficiency and savings"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 5,
+    "shown": 3,
+    "removed": 2,
+    "recited": 2,
+    "removedText": [
+     "name-not-in-source (PE): The resolution sets indicative milestones for the transition, including the last days for posting new procurement opportunities in PhilGEPS 1.5 by different gro",
+     "name-not-in-source (PE): After that date, PEs may only use PhilGEPS 1.5 to close or complete procurement activities and post awards and contracts for opportunities posted before the cut"
+    ]
+   },
+   "firstTokenMs": 3527,
+   "latencyMs": 5226,
+   "error": null
+  },
+  {
+   "id": "Q23",
+   "question": "What are the updated guidelines on the PhilGEPS eMarketplace?",
+   "category": "issuances",
+   "ground_truth_status": "PENDING",
+   "scope": "issuances",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-10-2025"
+   ],
+   "abstained": false,
+   "answer": "The updated guidelines on the PhilGEPS eMarketplace are detailed in GPPB Resolution No. 10-2025 / Circular No. 03-2025 [E1].\nKey points include:\n\n- The Procurement Service - DBM (PS-DBM) regularly reviews and rationalizes the list of Common-Use Supplies and Equipment (CSE) to determine which goods or services are viable for the eMarketplace [E1]. The PS-DBM may add or delist items and must report modifications to the GPPB [E1], [E2].\n\n- For goods to be classified as CSE and offered in the eMarketplace, the PS-DBM publishes the list with classification and technical specifications [E1], [E2].\n\n- To evaluate merchants for onboarding, the PS-DBM requires submission of documents such as a Letter of Expression of Interest, valid PhilGEPS Platinum Registration, Statement of Single Largest Completed Contract, Omnibus Sworn Statement, Statement of Compliance with technical specs, financial proposal documents, and other relevant documents [E1], [E2].\n\n- Qualified merchants are allowed access to post CSE items with technical specs, prices, discounts, and offers as approved by PS-DBM [E1], [E2].\n\n- The PS-DBM conducts training for Procuring Entities on using the eMarketplace and establishes mechanisms to evaluate merchant performance, gather feedback, process warranties and returns, and delist goods if necessary [E1], [E2].\n\n- The PS-DBM ensures CSE are from reliable sources, of best quality, and at advantageous prices [E3].\n\n- Before inclusion in the eMarketplace, CSE must be used frequently by Procuring Entities, published in the Official Gazette or newspaper, and posted with complete technical specifications in the PhilGEPS Electronic Catalogue [E3].\n\n- The eMarketplace is part of the PhilGEPS system features designed to promote transparency, accountability, and efficiency in government procurement [E6].\n\nThese guidelines were approved on 25 September 2025 and published on 19 December 2025 [E1], [E2], [E3].\n\nIn summary, the updated PhilGEPS eMarketplace guidelines emphasize regular review of CSE, strict merchant onboarding requirements, training for users, and mechanisms for performance evaluation to ensure efficient and transparent procurement [E1], [E2], [E3], [E6].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-10-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-10-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-10-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 3",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-09-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-17-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 100",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 20",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.9230769230769231,
+     "comment": "name-not-in-source (SUC): The guidelines apply to all government branches and instrumentalities, including SUCs, GOCCs, GFIs, and LGUs."
+    },
+    {
+     "key": "groundedness",
+     "score": 0.8461538461538461,
+     "comment": "These guidelines were approved on 25 September 2025 and published on 19 December 2025"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 13,
+    "shown": 12,
+    "removed": 1,
+    "recited": 2,
+    "removedText": [
+     "name-not-in-source (SUC): The guidelines apply to all government branches and instrumentalities, including SUCs, GOCCs, GFIs, and LGUs."
+    ]
+   },
+   "firstTokenMs": 2544,
+   "latencyMs": 5827,
+   "error": null
+  },
+  {
+   "id": "Q24",
+   "question": "What is the Beneficial Ownership Information Registry?",
+   "category": "issuances",
+   "ground_truth_status": "PENDING",
+   "scope": "issuances",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-11-2025"
+   ],
+   "abstained": false,
+   "answer": "The Beneficial Ownership Information (BOI) Registry is an online registry maintained by the Government Procurement Policy Board (GPPB) through the PhilGEPS [E1]. It contains beneficial ownership information of bidders established for government procurement and is accessible to the public [E1].\n\nKey points:\n- The BOI Registry is published through PhilGEPS as the single portal for procurement-related information [E1].\n- It is implemented through coordination among various government agencies to ensure secure, efficient, and real-time data sharing [E1].\n- The registry protects trade secrets and promotes competition while ensuring transparency [E1].\n- Bidders must update their beneficial ownership information as necessary through the registry [E1], [E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-11-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 82",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-08-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 8",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-08-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 8",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 20",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.75,
+     "comment": "name-not-in-source (Securities and Exchange Commission): The BOI Registry is based on the supplier's submission to PhilGEPS, validated with information shared by the Securities and Exchange Commission (SEC), certified | depends-on-removed (it refers to a statement that was removed): This registry aims to enhance transparency in public procurement by safeguarding the government from acts that undermine a transparent, fair, and competitive pr"
+    },
+    {
+     "key": "groundedness",
+     "score": 0.8,
+     "comment": "Bidders must update their beneficial ownership information as necessary through the registry [E1], [E2]."
+    },
+    {
+     "key": "citation_support",
+     "score": 0.75,
+     "comment": "Bidders must update their beneficial ownership information as necessary through the registry [E1], [E2]."
+    }
+   ],
+   "guard": {
+    "checked": 8,
+    "shown": 6,
+    "removed": 2,
+    "recited": 5,
+    "removedText": [
+     "name-not-in-source (Securities and Exchange Commission): The BOI Registry is based on the supplier's submission to PhilGEPS, validated with information shared by the Securities and Exchange Commission (SEC), certified",
+     "depends-on-removed (it refers to a statement that was removed): This registry aims to enhance transparency in public procurement by safeguarding the government from acts that undermine a transparent, fair, and competitive pr"
+    ]
+   },
+   "firstTokenMs": 3571,
+   "latencyMs": 4857,
+   "error": null
+  },
+  {
+   "id": "Q25",
+   "question": "What are the guidelines for Sagip Saka procurement?",
+   "category": "issuances",
+   "ground_truth_status": "PENDING",
+   "scope": "issuances",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-08-2025"
+   ],
+   "abstained": false,
+   "answer": "The guidelines for Sagip Saka procurement are set forth in GPPB Resolution No. 08-2025 / Circular No. 02-2025, approved on 25 September 2025 [E1].\n\nKey points include:\n- The procurement supports farmers and fisherfolk enterprise development [E2].\n- The procurement must align with sustainable public procurement principles under RA No. 12009, promoting inclusive growth, social equity, and environmental sustainability [E2].\n- The guidelines form part of the IRR of RA No. 12009 and are monitored by the GPPB-Technical Support Office in coordination with the Department of Agriculture and other relevant bodies [E1], [E2], [E3].\n\nThese guidelines apply to all government branches and instrumentalities, including local government units and government-owned or controlled corporations [E1], [E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-08-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-08-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-08-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-04-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 3",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 3",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.625,
+     "comment": "name-not-in-source (Section 11 of Republic Act No. 11321): These guidelines implement Section 11 of Republic Act No. 11321 (Sagip Saka Act) and its IRR, which mandate that national and local government agencies shall di | depends-on-removed (it refers to a statement that was removed): Such procurement is exempt from the bidding process but must undergo negotiated procurement under the applicable guidelines of the Government Procurement Policy"
+    },
+    {
+     "key": "groundedness",
+     "score": 0.8,
+     "comment": "These guidelines apply to all government branches and instrumentalities, including local government units and government-owned or controlled corporations"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 8,
+    "shown": 5,
+    "removed": 3,
+    "recited": 3,
+    "removedText": [
+     "name-not-in-source (Section 11 of Republic Act No. 11321): These guidelines implement Section 11 of Republic Act No. 11321 (Sagip Saka Act) and its IRR, which mandate that national and local government agencies shall di",
+     "depends-on-removed (it refers to a statement that was removed): Such procurement is exempt from the bidding process but must undergo negotiated procurement under the applicable guidelines of the Government Procurement Policy",
+     "no-citation (the statement names no source): It is exempt from the usual bidding process but requires negotiated procurement."
+    ]
+   },
+   "firstTokenMs": 2772,
+   "latencyMs": 4253,
+   "error": null
+  },
+  {
+   "id": "Q31",
+   "question": "What documents do I need for negotiated procurement?",
+   "category": "new-2026",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-10-2026"
+   ],
+   "abstained": false,
+   "answer": "For negotiated procurement, the required documents generally include: [E1]\n\n1. PhilGEPS Organization ID or PhilGEPS Certificate of Registration (Platinum Membership) [E1].\n2. Mayor\u2019s Permit or Business Registration Permit (an expired permit with official receipt of renewal application is accepted, subject to submission of the valid permit after award but before payment) [E1].\n3. Professional License or Curriculum Vitae for consulting services in certain cases [E1].\n4. Net Financial Contracting Capacity (NFCC) or committed Line of Credit (LoC) in specific negotiated procurement cases [E1].\n5. Philippine Contractors Accreditation Board (PCAB) License for infrastructure projects [E1].\n7. Omnibus Sworn Statement [E1].\n\nThe Bids and Awards Committee (BAC) will specify in the Request for Quotation (RFQ) or Request for Proposal (RFP) when these documents should be submitted, whether at submission of offers, evaluation, or before issuance of Notice of Award [E1]. Procuring Entities (PEs) that already have updated files of these documents may not require resubmission [E1][E2].\n\nAdditional notes:\n- The PE must ensure the PhilGEPS membership is not suspended [E1].\n- A PhilGEPS Certificate of Registration (Platinum Membership) may be submitted in lieu of Mayor\u2019s Permit or Business Registration Permit [E1].\n- For emergency or special cases, additional documents like performance security may be required [E3][E4].\n- The PE cannot impose additional documentary requirements beyond those authorized under RA 12009 and its IRR [E6].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-17-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 8",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-17-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 8",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-NPM-020-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 0,
+     "comment": "E6: opinion not attributed"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.9285714285714286,
+     "comment": "no-citation (the statement names no source): Income or Business Tax Return when the Approved Budget for the Contract (ABC) exceeds P500,000."
+    },
+    {
+     "key": "groundedness",
+     "score": 0.9230769230769231,
+     "comment": "For emergency or special cases, additional documents like performance security may be required"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 14,
+    "shown": 12,
+    "removed": 1,
+    "recited": 10,
+    "removedText": [
+     "no-citation (the statement names no source): Income or Business Tax Return when the Approved Budget for the Contract (ABC) exceeds P500,000."
+    ]
+   },
+   "firstTokenMs": 4359,
+   "latencyMs": 6439,
+   "error": null
+  },
+  {
+   "id": "Q32",
+   "question": "What are the guidelines on direct procurement for science technology and innovation?",
+   "category": "new-2026",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-04-2026",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": false,
+   "answer": "The guidelines on direct procurement for science, technology, and innovation (STI) allow a Procuring Entity to directly procure goods and services from a capable manufacturer, supplier, or qualified startup business under these conditions: [E2]\n\n1. Supplies, materials, equipment, and related services must be used actually, exclusively, and directly in research and development projects or activities [E2].\n2. Goods include products of a commissioned task by the Procuring Entity that were processed, developed, and manufactured to meet its needs [E2]. This includes pre-commercial goods and services for early market engagement and goods manufactured by qualified startup businesses [E2].\n3. Other goods analogous to the foregoing may also be procured directly [E2].\n\nIntellectual property rights over commissioned goods belong to the Procuring Entity unless otherwise agreed, and the supplier cannot manufacture or sell these goods independently [E2].\n\nThese guidelines are mandated by RA 12009 and RA 11293, with the Government Procurement Policy Board (GPPB) and the National Innovation Council (NIC) tasked to develop procurement policies that ensure efficiency, transparency, timeliness, and relevance, fostering innovation and expediting the release of goods and documents necessary for STI [E1], [E2], [E4], [E5].\n\nThe GPPB has issued a circular (GPPB Resolution No. 04-2026 / Circular No. 01-2026) approving these guidelines, which are consistent with the principles under Section 3 of the IRR of RA 12009 [E2], [E4].\n\nIn summary, direct procurement for STI is a special mode of procurement designed to support research and innovation by allowing direct purchase from capable suppliers or startups for specific goods and services essential to STI projects [E1], [E2], [E4], [E5].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-04-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-04-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 37",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-04-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 37",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 37",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 26",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 0.9166666666666666,
+     "comment": "The GPPB has issued a circular (GPPB Resolution No. 04-2026 / Circular No. 01-2026) approving these guidelines, which are consistent with the principles under Section 3 of the IRR of RA 12009"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 9,
+    "shown": 8,
+    "removed": 0,
+    "recited": 6,
+    "removedText": []
+   },
+   "firstTokenMs": 3501,
+   "latencyMs": 5221,
+   "error": null
+  },
+  {
+   "id": "Q33",
+   "question": "What are the current rules on tie-breaking?",
+   "category": "new-2026",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-08-2026"
+   ],
+   "abstained": false,
+   "answer": "At the start of the bidding process, PEs must specify in the bidding documents a clear, non-discretionary, and non-discriminatory tie-breaking method based on sheer luck or chance, such as drawing lots [E2]. Alternatively, the PE may require tied bidders to agree on an alternative non-discriminatory selection criterion based on chance, either on the day of bid opening or a later scheduled date [E1], [E2], [E3].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-08-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Circular No. 04-2026",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-08-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-08-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Gppb Circular 06-2005 Tie-Breaking Method",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Sec. 35",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 116",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.5,
+     "comment": "wording-not-in-source (59% of its wording is in the source): The current rules on tie-breaking in Philippine government procurement require procuring entities (PEs) to adopt measures to resolve ties after postqualificatio | number-not-in-source (RA12009): These guidelines are set forth in GPPB Resolution No. 08-2026 Circular No. 04-2026, approved 19 February 2026 and published 3 July 2026, under the RA 12009 fram"
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 0.6666666666666666,
+     "comment": "Alternatively, the PE may require tied bidders to agree on an alternative non-discriminatory selection criterion based on chance, either on the day of bid opening or a later scheduled date [E1]"
+    }
+   ],
+   "guard": {
+    "checked": 4,
+    "shown": 2,
+    "removed": 2,
+    "recited": 1,
+    "removedText": [
+     "wording-not-in-source (59% of its wording is in the source): The current rules on tie-breaking in Philippine government procurement require procuring entities (PEs) to adopt measures to resolve ties after postqualificatio",
+     "number-not-in-source (RA12009): These guidelines are set forth in GPPB Resolution No. 08-2026 Circular No. 04-2026, approved 19 February 2026 and published 3 July 2026, under the RA 12009 fram"
+    ]
+   },
+   "firstTokenMs": 3723,
+   "latencyMs": 4149,
+   "error": null
+  },
+  {
+   "id": "Q34",
+   "question": "What are the framework agreement guidelines?",
+   "category": "new-2026",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-12-2026"
+   ],
+   "abstained": false,
+   "answer": "The framework agreement guidelines under RA 12009 are detailed in GPPB Resolution No. 12-2026 / Circular No. 07-2026 [E1].\nKey points include:\n\n- Framework Agreement is a procurement strategy for Goods, Infrastructure Projects, and Consulting Services, used when items are frequently or repeatedly needed, for indefinite periods or quantities, or when timing or scope is unpredictable, among other conditions [E1], [E3].\n- It requires Competitive Bidding or Limited Source Bidding as the mode of procurement, ensuring transparency and competitive pricing [E3].\n- The Head of the Procuring Entity may establish a separate BAC for framework agreements, and the End-User must assess if it is practical and advantageous, considering efficiency, cost savings, competitive pricing, and reduction of procurement delays [E2].\n- Market Scoping must validate the feasibility, ensuring capable bidders, competitive prices, reasonable terms, and supply chain support [E2].\n- Framework Agreements do not create a procurement contract or financial obligation until a Call-Off is made, and multi-year agreements do not require Multi-Year Contracting Authority but must have budget programming [E1].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-12-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-12-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 6",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-12-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 8",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 6",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.6666666666666666,
+     "comment": "name-not-in-source (GOCC): The guidelines apply to all branches and instrumentalities of the government, including LGUs and GOCCs [E3]. | number-not-in-source (RA12009): The older RA 9184 IRR had similar provisions but is now historical and replaced by RA 12009 guidelines [E4], [E5]."
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 9,
+    "shown": 6,
+    "removed": 3,
+    "recited": 2,
+    "removedText": [
+     "name-not-in-source (GOCC): The guidelines apply to all branches and instrumentalities of the government, including LGUs and GOCCs [E3].",
+     "number-not-in-source (RA12009): The older RA 9184 IRR had similar provisions but is now historical and replaced by RA 12009 guidelines [E4], [E5].",
+     "wording-not-in-source (50% of its wording is in the source): For full details, see GPPB Resolution No. 12-2026 / Circular No. 07-2026 [E1] [E3]."
+    ]
+   },
+   "firstTokenMs": 3328,
+   "latencyMs": 5280,
+   "error": null
+  },
+  {
+   "id": "Q35",
+   "question": "What rules apply to procurement during the 2026 BSKE election period?",
+   "category": "new-2026",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-20-2026"
+   ],
+   "abstained": false,
+   "answer": "Procurement during the 2026 Barangay and Sangguniang Kabataan Elections (BSKE) election period, from 3 October 2026 to 9 November 2026, is governed by GPPB Resolution No. 20-2026 / Circular No. 09-2026 [E1]. The prohibited activities aim to insulate government procurement from political partisan activities and are not intended to paralyze government operations [E1], [E2], [E3].\n\nConstruction or maintenance of barangay-funded roads and bridges is prohibited from 23 October 2026 to 1 November 2026 [E1].\n\nIn summary, procurement during the 2026 BSKE election period must comply with these prohibitions and guidelines to avoid partisan influence and ensure lawful conduct of procurement activities [E1], [E2], [E3].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-20-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-20-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-20-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 49",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 49",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.6666666666666666,
+     "comment": "name-not-in-source (PE): This circular provides guidelines to Procuring Entities (PEs) on procurement activities during this period, pursuant to COMELEC Resolutions Nos. 11191 and 11265 | name-not-in-source (COMELEC Resolution No. 11191): Specifically, the COMELEC Resolution No. 11191 prescribes the election period from 3 October 2026 to 9 November 2026, with prohibitions on the release, disburse"
+    },
+    {
+     "key": "groundedness",
+     "score": 0.8,
+     "comment": "procurement during the 2026 Barangay and Sangguniang Kabataan Elections (BSKE) election period, from 3 October 2026 to 9 November 2026, is governed by GPPB Resolution No. 20-2026 / Circular No. 09-2026 [E1]"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 6,
+    "shown": 4,
+    "removed": 2,
+    "recited": 1,
+    "removedText": [
+     "name-not-in-source (PE): This circular provides guidelines to Procuring Entities (PEs) on procurement activities during this period, pursuant to COMELEC Resolutions Nos. 11191 and 11265",
+     "name-not-in-source (COMELEC Resolution No. 11191): Specifically, the COMELEC Resolution No. 11191 prescribes the election period from 3 October 2026 to 9 November 2026, with prohibitions on the release, disburse"
+    ]
+   },
+   "firstTokenMs": 3524,
+   "latencyMs": 5253,
+   "error": null
+  },
+  {
+   "id": "Q36",
+   "question": "What are the guidelines for disaster-related procurement?",
+   "category": "new-2026",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-17-2026"
+   ],
+   "abstained": false,
+   "answer": "The guidelines for disaster-related procurement are set forth in GPPB Resolution No. 17-2026 / Circular No. 08-2026 under RA 12009 [E2].\nKey points include:\n\n1. Procurement planning must identify disaster-related requirements, conduct Pre-Disaster Risk Assessment, and plan procurement of goods, infrastructure, and consulting services needed for disaster preparedness and response [E1]. Early Procurement Activities and Framework Agreements are encouraged to ensure timely implementation and supply security [E1]. The Fit-for-Purpose approach allows adopting the procurement modality best suited to the needs, subject to Market Scoping and applicable rules [E1].\n\n2. Emergency Procurement is streamlined for use in cases of imminent disaster or when immediate action is necessary to protect life, property, or restore vital public services [E3]. Documentary requirements are rationalized, allowing use of previously submitted valid documents, electronic submissions, and electronic notarization, with some deficiencies allowed to be completed after award but before payment [E1].\n\n3. The guidelines promote strategic procurement planning linked to budgeting, including market scoping, risk management, and disposal procedures [E3]. Early Procurement Activities may be conducted pending budget approval, with contract award only after funding is effective [E3]. Framework Agreements may be used to expand bidders and save time and money [E3]. Negotiated Procurement for Emergency Cases is allowed when time is of the essence due to calamities [E3].\n\n4. The Head of Procuring Entity may establish a dedicated Bids and Awards Committee for disaster-related procurement to enable rapid response and reduce delays [E3].\n\n5. The guidelines amend relevant provisions of the IRR of RA 12009 to reflect these changes and direct periodic monitoring and review of implementation [E2].\n\nThese guidelines aim to protect lives, property, and vital public services through efficient and timely procurement during disasters [E1], [E2], [E3]. \n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-17-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-17-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 100",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-17-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 3",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 1",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.9285714285714286,
+     "comment": "number-not-in-source (RA12009): I couldn't verify specific procedural details from the older RA 9184 framework as it is historical and superseded by RA 12009 [E4], [E5]."
+    },
+    {
+     "key": "groundedness",
+     "score": 0.9230769230769231,
+     "comment": "The guidelines for disaster-related procurement are set forth in GPPB Resolution No. 17-2026 / Circular No. 08-2026 under RA 12009"
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 14,
+    "shown": 13,
+    "removed": 1,
+    "recited": 7,
+    "removedText": [
+     "number-not-in-source (RA12009): I couldn't verify specific procedural details from the older RA 9184 framework as it is historical and superseded by RA 12009 [E4], [E5]."
+    ]
+   },
+   "firstTokenMs": 3232,
+   "latencyMs": 5714,
+   "error": null
+  },
+  {
+   "id": "Q37",
+   "question": "Can direct acquisition be used for customized goods?",
+   "category": "opinions",
+   "ground_truth_status": "PENDING",
+   "scope": "opinions",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-NPM-019-2026",
+    "GPPB-NPM-004-2026"
+   ],
+   "abstained": false,
+   "answer": "GPPB-TSO has opined that Direct Acquisition may be used for customized goods under certain conditions [E1]. Specifically, Section 32.3 of the IRR of RA No. 12009 allows Direct Acquisition from a known and reputable source, and the availability of goods off-the-shelf is only one circumstance for Direct Acquisition [E1]. Even if the goods are subject to minor or customary customization, they may still be considered \"readily available\" and thus eligible for Direct Acquisition, provided other requirements are met [E1]. Therefore, customized goods are not automatically excluded from Direct Acquisition [E1].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-NPM-019-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-NPM-004-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-NPM-005-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-NPM-021-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-NPM-024-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 4,
+    "shown": 4,
+    "removed": 0,
+    "recited": 2,
+    "removedText": []
+   },
+   "firstTokenMs": 2633,
+   "latencyMs": 3272,
+   "error": null
+  },
+  {
+   "id": "Q38",
+   "question": "What are the grounds for post-disqualification?",
+   "category": "opinions",
+   "ground_truth_status": "PENDING",
+   "scope": "opinions",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-NPM-032-2026"
+   ],
+   "abstained": false,
+   "answer": "GPPB-TSO has opined that the grounds for post-disqualification under Section 63 of the IRR of RA No. 12009 include failure to submit any of the post-qualification requirements on time or a finding against the veracity of these documents [E1]. The post-qualification inspection findings must establish non-compliance with a specific requirement or condition prescribed in the Bidding Documents or with an applicable legal requirement relevant thereto [E1]. Findings that merely establish conditions not prescribed as requirements should not be treated as new grounds for disqualification [E1]. The physical condition or characteristics of a bidder\u2019s office may be considered only if relevant to a requirement in the Bidding Documents [E1]. Compliance with particular licenses, permits, or legal requirements expressly required by the Bidding Documents may also be grounds for post-disqualification if not met [E1].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-NPM-032-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-NPM-026-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-NPM-023-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-NPM-018-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "Sec. 70",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-NPM-001-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-NPM-010-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 5,
+    "shown": 5,
+    "removed": 0,
+    "recited": 4,
+    "removedText": []
+   },
+   "firstTokenMs": 2609,
+   "latencyMs": 3331,
+   "error": null
+  },
+  {
+   "id": "Q39",
+   "question": "Are the Generic Procurement Manuals current?",
+   "category": "opinions",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-GPM-2017"
+   ],
+   "abstained": false,
+   "answer": "The Generic Procurement Manuals are historical and not current [E4]. The current rules and manuals are aligned with RA 12009 and its Implementing Rules and Regulations, approved in 2025 [E2], [E3].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 20",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-GPM-2017",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "Volume 1",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 20",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 0,
+     "comment": "E4: opinion not attributed"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.6666666666666666,
+     "comment": "number-not-in-source (RA12009): They were issued under the RA 9184 framework and are now considered interpretive only, as the current procurement framework is governed by RA 12009 and its IRR,"
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 3,
+    "shown": 2,
+    "removed": 1,
+    "recited": 1,
+    "removedText": [
+     "number-not-in-source (RA12009): They were issued under the RA 9184 framework and are now considered interpretive only, as the current procurement framework is governed by RA 12009 and its IRR,"
+    ]
+   },
+   "firstTokenMs": 3012,
+   "latencyMs": 3529,
+   "error": null
+  },
+  {
+   "id": "Q40",
+   "question": "What documents are required for eligibility in negotiated procurement according to the TSO?",
+   "category": "opinions",
+   "ground_truth_status": "PENDING",
+   "scope": "opinions",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-NPM-025-2026"
+   ],
+   "abstained": false,
+   "answer": "GPPB-TSO has opined that the eligibility documents required for negotiated procurement under RA 12009 are those expressly enumerated in the applicable tables of GPPB Resolution No. 10-2026 [E1]. These documents include the PhilGEPS registration, which can be satisfied by either the PhilGEPS Organization ID (Red Membership) or the PhilGEPS Certificate of Registration (Platinum Membership) [E1]. The Platinum Membership requires submission and maintenance of prescribed eligibility documents such as registration certificate, Mayor's or Business Permit, Tax Clearance, PCAB License (for contractors), and Audited Financial Statement (AFS) [E1]. The eligibility documents enumerated in the Guidelines are exclusive, and Procuring Entities shall not require additional eligibility documents beyond those specified [E1]. \n\nFurthermore, the Procuring Entity may prepare its Bidding Documents and checklist within the parameters of RA 12009 and related issuances, but it cannot impose additional eligibility requirements not authorized under the procurement rules [E2]. The checklist is to facilitate identification and examination of requirements but does not create new mandatory eligibility documents [E2].\n\nIn summary, the required eligibility documents for negotiated procurement are those listed in GPPB Resolution No. 10-2026, including PhilGEPS registration documents and other prescribed eligibility documents, and no additional documents like Income Tax Return or Tax Clearance may be required solely for verifying PhilGEPS status [E1], [E2].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-NPM-025-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-NPM-020-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-NPM-001-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-NPM-007-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-NPM-010-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-NPM-031-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 7,
+    "shown": 7,
+    "removed": 0,
+    "recited": 4,
+    "removedText": []
+   },
+   "firstTokenMs": 2759,
+   "latencyMs": 6196,
+   "error": null
+  },
+  {
+   "id": "A01",
+   "question": "Is the March 2026 IRR the current IRR?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-ADV-09-2026",
+    "RA12009-IRR-2025"
+   ],
+   "abstained": false,
+   "answer": "The March 2026 IRR of RA 12009 is not the current IRR; it was withdrawn on 31 July 2026 by GPPB-TSO Public Advisory No. 09-2026 [E8]. The current IRR to use is the one approved by GPPB Resolution No. 02-2025 dated 4 February 2025, effective 25 February 2025 [E1], [E2], [E8].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2026-03-31-WITHDRAWN",
+     "status": "WITHDRAWN",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "VERSION_ONLY",
+     "section": "Sec. 117",
+     "companion": true
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-20-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 69",
+     "companion": false
+    },
+    {
+     "n": 7,
+     "documentId": "GPPB-RES-10-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    },
+    {
+     "n": 8,
+     "documentId": "GPPB-ADV-09-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": true
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 0,
+     "comment": "top 5: RA12009-IRR-2026-03-31-WITHDRAWN, GPPB-RES-02-2025, GPPB-RES-05-2025, GPPB-RES-05-2025, GPPB-RES-20-2026"
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 5077,
+   "latencyMs": 5414,
+   "error": null
+  },
+  {
+   "id": "A03",
+   "question": "What does RA 9184 require under the NGPA?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "RA12009",
+    "GPPB-RES-05-2025"
+   ],
+   "abstained": false,
+   "answer": "Republic Act 9184, known as the Government Procurement Reform Act, provides for the modernization, standardization, and regulation of government procurement activities [E1]. Under RA 9184, the procurement process and forms are to be standardized to systematize the procurement process, avoid confusion, and ensure transparency [E3]. Transparency requirements include posting invitations to bid, bidding documents, notices of award, and contracts on the Philippine Government Electronic Procurement System (PhilGEPS) and other designated places [E4].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA9184",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 1,
+     "label": "HISTORICAL_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA9184",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 1,
+     "label": "HISTORICAL_ONLY",
+     "section": "Sec. 64",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA9184",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 1,
+     "label": "HISTORICAL_ONLY",
+     "section": "Sec. 6",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 3",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 107",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 110",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": 1
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 0,
+     "comment": "cited frameworks: RA9184, RA9184, RA9184"
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.5,
+     "comment": "name-not-in-source (The Government Procurement Policy Board): The Government Procurement Policy Board (GPPB) is tasked with developing generic procurement manuals and standard bidding forms, which are mandatory for all Pro | wording-not-in-source (45% of its wording is in the source): Note that RA 9184 is now historical and has been superseded by RA 12009, the New Government Procurement Act, which took effect on 13 August 2024 [E5], [E6]."
+    },
+    {
+     "key": "groundedness",
+     "score": 0.75,
+     "comment": "\"Republic Act 9184, known as the Government Procurement Reform Act, provides for the modernization, standardization, and regulation of government procurement activities\""
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 6,
+    "shown": 3,
+    "removed": 3,
+    "recited": 1,
+    "removedText": [
+     "name-not-in-source (The Government Procurement Policy Board): The Government Procurement Policy Board (GPPB) is tasked with developing generic procurement manuals and standard bidding forms, which are mandatory for all Pro",
+     "wording-not-in-source (45% of its wording is in the source): Note that RA 9184 is now historical and has been superseded by RA 12009, the New Government Procurement Act, which took effect on 13 August 2024 [E5], [E6].",
+     "depends-on-removed (it refers to a statement that was removed): However, prior to the effectivity of RA 12009's Implementing Rules and Regulations, RA 9184 and its IRR remain in force to ensure continuity [E5]."
+    ]
+   },
+   "firstTokenMs": 2822,
+   "latencyMs": 4003,
+   "error": null
+  },
+  {
+   "id": "A04",
+   "question": "Does Resolution No. 27-2019 still govern framework agreements?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-RES-12-2026",
+    "GPPB-RES-27-2019"
+   ],
+   "abstained": false,
+   "answer": "No, Resolution No. 27-2019 no longer governs framework agreements as it is a historical document under the RA 9184 framework [E1]. Its current counterpart is GPPB Resolution No. 12-2026 / Circular No. 07-2026, which is the current rule under RA 12009 and was approved on 23 July 2026 and published on 7 August 2026 [E1], [E2], [E3], [E4], [E5].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-27-2019",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 3,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 8",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-27-2019",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 3,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 13",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-12-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 7",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-12-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 7",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-12-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 0,
+     "comment": "E1: historical source stated as current; E2: historical source stated as current"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 0.5,
+     "comment": "published on 7 August 2026 | under the RA 9184 framework"
+    },
+    {
+     "key": "citation_support",
+     "score": 0,
+     "comment": "Resolution No. 27-2019 no longer governs framework agreements as it is a historical document under the RA 9184 framework [E1]. | Its current counterpart is GPPB Resolution No. 12-2026 / Circular No. 07-2026, which is the current rule under RA 12009 and was approved on 23 July 2026 and published on 7 August 2026 [E1], [E2], [E3], [E4], [E5]."
+    }
+   ],
+   "guard": {
+    "checked": 2,
+    "shown": 2,
+    "removed": 0,
+    "recited": 1,
+    "removedText": []
+   },
+   "firstTokenMs": 3082,
+   "latencyMs": 3632,
+   "error": null
+  },
+  {
+   "id": "A05",
+   "question": "What procurement timeline does the Generic Procurement Manual require today?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [
+    "GPPB-GPM-2017"
+   ],
+   "abstained": false,
+   "answer": "\nThe manual advises that the schedule of these significant activities be included in the Project Procurement Management Plan (PPMP) and consolidated into the Annual Procurement Plan (APP) to ensure logistical support and timely delivery of public service [E1].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-GPM-2017",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "Volume 2",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-GPM-2017",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "Volume 1",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 7",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 7",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-17-2026",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 5",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": 1
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": 1
+    },
+    {
+     "key": "status_accuracy",
+     "score": 0,
+     "comment": "E1: opinion not attributed"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 0.16666666666666666,
+     "comment": "name-not-in-source (The Generic Procurement Manual): The Generic Procurement Manual under the RA 9184 framework does not specify a fixed procurement timeline but emphasizes the importance of procurement milestones | depends-on-removed (it refers to a statement that was removed): These milestones should be scheduled to guide the procurement process efficiently and effectively [E2]."
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 0,
+     "comment": "The manual advises that the schedule of these significant activities be included in the Project Procurement Management Plan (PPMP) and consolidated into the Annual Procurement Plan (APP) to ensure logistical support and timely delivery of public service"
+    }
+   ],
+   "guard": {
+    "checked": 6,
+    "shown": 1,
+    "removed": 5,
+    "recited": 1,
+    "removedText": [
+     "name-not-in-source (The Generic Procurement Manual): The Generic Procurement Manual under the RA 9184 framework does not specify a fixed procurement timeline but emphasizes the importance of procurement milestones",
+     "depends-on-removed (it refers to a statement that was removed): These milestones should be scheduled to guide the procurement process efficiently and effectively [E2].",
+     "name-not-in-source (Generic Procurement Manual): More recent rules under RA 12009 and its IRR focus on strategic procurement planning and budgeting linkage, requiring the schedule for each procurement activity",
+     "depends-on-removed (it refers to a statement that was removed): Therefore, the Generic Procurement Manual requires a procurement timeline to be planned and scheduled as part of the PPMP and APP, covering all key procurement ",
+     "no-citation (the statement names no source): If you want the exact timeline durations or more detailed schedules, those are typically found in the specific volumes of the manual or in the implementing rule"
+    ]
+   },
+   "firstTokenMs": 3937,
+   "latencyMs": 4964,
+   "error": null
+  },
+  {
+   "id": "A06",
+   "question": "Is an NPM opinion official GPPB policy?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": false,
+   "expected_documents": [],
+   "abstained": false,
+   "answer": "GPPB-TSO opinions, such as NPM opinions, are interpretive only and not official GPPB policy [E5]. The GPPB-TSO provides policy and non-policy opinions on procurement issues but does not have quasi-judicial or investigatory powers and cannot resolve actual cases or controversies [E5]. Official policy decisions are made by the Government Procurement Policy Board (GPPB) itself, which sets strategic direction and makes policy decisions regarding public procurement [E3].\n",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 8",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 91",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 91",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-NPM-029-2026",
+     "status": "REFERENCE",
+     "framework": "RA12009",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": null,
+     "comment": "no expected documents"
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": null,
+     "comment": "not applicable"
+    },
+    {
+     "key": "status_accuracy",
+     "score": 1
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": 1
+    },
+    {
+     "key": "statements_supported",
+     "score": 1
+    },
+    {
+     "key": "groundedness",
+     "score": 1
+    },
+    {
+     "key": "citation_support",
+     "score": 1
+    }
+   ],
+   "guard": {
+    "checked": 3,
+    "shown": 3,
+    "removed": 0,
+    "recited": 3,
+    "removedText": []
+   },
+   "firstTokenMs": 2970,
+   "latencyMs": 3460,
+   "error": null
+  },
+  {
+   "id": "A08",
+   "question": "What procurement law will Congress pass next year?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": true,
+   "expected_documents": [],
+   "abstained": true,
+   "answer": "I couldn't verify that from the available procurement documents.",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 7",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 7",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 26",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-GPM-2017",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "Volume 1",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-GPM-2017",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 4,
+     "label": "INTERPRETIVE_ONLY",
+     "section": "Volume 2",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 110",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": null,
+     "comment": "no expected documents"
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": null,
+     "comment": "not applicable"
+    },
+    {
+     "key": "status_accuracy",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "statements_supported",
+     "score": null,
+     "comment": "no statements drafted"
+    },
+    {
+     "key": "groundedness",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "citation_support",
+     "score": null,
+     "comment": "abstained"
+    }
+   ],
+   "guard": {
+    "checked": 0,
+    "shown": 0,
+    "removed": 0,
+    "recited": 0,
+    "removedText": []
+   },
+   "firstTokenMs": 2930,
+   "latencyMs": 2931,
+   "error": null
+  },
+  {
+   "id": "A09",
+   "question": "What is the penalty for bidding while wearing a red shirt?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": true,
+   "expected_documents": [],
+   "abstained": true,
+   "answer": "I couldn't verify that from the available procurement documents.",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 69",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 69",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "GPPB-RES-03-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "RA12009-IRR-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 2,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 47",
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-02-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 47",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "RA9184-IRR-2016",
+     "status": "HISTORICAL",
+     "framework": "RA9184",
+     "authority": 2,
+     "label": "HISTORICAL_ONLY",
+     "section": "Item 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": null,
+     "comment": "no expected documents"
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": null,
+     "comment": "not applicable"
+    },
+    {
+     "key": "status_accuracy",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "statements_supported",
+     "score": null,
+     "comment": "no statements drafted"
+    },
+    {
+     "key": "groundedness",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "citation_support",
+     "score": null,
+     "comment": "abstained"
+    }
+   ],
+   "guard": {
+    "checked": 0,
+    "shown": 0,
+    "removed": 0,
+    "recited": 0,
+    "removedText": []
+   },
+   "firstTokenMs": 3017,
+   "latencyMs": 3017,
+   "error": null
+  },
+  {
+   "id": "A10",
+   "question": "What did the Supreme Court rule about RA 12009 in 2027?",
+   "category": "adversarial",
+   "ground_truth_status": "PENDING",
+   "scope": "all",
+   "should_abstain": true,
+   "expected_documents": [],
+   "abstained": true,
+   "answer": "I couldn't verify that from the available procurement documents.",
+   "retrieved": [
+    {
+     "n": 1,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 117",
+     "companion": false
+    },
+    {
+     "n": 2,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 85",
+     "companion": false
+    },
+    {
+     "n": 3,
+     "documentId": "RA12009",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 1,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 116",
+     "companion": false
+    },
+    {
+     "n": 4,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": null,
+     "companion": false
+    },
+    {
+     "n": 5,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Sec. 93",
+     "companion": false
+    },
+    {
+     "n": 6,
+     "documentId": "GPPB-RES-05-2025",
+     "status": "CURRENT",
+     "framework": "RA12009",
+     "authority": 3,
+     "label": "CURRENT_RULE",
+     "section": "Item 4",
+     "companion": false
+    }
+   ],
+   "scores": [
+    {
+     "key": "hit_at_5",
+     "score": null,
+     "comment": "no expected documents"
+    },
+    {
+     "key": "section_hit",
+     "score": null,
+     "comment": "no expected sections"
+    },
+    {
+     "key": "version_accuracy",
+     "score": 1
+    },
+    {
+     "key": "framework_accuracy",
+     "score": null,
+     "comment": "not applicable"
+    },
+    {
+     "key": "status_accuracy",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "abstention",
+     "score": 1
+    },
+    {
+     "key": "tool_called",
+     "score": 1
+    },
+    {
+     "key": "citation_validity",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "statements_supported",
+     "score": 0,
+     "comment": "no-citation (the statement names no source): There is no specific Supreme Court ruling about RA 12009 in 2027 found in the retrieved evidence."
+    },
+    {
+     "key": "groundedness",
+     "score": null,
+     "comment": "abstained"
+    },
+    {
+     "key": "citation_support",
+     "score": null,
+     "comment": "abstained"
+    }
+   ],
+   "guard": {
+    "checked": 1,
+    "shown": 0,
+    "removed": 1,
+    "recited": 0,
+    "removedText": [
+     "no-citation (the statement names no source): There is no specific Supreme Court ruling about RA 12009 in 2027 found in the retrieved evidence."
+    ]
+   },
+   "firstTokenMs": 2838,
+   "latencyMs": 2839,
+   "error": null
+  }
+ ]
+}

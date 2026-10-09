@@ -1,0 +1,2 @@
+id,question,category,difficulty,scope,expected_documents,expected_sections,expected_status,should_abstain,expected_answer,verified_by,verified_at,ground_truth_status,notes
+Q01,What is RA 12009?,direct,easy,all,RA12009,,CURRENT,false,,,,PENDING,
