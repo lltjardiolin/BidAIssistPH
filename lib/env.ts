@@ -4,5 +4,5 @@ export const APP_ENV = process.env.APP_ENV ?? process.env.VERCEL_ENV ?? 'develop
 export const isProduction = APP_ENV === 'production';
 
 /** True when answers are quoted extracts rather than model output. Shown to every visitor. */
-export const isDemoMode = (process.env.LLM_PROVIDER ?? 'minimax') === 'mock';
+export const isDemoMode = (process.env.LLM_PROVIDER ?? 'openai') === 'mock';
 

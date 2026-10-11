@@ -21,7 +21,6 @@
     "notices:sync": "tsx --env-file-if-exists=.env.local scripts/sync-philgeps.ts"
   },
   "dependencies": {
-    "@ai-sdk/minimax": "3.0.42",
     "@ai-sdk/openai-compatible": "3.0.57",
     "@ai-sdk/otel": "1.0.118",
     "@ai-sdk/react": "4.0.121",

@@ -13,7 +13,7 @@ Your v3.1 edits (closed-corpus rule, lockfile, evidence gate, ground-truth gate,
 | 5 | `applyEvidencePolicy` accepted a WITHDRAWN block when a replacement *id* existed even if the replacement wasn't retrieved; its mixed-framework rule only looked at CURRENT evidence (so it never fired) and, had it fired, would abstain on legitimate questions like "What governed procurement before RA 12009?" | Rewritten: withdrawn/superseded blocks survive only if the replacement is in the evidence set; each block is labelled (CURRENT_RULE, HISTORICAL_ONLY, VERSION_ONLY, PROPOSAL_ONLY, INTERPRETIVE_ONLY); mixed frameworks are flagged, not abstained; version-only evidence abstains. Type-checked and unit-tested. |
 | 6 | Downloader had no timeout/retry; a blocked page or soft 404 served with HTTP 200 was archived as the "PDF" | 60 s timeout, 3 retries with backoff, polite delay, `%PDF-` magic-byte check, change detection vs the previous lock |
 | 7 | Validator ignored download failures, documents with zero artifacts, and HTML stored where a PDF was expected | All three checked; `--release` mode also requires approvals and fails on any `release_note` |
-| 8 | Embedding model/dimension never pinned (MiniMax has no embedding model) | `EMBEDDING_PROVIDER / MODEL / DIMENSIONS` in `.env.example`; `corpus_releases` table records them per corpus version |
+| 8 | Embedding model/dimension never pinned | `EMBEDDING_PROVIDER / MODEL / DIMENSIONS` in `.env.example`; `corpus_releases` table records them per corpus version |
 | 9 | `package.json` used `"latest"` everywhere (AI SDK majors change APIs) | Exact versions pinned (checked on npm, 28 Sep 2026); `pgvector`, `tsx`, `@types/pg` added |
 
 ## Still open (need a human, not code)

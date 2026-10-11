@@ -7,7 +7,7 @@
 // calls are traced in Pydantic Logfire when OTEL_EXPORTER_OTLP_ENDPOINT is set.
 //   npm run eval -- --only Q31,Q34        selected rows
 //   npm run eval -- --retrieval-only      no LLM: retrieval evaluators only
-//   EXP=A|B|C|D  EVAL_SCOPE=own|all|<tab>  LLM_PROVIDER=openai|minimax
+//   EXP=A|B|C|D  EVAL_SCOPE=own|all|<tab>  LLM_PROVIDER=openai|mock
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { getPool } from '../lib/db';

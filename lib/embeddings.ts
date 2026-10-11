@@ -1,5 +1,4 @@
-// Embedding provider (PDR D4 / CHANGES #8). MiniMax has no embedding model, so embeddings are configured
-// separately and pinned per corpus release (corpus_releases table). Changing model or dimension = full re-embed.
+// Embedding provider (PDR D4 / CHANGES #8). Embeddings are configured separately from the chat model and pinned per corpus release (corpus_releases table). Changing model or dimension = full re-embed.
 import { embed, embedMany, type EmbeddingModel } from 'ai';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { telemetryFor } from './telemetry';

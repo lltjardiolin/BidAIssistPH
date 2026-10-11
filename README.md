@@ -26,7 +26,7 @@ Browser (useChat · scope tabs · source cards)
    ▼
 app/api/chat/route.ts ── validation · rate limit · UI message stream
    │
-lib/chat.ts ── streamText(model = OpenAI | MiniMax)
+lib/chat.ts ── streamText(model = OpenAI)
    │     step 1: toolChoice = retrieveEvidence (forced)      step 2: toolChoice = none (must answer)
    ▼
 lib/retrieval.ts
@@ -109,9 +109,8 @@ Names only. None may be prefixed `NEXT_PUBLIC_`.
 | Name | Purpose |
 |---|---|
 | `APP_ENV` | `development` · `staging` · `production` |
-| `LLM_PROVIDER` | `openai` · `minimax` · `mock` (offline, development/CI only) |
+| `LLM_PROVIDER` | `openai` · `mock` (offline, development/CI only) |
 | `OPENAI_API_KEY`, `OPENAI_MODEL`, `OPENAI_REASONING_EFFORT` | OpenAI chat model (default `gpt-4.1-mini`; effort applies to gpt-5 / o-series only) |
-| `MINIMAX_API_KEY`, `MINIMAX_MODEL` | MiniMax chat model (default `minimax-m3`) |
 | `EMBEDDING_PROVIDER`, `EMBEDDING_MODEL`, `EMBEDDING_DIMENSIONS`, `EMBEDDING_API_KEY`, `EMBEDDING_BASE_URL` | Embeddings; pinned per corpus release |
 | `DATABASE_URL` | Postgres with pgvector |
 | `OTEL_EXPORTER_OTLP_ENDPOINT`, `OTEL_EXPORTER_OTLP_HEADERS`, `LOGFIRE_SERVICE_NAME`, `TRACE_CONTENT` | Tracing to Pydantic Logfire |
