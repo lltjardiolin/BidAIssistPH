@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { AppHeader } from '@/components/shell/app-header';
 import { Sheet } from '@/components/shell/sheet';
 import { CORPUS_DATE } from '@/lib/copy';
-import { METRIC_LABEL, loadRuns, type EvalRun } from '@/lib/eval-results';
+import { METRIC_LABEL, loadGroundTruthCounts, loadRuns, type EvalRun } from '@/lib/eval-results';
 import { CORPUS_VERSION, formatDate } from '@/lib/manifest';
 
 export const metadata: Metadata = { title: 'Evaluation' };
@@ -126,7 +126,7 @@ function Run({ run }: { run: EvalRun }) {
 
 export default async function EvaluationPage() {
   const runs = await loadRuns();
-  const counts = runs[0]?.metadata.rowsInSet;
+  const counts = (await loadGroundTruthCounts()) ?? runs[0]?.metadata.rowsInSet;
   return (
     <div className="flex min-h-dvh flex-col">
       <AppHeader active="evaluation" />

@@ -1,6 +1,7 @@
 // Reads evaluation/results/*.json (written by `npm run eval`) for the /evaluation page. Server only.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { parseCsv } from '@/evaluation/csv';
 
 export type Metric = { n: number; mean: number | null; target: number | null };
 export type EvalRun = {
@@ -30,6 +31,16 @@ export async function loadRuns(): Promise<EvalRun[]> {
     } catch { /* a file being written right now; it will be readable on the next request */ }
   }
   return runs.sort((a, b) => b.generated_at.localeCompare(a.generated_at));
+}
+
+/** Ground-truth status counts from evaluation/evaluation.csv, so the page reflects verification done after the last run. */
+export async function loadGroundTruthCounts(): Promise<Record<string, number> | null> {
+  try {
+    const rows = parseCsv(await fs.readFile(path.join(process.cwd(), 'evaluation', 'evaluation.csv'), 'utf8'));
+    const counts: Record<string, number> = {};
+    for (const r of rows) { const s = (r.ground_truth_status || 'PENDING').toUpperCase(); counts[s] = (counts[s] ?? 0) + 1; }
+    return counts;
+  } catch { return null; }
 }
 
 export const METRIC_LABEL: Record<string, [string, string]> = {
