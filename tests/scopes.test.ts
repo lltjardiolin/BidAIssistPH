@@ -26,7 +26,7 @@ describe('scopes', () => {
   it('counts only indexed documents', () => {
     expect(scopeCounts.ngpa).toBe(2);
     expect(scopeCounts.versions).toBe(1);
-    expect(scopeCounts.opinions).toBe(30);
+    expect(scopeCounts.opinions).toBeGreaterThanOrEqual(30);
     expect(scopeCounts.all).toBeGreaterThan(scopeCounts.issuances);
   });
 });

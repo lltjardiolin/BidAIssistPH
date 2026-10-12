@@ -19,6 +19,8 @@ export const MAX_PASSAGE_CHARS = Number(process.env.EVIDENCE_MAX_CHARS || 0);
 const PER_DOC_CAP = 3;
 const HISTORICAL_CANDIDATES = 8;
 const HISTORICAL_CAP = 2;
+/** Tabs that mix frameworks: RA 9184-era documents (1,500+ old opinions) must not crowd out current ones. */
+const SPLIT_SCOPES = new Set<string>(['all', 'opinions']);
 
 /** Retrieval configuration. Production is always D; A–C exist only for the evaluation experiments (PDR E5). */
 export type RetrievalConfig = { mode: 'vector' | 'hybrid'; rerank: boolean; companions: boolean; topK: number };
@@ -161,7 +163,7 @@ export function rerank(rows: ChunkRow[], opts: { ids: string[]; sections: string
   for (const r of scored) {
     if ((perDoc.get(r.document_id) ?? 0) >= PER_DOC_CAP) continue;
     // A current-rule question may show the old rule for context, but not be dominated by it.
-    if (r.status === 'HISTORICAL' && !historical && opts.scope === 'all' && old >= HISTORICAL_CAP) continue;
+    if (r.status === 'HISTORICAL' && !historical && SPLIT_SCOPES.has(opts.scope) && old >= HISTORICAL_CAP) continue;
     const sectionKey = r.context_header.replace(/ \(part \d+\/\d+\)$/, '');
     if (sections.has(sectionKey)) continue;
     sections.add(sectionKey);
@@ -195,7 +197,7 @@ export async function retrieveEvidence({ query: q, compare, scope }: { query: st
   // is about the old framework, candidates are drawn from a current pool and a smaller historical pool, so
   // volume alone can never crowd current issuances out (A7: historical ranks below current).
   const historical = HISTORICAL_INTENT.test(q) || wantsCompare;
-  const split = cfg.rerank && scope === 'all' && !historical;
+  const split = cfg.rerank && SPLIT_SCOPES.has(scope) && !historical;
   const candidates = split
     ? [
         ...await hybridQuery(emb, norm, scope, CANDIDATES, cfg.mode, { statuses: ['HISTORICAL'], exclude: true }),

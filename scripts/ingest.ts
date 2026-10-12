@@ -50,11 +50,15 @@ function artifactLabel(d: ManifestDoc, a: Artifact): { label: string | null; doc
     const circ = /Circular No\. \d{2}-\d{4}/.exec(d.reference)?.[0] ?? d.aliases.find(x => /^Circular No\./.test(x)) ?? 'Annex';
     return { label: circ, docType: 'circular' };
   }
+  if (a.source_field === 'annex_urls') return { label: `Annex ${Number(a.variant) + 1}`, docType: type };
   if (a.source_field === 'volume_urls') return { label: GPM_VOLUMES[Number(a.variant)] ?? `Volume ${Number(a.variant) + 1}`, docType: type };
   return { label: null, docType: type };
 }
 
 const chunkOpts = chunkOptionsFromEnv();
+/** OCR pages below this Tesseract confidence are photos, stamps or scanned attachments that read as noise. */
+const MIN_OCR_CONFIDENCE = Number(process.env.MIN_OCR_CONFIDENCE || 50);
+let noisyPages = 0;
 const cacheDir = path.join(ROOT, 'storage', 'processed');
 const report: Array<{ id: string; artifacts: number; pages: number; ocrPages: number; chunks: number; skipped?: string }> = [];
 const pool = DRY ? null : getPool();
@@ -111,8 +115,10 @@ try {
     for (const a of arts) {
       const ex = await extractArtifact(path.join(ROOT, a.local_path), { contentType: a.content_type, sha256: a.sha256, cacheDir });
       pages += ex.pages.length; ocrPages += ex.ocrPages;
+      const readable = ex.pages.filter(p => !(p.ocr && (p.confidence ?? 100) < MIN_OCR_CONFIDENCE));
+      noisyPages += ex.pages.length - readable.length;
       const { label, docType } = artifactLabel(d, a);
-      const chunks = chunkSections(sectionize(normalize(ex.pages)), chunkOpts);
+      const chunks = chunkSections(sectionize(normalize(readable)), chunkOpts);
       const key = a.variant ? `${a.source_field}-${a.variant}` : a.source_field;
       chunks.forEach((ch, i) => {
         const header = [shortRef(d), label, ...ch.path].filter(Boolean).join(' › ') + (ch.parts > 1 ? ` (part ${ch.part}/${ch.parts})` : '');
@@ -199,6 +205,7 @@ try {
     `- Corpus version: ${manifest.corpus_version}`,
     `- Generated: ${new Date().toISOString()}${DRY ? ' (dry run — nothing written to the index)' : ''}`,
     `- Embedding: ${EMBEDDING_MODEL} (${EMBEDDING_DIMENSIONS} dimensions)`,
+    `- OCR pages skipped as unreadable (confidence < ${MIN_OCR_CONFIDENCE}): ${noisyPages}`,
     `- Chunking: ${chunkOpts.mode}, max ${chunkOpts.maxTokens} tokens, overlap ${chunkOpts.overlapTokens}`,
     `- Approval gate: ${ALLOW_UNAPPROVED ? '**BYPASSED (--allow-unapproved) — development index, not a release**' : 'enforced (approved artifacts only)'}`,
     `- Documents indexed: ${ingested.length} of ${manifest.documents.length} manifest entries · ${total} chunks`, '',
