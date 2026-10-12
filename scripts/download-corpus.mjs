@@ -69,7 +69,7 @@ for (const doc of manifest.documents) {
       const expectPdf = /\.pdf($|\?)/i.test(src.url);
       const isPdf = buf.subarray(0, 5).toString() === '%PDF-';
       if (expectPdf && !isPdf) throw new Error(`expected PDF, got ${ct} (${buf.length} bytes) — blocked page or soft 404?`);
-      const ext = isPdf ? '.pdf' : ct.includes('html') ? '.html' : '.bin';
+      const ext = isPdf ? '.pdf' : ct.includes('html') ? '.html' : ct === 'image/jpeg' ? '.jpg' : ct === 'image/png' ? '.png' : '.bin';
       const safe = (src.variant ? `${src.field}-${src.variant}` : src.field).replace(/[^a-zA-Z0-9._-]/g, '_');
       const rel = path.posix.join('corpus', 'archive', doc.id, `${safe}${ext}`);
       await fs.mkdir(path.join(archive, doc.id), { recursive: true });

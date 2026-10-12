@@ -51975,6 +51975,1657 @@
       "ingest_fields": [
         "source_url"
       ]
+    },
+    {
+      "id": "OP-ADMINISTRATIVE-ORDER-NO-17",
+      "reference": "Administrative Order No. 17 — Directing the Use of the Procurement Service and the Philippine Government Electronic Procurement System in the Procurement Activities in Accordance with the Republic Act No. 9184, and Improving the Operation of the Procurement Service",
+      "aliases": [
+        "Administrative Order No. 17"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2011-07-28",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Administrative-Order-No.-17.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-ADMINISTRATIVE-ORDER-NO-16",
+      "reference": "Administrative Order No. 16 — Directing Government Entities to Coordinate with the National Mapping and Resource Information Authority in the Acquisition of Data from Airborne and Spaceborne Platforms for Use in their Respective Projects",
+      "aliases": [
+        "Administrative Order No. 16"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2011-07-05",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Administrative-Order-No.-16.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-ADMINISTRATIVE-ORDER-NO-227",
+      "reference": "Administrative Order No. 227 — Directing all Heads of Departments, Bureaus, Offices and Agencies of the National Government, including Local Government Units (LGUs); Government-Owned and/or Controlled Corporations (GOCCs), Government Financial Institutions (GFIs), State Universities and Colleges (SUCs) and Military and Police Units to give preference in the procurement of materials and supplies, produced, made and manufactured in the Philippines",
+      "aliases": [
+        "Administrative Order No. 227"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2008-05-27",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Administrative-Order-No.-227.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-ADMINISTRATIVE-ORDER-NO-222",
+      "reference": "Administrative Order No. 222 — Continuing the Advocacy for and Activities by the Procurement Transparency Group",
+      "aliases": [
+        "Administrative Order No. 222"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2008-02-26",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Administrative-Order-No.-222.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-ADMINISTRATIVE-ORDER-NO-210",
+      "reference": "Administrative Order No. 210 — Harnessing Government, Civil Society and Sectoral Groups for Transparency and Procurement Reforms",
+      "aliases": [
+        "Administrative Order No. 210"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-11-22",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Administrative-Order-No.-210.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-ADMINISTRATIVE-ORDER-NO-206",
+      "reference": "Administrative Order No. 206 — Accelerating Infrastructure Projects to Maintain Growth Amid Export/Remittance Slowdown",
+      "aliases": [
+        "Administrative Order No. 206"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-10-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Administrative-Order-No.-206.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-ADMINISTRATIVE-ORDER-NO-193",
+      "reference": "Administrative Order No. 193 — Placing the Government Procurement Policy Board in the Frontlines of the War against Graft",
+      "aliases": [
+        "Administrative Order No. 193"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-08-22",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Administrative-Order-No.-193.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-662-B",
+      "reference": "Executive Order No. 662-B — Amending Section Seven of Executive Order No. 662 (Series of 2007) Entitled Enhancing Transparency Measures under Republic Act No. 9184 and Creating the Procurement Transparency Board",
+      "aliases": [
+        "Executive Order No. 662-B"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2008-05-16",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-662-B.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-662-A",
+      "reference": "Executive Order No. 662-A — Amending Executive Order No. 662, series of 2007 entitled “Enhancing Transparency Measures under Republic Act No. 9184 and Creating the Procurement Transparency Group",
+      "aliases": [
+        "Executive Order No. 662-A"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-11-15",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-662-A.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-662",
+      "reference": "Executive Order No. 662 — Enhancing Transparency Measures under Republic Act No. 9184 and Creating the Procurement Transparency Board",
+      "aliases": [
+        "Executive Order No. 662"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-09-20",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-662.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-645",
+      "reference": "Executive Order No. 645 — Amending Section 4 of Executive Order No. 423 dated 18 September 2003 which prescribes the rules and procedures on the review and approval of all Government contracts to conform to Republic Act No. 9184 otherwise known as “The Government Procurement Reform Act”",
+      "aliases": [
+        "Executive Order No. 645"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-07-31",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-645.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-423",
+      "reference": "Executive Order No. 423 — Repealing Executive Order No. 109-A dated September 18, 2003, Prescribing the Rules and Procedures on the Review and Approval of all Government Contracts to Conform with Republic Act No. 9184, otherwise known as “The Government Procurement Reform Act”",
+      "aliases": [
+        "Executive Order No. 423"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-06-03",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-423.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-398",
+      "reference": "Executive Order No. 398 — Directing Timely and Complete Payment of Taxes as a Precondition for Entering into, and as a Continuing Obligation in Contracts with the Government, its Departments, Agencies and Instrumentalities",
+      "aliases": [
+        "Executive Order No. 398"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-01-12",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-398.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-298",
+      "reference": "Executive Order No. 298 — Amending Further Executive Order No. 248 dated May 29, 1995 as Amended by Executive Order No. 248-A dated August 14, 1995, which Prescribes Rules and Regulations and New Rates of Allowances for Official Local and Foreign Travels of Government Personnel",
+      "aliases": [
+        "Executive Order No. 298"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2004-03-23",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-298.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-278",
+      "reference": "Executive Order No. 278 — Prescribing Guidelines for Project Loan Negotiations and Packaging of Government Foreign-Assisted Infrastructure Projects",
+      "aliases": [
+        "Executive Order No. 278"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2004-02-02",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-278.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-109-A",
+      "reference": "Executive Order No. 109-A — Amending Executive Order No. 109 dated May 27, 2002 Prescribing the Rules and Procedures on the Review and Approval of All Government Contracts to Conform with Republic Act No. 9184, otherwise Known as the Government Procurement Reform Act",
+      "aliases": [
+        "Executive Order No. 109-A"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2003-09-18",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-109-A.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-139",
+      "reference": "Executive Order No. 139 — Promulgating the Fifth Regular Foreign Investment Negative List",
+      "aliases": [
+        "Executive Order No. 139"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2002-10-22",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-139.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-40",
+      "reference": "Executive Order No. 40 — Consolidating Procurement Rules and Procedures for All National Government Agencies, Government Owned and Controlled Corporations, Government Financial Institutions Requiring the Use of the Government Electronic Procurement System",
+      "aliases": [
+        "Executive Order No. 40"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2002-01-08",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-40.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-IMPLEMENTING-RULES-AND-REGULATIONS-OF-E-O-40",
+      "reference": "Implementing Rules and Regulations of E.O. 40 — Implementing Rules and Regulations of Executive Order No. 40, series of 2001, Consolidating Procurement Rules and Procedures for All National Government Agencies, Government Owned and Controlled Corporations, Government Financial Institutions Requiring the Use of the Government Electronic Procurement System",
+      "aliases": [
+        "Implementing Rules and Regulations of E.O. 40"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2002-04-04",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Implementing-Rules-and-Regulations-of-E.O.-40.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-322",
+      "reference": "Executive Order No. 322 — Requiring All National Government Agencies, Instrumentalities and Government-Owned and/or Controlled Corporations to Participate in the Electronic Procurement System",
+      "aliases": [
+        "Executive Order No. 322"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2000-11-22",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-322.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-262",
+      "reference": "Executive Order No. 262 — Amending Executive Order No. 302, Series Of 1996, Entitled “Providing Policies, Guidelines, Rules and Regulations for the Procurement of Goods/Supplies by the National Government” and Section (3) of Executive Order No. 201, Series of 2000, Entitled “Providing Additional Policies and Guidelines in the Procurement of Goods and Supplies by the National Government”",
+      "aliases": [
+        "Executive Order No. 262"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2000-12-05",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-262.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-IMPLEMENTING-RULES-AND-REGULATIONS-OF-E-O-262",
+      "reference": "Implementing Rules and Regulations of E.O. 262 — Rules and Regulations to Implement the Amendments to Executive Order No. 302 Series of 1996 and to Executive Order No. 201 Series of 2000, Pursuant to Executive Order No. 262 Series of 2000 to Govern Procurement of Goods and Supplies by the National Government",
+      "aliases": [
+        "Implementing Rules and Regulations of E.O. 262"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2000-12-05",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Implementing-Rules-and-Regulations-of-E.O.-262.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-459",
+      "reference": "Executive Order No. 459 — Providing for the Guidelines in the Negotiation of International Agreements and its Ratification",
+      "aliases": [
+        "Executive Order No. 459"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1997-11-25",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-459.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-354",
+      "reference": "Executive Order No. 354 — Authorizing the National Power Corporation to Enter into Negotiated Contracts for the Coal Supply Requirements of its Power Stations as well as those of its Independent Power Producers, and for other purposes",
+      "aliases": [
+        "Executive Order No. 354"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1996-09-24",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-354.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-120",
+      "reference": "Executive Order No. 120 — Directing the National Government, its Departments, Bureaus, Agencies and Offices, Including Government-Owned or Controlled Corporations, to Adopt Counter-Trade as a Supplemental Trade Tool with Respect to the Importation or Procurement of Foreign Capital Equipment, Machinery, Products, Goods and Services",
+      "aliases": [
+        "Executive Order No. 120"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1993-08-19",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-120.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-381",
+      "reference": "Executive Order No. 381 — Authorizing the National Power Corporation to Enter into Negotiated Contracts Beyond the Present Ceilings for Infrastructure Projects",
+      "aliases": [
+        "Executive Order No. 381"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1990-01-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-381.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-380",
+      "reference": "Executive Order No. 380 — Revising the Levels of Authority on Approval of Government Contracts",
+      "aliases": [
+        "Executive Order No. 380"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1989-11-27",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-380.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-359",
+      "reference": "Executive Order No. 359 — Reiterating the Policy and Prescribing the Guidelines and Procedures in the Implementation of the Provisions of Executive Order No. 285, “Abolishing the General Services Administration and Transferring its Functions to Appropriate Government Agencies” on the Operation of a Procurement System for Common-Use Office Supplies, Materials and Equipment",
+      "aliases": [
+        "Executive Order No. 359"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1996-10-29",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-359.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-EXECUTIVE-ORDER-NO-888",
+      "reference": "Executive Order No. 888 — Authorizing Ministers and Heads of Ministries/Agencies to dispose of, their respective unserviceable equipment and disposable property",
+      "aliases": [
+        "Executive Order No. 888"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1983-03-18",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Executive-Order-No.-888.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-CIRCULAR-NO-9",
+      "reference": "Memorandum Circular No. 9 — Government Policy and Procedural/Documentary Requirements on the Approval/Issuance of Authority to Purchase Motor Vehicles",
+      "aliases": [
+        "Memorandum Circular No. 9"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2010-12-14",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Circular-No.-9.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-CIRCULAR-NO-105",
+      "reference": "Memorandum Circular No. 105 — Enjoining all Government Departments, Agencies and Offices including Government-Owned and Controlled Corporations to Invite Observers from the Private Sector and the Non-Government Organizations to sit in all stages of the proceedings of their respective Bids and Awards Committee",
+      "aliases": [
+        "Memorandum Circular No. 105"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2006-07-23",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Circular-No.-105.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-15",
+      "reference": "Memorandum Order No. 15 — Amending No. 4.5 of Annex “D”, Contract Implementation Guidelines for the Procurement of Goods, Supplies and Materials, of the Implementing Rules and Regulations of Republic Act No. 9184, Authorizing Advance Payment upon Submission of an Irrevocable Letter of Credit or Bank Guarantee",
+      "aliases": [
+        "Memorandum Order No. 15"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2011-05-09",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-15.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-144",
+      "reference": "Memorandum Order No. 144 — Reminding All Head of The National Government Agencies, Government-Owned And Controlled Corporations, and Local Government Units to Faithfully Comply with Section 13, Article V of Republic Act No. 9184, “An Act Providing for the Modernization, Standardization and Regulation of the Procurement Activities of the Government and for other Purposes,” on Invitation of Non-Government Organizations as Observers in the Bids and Awards Committee Proceedings",
+      "aliases": [
+        "Memorandum Order No. 144"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-08-13",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-144.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-213",
+      "reference": "Memorandum Order No. 213 — Approving Amendments to Sections 42.5, 54.2 (b) (d), and 61.1 of the Implementing Rules and Regulations Part A (IRR-A) of Republic Act No. 9184",
+      "aliases": [
+        "Memorandum Order No. 213"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2006-05-27",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-213.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-195",
+      "reference": "Memorandum Order No. 195 — Approving the Amendment to Section 53 (g) of the Implementing Rules and Regulations Part A (IRR-A) of Republic Act No. 9184",
+      "aliases": [
+        "Memorandum Order No. 195"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-12-04",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-195.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-171-A",
+      "reference": "Memorandum Order No. 171-A — Amending Memorandum Order No. 171, Series of 2005, which amended Section 23.11.1 No. 3 of the Implementing Rules and Regulations Part A (IRR-A) of Republic Act No. 9184, otherwise known as the Government Procurement Reform Act",
+      "aliases": [
+        "Memorandum Order No. 171-A"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-10-18",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-171-A.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-176",
+      "reference": "Memorandum Order No. 176 — Approving Amendments to Sections 20.1; 23.6 no. 2; 24.7.1 no. 2; 25.2; 25.3; 33.4.1; 33.5; 37.3; 39.5; 54.2(b); 62.2; Annex D, 1.2; and Annex D, 1.4, of the Implementing Rules and Regulations Part A (IRR-A) of Republic Act No. 9184",
+      "aliases": [
+        "Memorandum Order No. 176"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-09-13",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-176.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-171",
+      "reference": "Memorandum Order No. 171 — Approving Amendment to Section 23.11.2 No. 3 of the Implementing Rules and Regulations Part A (IRR-A) of Republic Act No. 9184, otherwise known as the Government Procurement Reform Act",
+      "aliases": [
+        "Memorandum Order No. 171"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-05-19",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-171.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-ORDER-NO-172",
+      "reference": "Memorandum Order No. 172 — Approving Amendment to No. 4 of Annex “D”, Contract Implementation Guidelines for the Procurement of Goods, Supplies and Materials, of the IRR-A of Republic Act (RA) No. 9184, (Government Procurement Reform Act), providing for the inclusion of a provision for the Application of Advance Payment for Procurement of Goods as Section 4 of Annex “D” of the IRR-A of R.A. No. 9184",
+      "aliases": [
+        "Memorandum Order No. 172"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-08-09",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Order-No.-172.pdf",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "OP-MEMORANDUM-FROM-THE-EXECUTIVE-SECRETARY",
+      "reference": "Memorandum from the Executive Secretary — Authorizing the Government Procurement Policy Board (GPPB) to Promulgate Rules and Regulations in Carrying Out the Provisions of Republic Act No. 9184",
+      "aliases": [
+        "Memorandum from the Executive Secretary"
+      ],
+      "type": "executive_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Office of the President",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2006-08-23",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-from-the-Executive-Secretary.jpg",
+      "verification": "index-listed (GPPB executive issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-REVENUE-MEMORANDUM-CIRCULAR-NO-16-2005",
+      "reference": "Revenue Memorandum Circular No. 16-2005 — Clarification to Revenue Regulations No. 3-2005, Executive Order 398",
+      "aliases": [
+        "Revenue Memorandum Circular No. 16-2005"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Bureau of Internal Revenue",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-04-19",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Revenue-Memorandum-Circular-No.-16-2005.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-REVENUE-REGULATIONS-NO-3-2005",
+      "reference": "Revenue Regulations No. 3-2005 — Rules and Regulations Implementing Executive Order No. 398 (E.O. 398) and Requiring Timely and Complete Payment of Taxes as a Precondition for Entering Into, as a Continuing Obligation with the Government, its Departments, Agencies and Instrumentatlities",
+      "aliases": [
+        "Revenue Regulations No. 3-2005"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Bureau of Internal Revenue",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-02-16",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Revenue-Regulations-No.-3-2005.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-COMMISSION-ON-AUDIT-CIRCULAR-NO-2003-004",
+      "reference": "Commission on Audit Circular No. 2003-004 — Prohibition for the Chief Accountant and personnel of accounting units to be regular members of the Bids and Award Committees",
+      "aliases": [
+        "Commission on Audit Circular No. 2003-004"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Commission on Audit",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2003-07-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Commission-on-Audit-Circular-No.-2003-004.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-COMMISSION-ON-AUDIT-CIRCULAR-NO-2001-001",
+      "reference": "Commission on Audit Circular No. 2001-001 — Abolishing the General Services Administration and Transferring its Functions to Appropriate Government Agencies",
+      "aliases": [
+        "Commission on Audit Circular No. 2001-001"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Commission on Audit",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2001-07-31",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Commission-on-Audit-Circular-No.-2001-001.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-COMMISSION-ON-AUDIT-CIRCULAR-NO-96-003",
+      "reference": "Commission on Audit Circular No. 96-003 — Restatement with amendments of COA Circular No. 95-003 dated February 15, 1995 Prescribing Accounting and Auditing Guidelines on the release of Funds Assistance to Non-Governmental Organizations/People’s Organizations (NGOs/POs)",
+      "aliases": [
+        "Commission on Audit Circular No. 96-003"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Commission on Audit",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1996-02-27",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Commission-on-Audit-Circular-No.-96-003.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-COMMISSION-ON-AUDIT-CIRCULAR-NO-89-296-JANUARY-27-1989",
+      "reference": "Commission on Audit Circular No. 89-296 January 27,1989 — Audit Guidelines on the Divestment or Disposal of Property and Other Assets of National Government Agencies and Instrumentalities, Local Government Units and Government-Owned or Controlled Corporations and their Subsidiaries",
+      "aliases": [
+        "Commission on Audit Circular No. 89-296 January 27,1989"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Commission on Audit",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Commission-on-Audit-Circular-No.-89-296.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-COMMISSION-ON-AUDIT-RESOLUTION-NO-86-58",
+      "reference": "Commission on Audit Resolution No. 86-58 — Policy on the Recovery by Government Contractors on the Basis of Quantum Meruit",
+      "aliases": [
+        "Commission on Audit Resolution No. 86-58"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Commission on Audit",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1986-11-15",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Commission-on-Audit-Resolution-No.-86-58.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-COMMISSION-ON-AUDIT-CIRCULAR-NO-86-264",
+      "reference": "Commission on Audit Circular No. 86-264 — General guidelines on the divestment or disposal of assets of Government-Owned and/or Controlled Corporations, and their subsidiaries",
+      "aliases": [
+        "Commission on Audit Circular No. 86-264"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Commission on Audit",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1986-10-16",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Commission-on-Audit-Circular-No.-86-264.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-COMMISSION-ON-AUDIT-CIRCULAR-NO-82-177",
+      "reference": "Commission on Audit Circular No. 82-177 — Prohibition against advance payment on government contracts",
+      "aliases": [
+        "Commission on Audit Circular No. 82-177"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Commission on Audit",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1982-03-04",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Commission-on-Audit-Circular-No.-82-177.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-CIRCULAR-LETTER-NO-2011-6A",
+      "reference": "Circular Letter No. 2011-6A — Addendum to Circular Letter (CL) No. 2011-6",
+      "aliases": [
+        "Circular Letter No. 2011-6A"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2011-09-28",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Circular-Letter-No.-2011-6A.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-CIRCULAR-LETTER-NO-2011-6",
+      "reference": "Circular Letter No. 2011-6 — Directing the Use of the Procurement Service (PS) and the Philippine Government Electronic Procurement System (PhilGEPS) in Procurement Activities",
+      "aliases": [
+        "Circular Letter No. 2011-6"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2011-08-25",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Circular-Letter-No.-2011-6.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-CIRCULAR-LETTER-NO-2010-9",
+      "reference": "Circular Letter No. 2010-9 — Guidelines Directing Agencies to Expedite the Implementation of their Procurement Activities",
+      "aliases": [
+        "Circular Letter No. 2010-9"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2010-12-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Circular-Letter-No.-2010-9.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-BUDGET-CIRCULAR-NO-2010-2",
+      "reference": "Budget Circular No. 2010-2 — Guidelines on the Acquisition and Use of Government Motor Vehicles",
+      "aliases": [
+        "Budget Circular No. 2010-2"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2010-03-01",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Budget-Circular-No.-2010-2.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-NATIONAL-BUDGET-CIRCULAR-NO-517",
+      "reference": "National Budget Circular No. 517 — Guidelines on the Establishment of Procurement Units",
+      "aliases": [
+        "National Budget Circular No. 517"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2008-12-22",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/National-Budget-Circular-No.-517.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-BUDGET-CIRCULAR-NO-2007-3",
+      "reference": "Budget Circular No. 2007-3 — Amendments to certain provisions of Budget Circular (BC) No. 2004-5A Re: Guidelines on the Grant of Honoraria and Overtime Pay to Government Personnel Involved in Government Procurement",
+      "aliases": [
+        "Budget Circular No. 2007-3"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-11-29",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Budget-Circular-No.-2007-3.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-BUDGET-CIRCULAR-NO-2004-5A",
+      "reference": "Budget Circular No. 2004-5A — Guidelines on the Grant of Honoraria to Government Personnel Involved in Government Procurement",
+      "aliases": [
+        "Budget Circular No. 2004-5A"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2005-10-07",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Budget-Circular-No.-2004-5A.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-BUDGET-CIRCULAR-NO-2004-5",
+      "reference": "Budget Circular No. 2004-5 — Guidelines on the Grant of Honoraria to Government Personnel Involved in Government Procurement",
+      "aliases": [
+        "Budget Circular No. 2004-5"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2004-03-23",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Budget-Circular-No.-2004-5.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-NATIONAL-BUDGET-CIRCULAR-NO-486",
+      "reference": "National Budget Circular No. 486 — Amending National Budget Circular (NBC) No. 442, dated March 29, 1995 Relative to the Cost of Participation of Government Officials and Employees in Conventions, Seminars, Conferences, Symposia and Similar Non-Training Gatherings Sponsored by Non-Government Organizations or Private Institutions",
+      "aliases": [
+        "National Budget Circular No. 486"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2003-03-26",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/National-Budget-Circular-No.-486.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-NATIONAL-BUDGET-CIRCULAR-NO-446-A",
+      "reference": "National Budget Circular No. 446-A — Amending National Budget Circular (NBC) No. 446, dated November 24, on the subject, Guidelines on the Acquisition and Rental of Motor Vehicles",
+      "aliases": [
+        "National Budget Circular No. 446-A"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1998-01-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/National-Budget-Circular-No.-446-A.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-NATIONAL-BUDGET-CIRCULAR-NO-425",
+      "reference": "National Budget Circular No. 425 — Manual on the Disposal of Government Property",
+      "aliases": [
+        "National Budget Circular No. 425"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Department of Budget and Management",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "1992-01-28",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/National-Budget-Circular-No.-425.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-MEMORANDUM-CIRCULAR-NO-2010-83",
+      "reference": "Memorandum Circular No. 2010-83 — Full Disclosure of Local Budget and Finances, and Bids and Public Offerings",
+      "aliases": [
+        "Memorandum Circular No. 2010-83"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2010-08-31",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Memorandum-Circular-No.-2010-83.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-DILG-OPINION-NO-9-S-2006",
+      "reference": "DILG Opinion No. 9, s. 2006 — DILG Opinion on Sangguniang Panlalawigan (SP)",
+      "aliases": [
+        "DILG Opinion No. 9, s. 2006"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2006-02-17",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/DILG-Opinion-No.-9-s.-2006.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-DEPARTMENT-CIRCULAR-NO-2020-0391-COVID-19-RAPID-ANTIGEN-TEST",
+      "reference": "Department Circular No. 2020-0391 COVID-19 Rapid Antigen Test and COVID-19 RT-PCR Test — Price CAP For COVID-19 Rapid Antigen Test and Price Range for COVID-19 RT-PCR Test",
+      "aliases": [
+        "Department Circular No. 2020-0391 COVID-19 Rapid Antigen Test and COVID-19 RT-PCR Test"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2020-11-27",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Department-Circular-No.-2020-0391-COVID-19-Rapid-Antigen-Test-and-COVID-19-RT-PCR-Test.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-DOJ-OPINION-NO-46-S-2007",
+      "reference": "DOJ Opinion No. 46, s. 2007 — DOJ Opinion on National Broadband Network (NBN) Project",
+      "aliases": [
+        "DOJ Opinion No. 46, s. 2007"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2007-07-26",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/DOJ-Opinion-No.-46-s.-2007.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-DEPARTMENT-ORDER-NO-57",
+      "reference": "Department Order No. 57 — Requiring All Procuring Entities of Regional and District Offices to Post Bidding Documents and Plans at the DPWH and PhilGEPS",
+      "aliases": [
+        "Department Order No. 57"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2010-10-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Department-Order-No.-57.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-DEPARTMENT-ORDER-NO-56",
+      "reference": "Department Order No. 56 — Establishment of a Single Bids and Awards Committee for Civil Works in the DPWH Central Office",
+      "aliases": [
+        "Department Order No. 56"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2010-10-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Department-Order-No.-56.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-DEPARTMENT-ORDER-NO-55",
+      "reference": "Department Order No. 55 — Conduct of Pre-Procurement, Procurement, and Implementation Activities for DPWH Locally-Funded Civil Works Projects, Limits of Authorities of Concerned DPWH Key Officials and Related Matters",
+      "aliases": [
+        "Department Order No. 55"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2010-10-30",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Department-Order-No.-55.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-JV-GUIDELINES-SECTION-8-EO-423",
+      "reference": "Joint Venture Guidelines (Section 8 of EO 423) — Guidelines and Procedures for Entering into Joint Venture (JV) Agreement Between Government and Private Entities Per Section 8 of EO 423",
+      "aliases": [],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": "2008-04-17",
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Guidelines-and-Procedures-for-Entering-into-Joint-Venture-JV-Agreement-Between-Government-and-Private-Entities-Per-Section-8-of-EO-423.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-CONSTRUCTORS-PERFORMANCE-EVALUATION-SYSTEM-IMPLEMENTING-GUID",
+      "reference": "Constructors Performance Evaluation System – Implementing Guidelines for Infrastructure Projects — Amended Guidelines as Approved by NEDA InfraCom Pursuant to the IRR of RA 9184 13 September 2011 01. Foreword 02. Acknowledgment 03. NEDA BR 03-2011 04. CIAP BR10-2011 05. Salient Features of CPES 06. Amended Guidelines 07. Annex 1 – CPES Functional/Deployment Flowchart 08. Annex 2 – Checklists for Workmanship 09. Annex 3 – Checklist for Materials 10. Annex 4 – Checklist for Time 11. Annex 5 – Checklist for Facilities 12. Annex 6 – Checklist for Environmental, Safety and Health (ESH) 13. Annex 7 – Checklist for Resources Deployment 14. Annex 8 – CPES Evaluation Form 15. Annex 9 – Corrective Action Request (CAR) Form 16. Annex 10 – Constructors Performance Summary Report 17. Annex 11 – Schedule of Minimum Test Requirements 18. Annex 12 – List of Philippine National Standards",
+      "aliases": [
+        "Constructors Performance Evaluation System – Implementing Guidelines for Infrastructure Projects"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Constructors-Performance-Evaluation-System-Implementing-Guidelines-for-Infrastructure-Projects.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ],
+      "annex_urls": [
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Foreword.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Acknowledgment.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/NEDA-BR-03-2011.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/CIAP-BR10-2011.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Salient-Features-of-CPES.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Amended-Guidelines.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-1-CPES-Functional-Deployment-Flowchart.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-2-Checklists-for-Workmanship.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-3-Checklist-for-Materials.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-4-Checklist-for-Time.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-5-Checklist-for-Facilities.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-6-Checklist-for-Environmental-Safety-and-Health-ESH.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-7-Checklist-for-Resources-Deployment.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-8-CPES-Evaluation-Form.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-9-Corrective-Action-Request-CAR-Form.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-10-Constructors-Performance-Summary-Report.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-11-Schedule-of-Minimum-Test-Requirements.pdf",
+        "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Annex-12-List-of-Philippine-National-Standards.pdf"
+      ]
+    },
+    {
+      "id": "AGENCY-PCAB-CIRCULAR-NO-001-SERIES-OF-2009",
+      "reference": "PCAB Circular No. 001, Series of 2009 — Implementation of the Second Stage of Adjustment on Allowable Range of Contract Costs and Single Largest Project Completed/Track Record Management 01 April 2009",
+      "aliases": [
+        "PCAB Circular No. 001, Series of 2009"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Philippine Contractors Accreditation Board",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/PCAB-Circular-No.-001-Series-of-2009.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
+    },
+    {
+      "id": "AGENCY-PROCUREMENT-TRANSPARENCY-GROUP",
+      "reference": "Procurement Transparency Group — Implementing Guidelines of Executive Order No. 662, as amended by Executive Order No. 662-A, entitled “Enhancing the Transparency Measures under Republic Act No. 9184 and creating the Procurement Transparency Group” [Publication Date: 13 April 2008-Manila Standard Today] [Effectivity Date: 14 April 2008]",
+      "aliases": [
+        "Procurement Transparency Group"
+      ],
+      "type": "agency_issuance",
+      "framework": "RA9184",
+      "status": "HISTORICAL",
+      "authority_level": 3,
+      "issuing_body": "Government agency",
+      "date_approved": null,
+      "date_published": null,
+      "date_issued": null,
+      "effective_date": null,
+      "source_url": "https://www.gppb.gov.ph/wp-content/uploads/2023/06/Procurement-Transparency-Group.pdf",
+      "verification": "index-listed (GPPB administrative issuances page, catalogued 2026-10-12)",
+      "ingest": true,
+      "ingest_fields": [
+        "source_url",
+        "annex_urls"
+      ]
     }
   ],
   "project": "BidAIssistPH",

@@ -220,6 +220,42 @@ for (const [kind, url, prefix, label] of [
   }
 }
 
+// ---- Executive issuances (Office of the President) and other agencies' issuances GPPB lists ------------
+for (const [url, type, prefix] of [
+  [`${BASE}/executive-issuances/`, 'executive_issuance', 'OP'],
+  [`${BASE}/administrative-issuances/`, 'agency_issuance', 'AGENCY'],
+]) {
+  const $ = await get(url);
+  for (const r of rows($)) {
+    const files = [...new Set(r.links.filter(l => /\.(pdf|jpe?g|png)($|\?)/i.test(l)))];
+    if (!r.cells[0] || !files.length) continue;
+    const date = isoDate(r.cells[0]);
+    // "Administrative Order No. 17 July 28, 2011" → "Administrative Order No. 17"
+    const name = clean(r.cells[0].replace(/\[.*?\]|\(.*?\)/g, '').replace(/\s*[A-Z][a-z]+\.? \d{1,2},? \d{4}.*$/, ''));
+    // A row whose first column is only a date is named by its title instead.
+    const label = name || clean(r.cells[1]).split(/[(,]/)[0].slice(0, 80);
+    const slug = label.toUpperCase().replace(/[^A-Z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+    const body = type === 'executive_issuance' ? 'Office of the President'
+      : /Revenue/i.test(name) ? 'Bureau of Internal Revenue' : /Commission on Audit|COA/i.test(name) ? 'Commission on Audit'
+      : /PCAB/i.test(name) ? 'Philippine Contractors Accreditation Board' : /DBM|Budget/i.test(name) ? 'Department of Budget and Management'
+      : 'Government agency';
+    const fw = framework(date, date?.slice(0, 4) ?? '', `${name} ${r.cells[1]}`);
+    const doc = {
+      id: `${prefix}-${slug}`,
+      reference: name ? `${name} — ${r.cells[1]}` : r.cells[1],
+      aliases: name ? [name] : [],
+      type, framework: fw, status: fw === 'RA12009' ? 'CURRENT' : 'HISTORICAL',
+      authority_level: 3, issuing_body: body,
+      date_approved: null, date_published: null, date_issued: date, effective_date: null,
+      source_url: files[0],
+      verification: `index-listed (GPPB ${type === 'executive_issuance' ? 'executive' : 'administrative'} issuances page, catalogued ${TODAY})${fw === 'RA12009' ? '; status not reviewed' : ''}`,
+      ingest: true, ingest_fields: ['source_url', 'annex_urls'],
+    };
+    if (files.length > 1) doc.annex_urls = files.slice(1);
+    add(doc, files);
+  }
+}
+
 // Drop undefined keys so the manifest stays clean JSON.
 const out = added.map(d => Object.fromEntries(Object.entries(d).filter(([, v]) => v !== undefined)));
 const byType = out.reduce((n, d) => ({ ...n, [`${d.type}/${d.framework}`]: (n[`${d.type}/${d.framework}`] ?? 0) + 1 }), {});

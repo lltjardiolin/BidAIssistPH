@@ -11,7 +11,7 @@ import { extractText, getDocumentProxy } from 'unpdf';
 const run = promisify(execFile);
 
 export type Page = { page: number | null; text: string; ocr: boolean; confidence?: number };
-export type Extracted = { pages: Page[]; method: 'pdf-text' | 'pdf-ocr' | 'pdf-mixed' | 'html'; ocrPages: number };
+export type Extracted = { pages: Page[]; method: 'pdf-text' | 'pdf-ocr' | 'pdf-mixed' | 'html' | 'image-ocr'; ocrPages: number };
 
 /** A page with fewer characters than this has no usable text layer. */
 const MIN_PAGE_CHARS = 120;
@@ -91,6 +91,11 @@ export async function extractArtifact(
 
   let out: Extracted;
   if (opts.contentType === 'application/pdf') out = await extractPdf(file, path.join(opts.cacheDir, 'tessdata'));
+  else if (opts.contentType.startsWith('image/')) {
+    // A scanned page posted as a picture (some executive issuances are JPGs).
+    const { data } = await (await getWorker(path.join(opts.cacheDir, 'tessdata'))).recognize(file);
+    out = { pages: [{ page: 1, text: data.text, ocr: true, confidence: data.confidence }], method: 'image-ocr', ocrPages: 1 };
+  }
   else if (opts.contentType.includes('html')) out = { pages: [{ page: null, text: htmlToText(await fs.readFile(file)), ocr: false }], method: 'html', ocrPages: 0 };
   else throw new Error(`Unsupported content type ${opts.contentType} for ${file}`);
 

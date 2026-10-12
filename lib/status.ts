@@ -15,4 +15,5 @@ export const FRAMEWORK_LABEL: Record<string, string> = { RA12009: 'RA 12009', RA
 export const KIND_LABEL: Record<string, string> = {
   law: 'Statute', bill: 'Bill', irr: 'IRR', resolution: 'Resolution', circular: 'Circular', advisory: 'Advisory',
   opinion: 'TSO opinion', manual: 'Manual', faq: 'FAQ', comparison: 'Comparison', opinion_collection: 'Opinions',
+  executive_issuance: 'Executive issuance', agency_issuance: 'Agency issuance',
 };
