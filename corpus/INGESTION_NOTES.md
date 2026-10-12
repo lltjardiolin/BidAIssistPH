@@ -1,11 +1,11 @@
 # Ingestion notes
 
 - Corpus version: 2026-09-28
-- Generated: 2026-10-12T09:21:00.323Z
+- Generated: 2026-10-12T09:45:44.997Z
 - Embedding: text-embedding-3-small (1536 dimensions)
 - OCR pages skipped as unreadable (confidence < 50): 140
 - Chunking: section, max 900 tokens, overlap 150
-- Approval gate: **BYPASSED (--allow-unapproved) — development index, not a release**
+- Approval gate: enforced (approved artifacts only)
 - Documents indexed: 2106 of 2138 manifest entries · 9689 chunks
 
 | Document | Files | Pages | OCR pages | Chunks | Note |
