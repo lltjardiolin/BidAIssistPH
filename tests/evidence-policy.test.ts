@@ -47,10 +47,11 @@ describe('applyEvidencePolicy', () => {
       ev({ id: 'bill', status: 'PROPOSED', authorityLevel: 1 }),
       ev({ id: 'npm', status: 'REFERENCE', authorityLevel: 4 }),
       ev({ id: 'old', status: 'HISTORICAL', framework: 'RA9184', authorityLevel: 3 }),
+      ev({ id: 'oldnpm', status: 'HISTORICAL', framework: 'RA9184', authorityLevel: 4 }),
     ]);
     if (r.abstain) throw new Error('unexpected abstention');
-    expect(r.labels).toEqual({ bill: 'PROPOSAL_ONLY', npm: 'INTERPRETIVE_ONLY', old: 'HISTORICAL_ONLY' });
-    expect(r.flags).toMatchObject({ hasProposal: true, hasOpinion: true });
+    expect(r.labels).toEqual({ bill: 'PROPOSAL_ONLY', npm: 'INTERPRETIVE_ONLY', old: 'HISTORICAL_ONLY', oldnpm: 'HISTORICAL_OPINION' });
+    expect(r.flags).toMatchObject({ hasProposal: true, hasOpinion: true, hasHistoricalOpinion: true });
   });
 
   it('flags mixed frameworks instead of abstaining, and not at all when comparing', () => {

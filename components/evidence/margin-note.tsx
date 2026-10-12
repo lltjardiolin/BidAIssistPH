@@ -27,6 +27,7 @@ export function MarginNote({ e, messageId, active, fresh = false, compact = fals
       )}
       {!compact && e.note && <p className="mt-1.5 text-[12.5px] text-ink">{e.note}</p>}
       {!compact && e.label === 'INTERPRETIVE_ONLY' && <p className="mt-1.5 text-[12.5px] text-ink">An opinion or explanation, not Board policy.</p>}
+      {!compact && e.label === 'HISTORICAL_OPINION' && <p className="mt-1.5 text-[12.5px] text-ink">An opinion issued under RA 9184, before RA 12009. Not Board policy.</p>}
       {!compact && (
         <details className="mt-1.5 text-[12.5px]">
           <summary className="inline cursor-pointer select-none font-medium text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent">

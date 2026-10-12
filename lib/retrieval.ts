@@ -204,7 +204,11 @@ export async function retrieveEvidence({ query: q, compare, scope }: { query: st
         ...await hybridQuery(emb, norm, scope, HISTORICAL_CANDIDATES, cfg.mode, { statuses: ['HISTORICAL'] }),
       ]
     : await hybridQuery(emb, norm, scope, CANDIDATES, cfg.mode);
-  const ranked = (cfg.rerank ? rerank(candidates, { ids: norm.ids, sections: norm.sections, scope, query: norm.text }) : candidates).slice(0, cfg.topK);
+  const reranked = (cfg.rerank ? rerank(candidates, { ids: norm.ids, sections: norm.sections, scope, query: norm.text }) : candidates).slice(0, cfg.topK);
+  // Current evidence is numbered first (E1, E2, …) so the answer leads with today's rule; RA 9184-era passages
+  // follow as context. A question about the old framework keeps the ranking as is.
+  const ranked = historical ? reranked
+    : [...reranked.filter(r => r.status !== 'HISTORICAL'), ...reranked.filter(r => r.status === 'HISTORICAL')];
   // The evidence policy gate below always runs, whatever the experiment: safety is not a tunable.
   const expanded = cfg.companions
     ? await expandCompanions(ranked, { emb, compare: wantsCompare, namedIds: norm.ids, scope, max: MAX_EVIDENCE })
@@ -256,10 +260,11 @@ export function formatEvidenceForModel(r: RetrievalResult, question?: string): s
     r.flags?.mixedFrameworks ? 'NOTE: evidence spans RA 9184 and RA 12009 — keep frameworks separate and label each.' : '',
     r.flags?.hasProposal ? 'NOTE: PROPOSAL_ONLY evidence is a bill — say "proposes"; it is not law.' : '',
     r.flags?.hasOpinion ? 'NOTE: INTERPRETIVE_ONLY evidence — write "GPPB-TSO has opined…", never "the rule is…".' : '',
+    r.flags?.hasHistoricalOpinion ? 'NOTE: HISTORICAL_OPINION evidence is an RA 9184-era opinion — say so, and that it predates RA 12009.' : '',
     r.flags?.hasVersionEvidence ? 'NOTE: VERSION_ONLY evidence is withdrawn/superseded — never cite it as the current rule; name its replacement.' : '',
   ].filter(Boolean).join('\n');
   const blocks = r.evidence.map(e =>
-    `[E${e.n}] ${e.reference} · STATUS: ${e.status} · FRAMEWORK: ${e.framework} · AUTHORITY: ${e.authority} · USE AS: ${e.label}\n` +
+    `[E${e.n}] ${e.reference}${e.status === 'HISTORICAL' ? ' (RA 9184 era, before RA 12009)' : ''} · STATUS: ${e.status} · FRAMEWORK: ${e.framework} · AUTHORITY: ${e.authority} · USE AS: ${e.label}\n` +
     `Section: ${e.section ?? '—'}${e.page ? ` · p. ${e.page}` : ''}${e.dateLabel ? ` · ${e.dateLabel}` : ''}${e.note ? `\nNote: ${e.note}` : ''}\n` +
     `<evidence>\n${focusPassage(e.text, question ?? '', MAX_PASSAGE_CHARS)}\n</evidence>`);
   // Restated after the evidence: long evidence must not push the task out of the model's attention or context.

@@ -83,6 +83,7 @@ const STATUS_WORDS: Record<string, string> = {
   HISTORICAL_ONLY: 'historical previous previously former formerly old earlier era longer current rule governed counterpart framework',
   PROPOSAL_ONLY: 'bill proposed proposes proposal propose law enacted pending filed yet',
   INTERPRETIVE_ONLY: 'opinion opined opines interpretive interpretation guidance policy board',
+  HISTORICAL_OPINION: 'opinion opined opines interpretive interpretation guidance historical previous previously former formerly old earlier era predates longer current rule governed counterpart framework',
   CURRENT_RULE: 'current currently force effect rule applies governs framework',
 };
 
@@ -159,7 +160,7 @@ export function checkStatement(statement: string, cited: Evidence[], minSupport 
     return { ok: false, reason: 'wording-not-in-source', detail: `${Math.round(support * 100)}% of its wording is in the source` };
 
   // 4. Status: a source that is not the current rule cannot be the basis of a "current rule" statement.
-  if (CURRENT_CLAIM.test(full) && !NEGATED.test(full) && cited.every(e => e.label === 'VERSION_ONLY' || e.label === 'HISTORICAL_ONLY' || e.label === 'PROPOSAL_ONLY'))
+  if (CURRENT_CLAIM.test(full) && !NEGATED.test(full) && cited.every(e => e.label === 'VERSION_ONLY' || e.label === 'HISTORICAL_ONLY' || e.label === 'HISTORICAL_OPINION' || e.label === 'PROPOSAL_ONLY'))
     return { ok: false, reason: 'status-conflict', detail: `${cited[0].status} source stated as current` };
   if (LAW_CLAIM.test(full) && !NEGATED.test(full) && cited.some(e => e.label === 'PROPOSAL_ONLY'))
     return { ok: false, reason: 'status-conflict', detail: 'a bill stated as law' };

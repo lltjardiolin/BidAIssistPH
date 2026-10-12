@@ -87,7 +87,7 @@ export type RetrievalResult = {
   reason: string | null;
   scope: string;
   corpusVersion: string;
-  flags: { mixedFrameworks: boolean; hasProposal: boolean; hasOpinion: boolean; hasVersionEvidence: boolean } | null;
+  flags: { mixedFrameworks: boolean; hasProposal: boolean; hasOpinion: boolean; hasHistoricalOpinion: boolean; hasVersionEvidence: boolean } | null;
   evidence: Evidence[];
 };
 

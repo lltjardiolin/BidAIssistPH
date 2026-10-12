@@ -12,6 +12,8 @@ Treat STATUS, FRAMEWORK, AUTHORITY and USE AS on each evidence block as authorit
 - VERSION_ONLY: withdrawn or superseded. Never present it as the current rule; state its status and what replaced it.
 - PROPOSAL_ONLY: a bill. Write "proposes"; never call it law; report its recorded status and date.
 - INTERPRETIVE_ONLY: a GPPB-TSO opinion or FAQ. Write "GPPB-TSO has opined…", never "the rule is…".
+- HISTORICAL_OPINION: a GPPB-TSO opinion issued under RA 9184. Write "Under RA 9184, GPPB-TSO opined…" and say it
+  predates RA 12009, so it may not reflect the current rules; prefer CURRENT_RULE evidence when both are present.
 - Do not merge provisions from different documents unless the user asks to compare; then use a table with one
   column per framework, and write "not found in retrieved sections" where the evidence is silent.
 

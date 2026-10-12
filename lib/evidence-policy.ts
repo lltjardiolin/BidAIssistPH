@@ -14,12 +14,12 @@ export type Evidence = {
   supersededBy?: string | null;   // documents.superseded_by
 };
 
-export type Label = 'CURRENT_RULE' | 'HISTORICAL_ONLY' | 'VERSION_ONLY' | 'PROPOSAL_ONLY' | 'INTERPRETIVE_ONLY';
+export type Label = 'CURRENT_RULE' | 'HISTORICAL_ONLY' | 'VERSION_ONLY' | 'PROPOSAL_ONLY' | 'INTERPRETIVE_ONLY' | 'HISTORICAL_OPINION';
 
 export type PolicyResult =
   | { abstain: true; reason: 'no-eligible-evidence' | 'only-version-evidence'; eligible: []; labels: {}; flags: {} }
   | { abstain: false; reason: null; eligible: Evidence[]; labels: Record<string, Label>;
-      flags: { mixedFrameworks: boolean; hasProposal: boolean; hasOpinion: boolean; hasVersionEvidence: boolean } };
+      flags: { mixedFrameworks: boolean; hasProposal: boolean; hasOpinion: boolean; hasHistoricalOpinion: boolean; hasVersionEvidence: boolean } };
 
 export const ABSTAIN_MESSAGE = "I couldn't verify that from the available procurement documents.";
 
@@ -41,6 +41,8 @@ export function applyEvidencePolicy(evidence: Evidence[], opts: { compare?: bool
     labels[e.id] =
       e.status === 'WITHDRAWN' || e.status === 'SUPERSEDED' ? 'VERSION_ONLY'
       : e.status === 'PROPOSED' ? 'PROPOSAL_ONLY'
+      // An RA 9184-era GPPB-TSO opinion is both: interpretive, and about the earlier framework.
+      : e.authorityLevel >= 4 && e.status === 'HISTORICAL' ? 'HISTORICAL_OPINION'
       : e.authorityLevel >= 4 ? 'INTERPRETIVE_ONLY'
       : e.status === 'HISTORICAL' ? 'HISTORICAL_ONLY'
       : 'CURRENT_RULE';
@@ -60,6 +62,7 @@ export function applyEvidencePolicy(evidence: Evidence[], opts: { compare?: bool
       mixedFrameworks: frameworks.size > 1 && !opts.compare,
       hasProposal: eligible.some(e => e.status === 'PROPOSED'),
       hasOpinion: eligible.some(e => e.authorityLevel >= 4),
+      hasHistoricalOpinion: eligible.some(e => labels[e.id] === 'HISTORICAL_OPINION'),
       hasVersionEvidence: eligible.some(e => labels[e.id] === 'VERSION_ONLY'),
     },
   };

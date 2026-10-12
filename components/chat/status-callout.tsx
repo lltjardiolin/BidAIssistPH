@@ -18,7 +18,7 @@ export function pickCallout(evidence: Evidence[], mixedFrameworks: boolean): Cal
     return { status: 'HISTORICAL', title: 'The earlier framework', body: 'These sources are from the RA 9184 era. RA 12009 is the current law; RA 9184 rules apply only where the transitory provisions say so.' };
   if (mixedFrameworks || (evidence.some(e => e.framework === 'RA9184') && evidence.some(e => e.framework === 'RA12009')))
     return { status: 'HISTORICAL', title: 'Two frameworks', body: 'This answer draws on RA 9184, which is historical, and RA 12009, which is current. Each note in the margin says which.' };
-  if (ranked.length && ranked.every(e => e.label === 'INTERPRETIVE_ONLY'))
+  if (ranked.length && ranked.every(e => e.label === 'INTERPRETIVE_ONLY' || e.label === 'HISTORICAL_OPINION'))
     return { status: 'REFERENCE', title: 'Opinions only', body: 'These are GPPB-TSO opinions or explanations. They show how the office has read the rules; they are not Board policy.' };
   return null;
 }

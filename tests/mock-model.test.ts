@@ -13,7 +13,7 @@ const e = (o: Partial<Evidence>): Evidence => ({
 });
 const result = (evidence: Evidence[]): RetrievalResult => ({
   abstain: false, reason: null, scope: 'all', corpusVersion: '2026-09-28', evidence,
-  flags: { mixedFrameworks: false, hasProposal: false, hasOpinion: false, hasVersionEvidence: true },
+  flags: { mixedFrameworks: false, hasProposal: false, hasOpinion: false, hasHistoricalOpinion: false, hasVersionEvidence: true },
 });
 
 describe('evidence blocks → mock answer', () => {

@@ -35,6 +35,7 @@ export function composeExtractiveAnswer(evidence: string): string {
       label === 'VERSION_ONLY' ? `${name} is withdrawn and must not be cited as the current rule` :
       label === 'PROPOSAL_ONLY' ? `${name} proposes, and is not law` :
       label === 'INTERPRETIVE_ONLY' ? `GPPB-TSO has opined in ${name}` :
+      label === 'HISTORICAL_OPINION' ? `Under RA 9184, GPPB-TSO opined in ${name}` :
       label === 'HISTORICAL_ONLY' ? `Historically, under ${name}` : `${name} states`;
     return `- ${lead}: "${sentence}" [E${n}]`;
   });
