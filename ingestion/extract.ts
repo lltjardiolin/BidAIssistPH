@@ -15,9 +15,15 @@ export type Extracted = { pages: Page[]; method: 'pdf-text' | 'pdf-ocr' | 'pdf-m
 
 /** A page with fewer characters than this has no usable text layer. */
 const MIN_PAGE_CHARS = 120;
-const CACHE_VERSION = 1;
+/** v2: 300 dpi greyscale, with a cleaned black-and-white retry for weak pages. v1 (200 dpi) entries are still read
+ *  when no v2 exists, so the bump never forces a full re-OCR; scripts/ocr-upgrade.ts re-reads the weak ones. */
+const CACHE_VERSION = 2;
+const OCR_DPI = '300';
+/** Below this confidence a page is read again from a median-filtered, thresholded image: photocopy shading and
+ *  halftone margins otherwise read as stray characters (GPPB circulars of 1992–2011). */
+export const CLEAN_RETRY_BELOW = 85;
 
-type Worker = { recognize: (img: string) => Promise<{ data: { text: string; confidence: number } }>; terminate: () => Promise<unknown> };
+type Worker = { recognize: (img: string | Buffer) => Promise<{ data: { text: string; confidence: number } }>; terminate: () => Promise<unknown> };
 let worker: Worker | undefined;
 
 async function getWorker(cacheDir: string): Promise<Worker> {
@@ -34,18 +40,36 @@ export async function closeExtractors() {
   worker = undefined;
 }
 
-async function ocrPage(pdfPath: string, page: number, cacheDir: string): Promise<{ text: string; confidence: number }> {
+/** Reads an image; a weak reading is retried on a cleaned copy and the higher-confidence reading wins. */
+export async function recognizeBest(img: string, cacheDir: string): Promise<{ text: string; confidence: number }> {
+  const w = await getWorker(cacheDir);
+  const { data } = await w.recognize(img);
+  if (data.confidence >= CLEAN_RETRY_BELOW) return { text: data.text, confidence: data.confidence };
+  const { default: sharp } = await import('sharp');
+  const clean = await sharp(img).greyscale().median(3).threshold(140).png().toBuffer();
+  const { data: retry } = await w.recognize(clean);
+  const best = retry.confidence > data.confidence ? retry : data;
+  return { text: best.text, confidence: best.confidence };
+}
+
+export async function ocrPage(pdfPath: string, page: number, cacheDir: string): Promise<{ text: string; confidence: number }> {
   const tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'bid-ocr-'));
   try {
     // Requires poppler-utils (pdftoppm) on the maintainer machine. Ingestion-only; never runs on Vercel.
-    await run('pdftoppm', ['-r', '200', '-png', '-f', String(page), '-l', String(page), pdfPath, path.join(tmp, 'p')]);
+    await run('pdftoppm', ['-r', OCR_DPI, '-gray', '-png', '-f', String(page), '-l', String(page), pdfPath, path.join(tmp, 'p')]);
     const [png] = await fs.readdir(tmp);
     if (!png) throw new Error(`pdftoppm produced no image for page ${page}`);
-    const { data } = await (await getWorker(cacheDir)).recognize(path.join(tmp, png));
-    return { text: data.text, confidence: data.confidence };
+    return await recognizeBest(path.join(tmp, png), cacheDir);
   } finally {
     await fs.rm(tmp, { recursive: true, force: true });
   }
+}
+
+/** A text layer that splits words into letters ("i n t h e"), as some Distiller-made PDFs do, is unusable. */
+export function isLetterSpaced(text: string): boolean {
+  const tokens = text.split(/\s+/).filter(Boolean);
+  if (tokens.length < 40) return false;
+  return tokens.filter(t => /^\p{L}$/u.test(t)).length / tokens.length > 0.3;
 }
 
 async function extractPdf(file: string, tessCache: string): Promise<Extracted> {
@@ -54,11 +78,14 @@ async function extractPdf(file: string, tessCache: string): Promise<Extracted> {
   const pages: Page[] = [];
   let ocrPages = 0;
   for (const [i, t] of (text as string[]).entries()) {
-    if (t.trim().length >= MIN_PAGE_CHARS) { pages.push({ page: i + 1, text: t, ocr: false }); continue; }
+    const spaced = isLetterSpaced(t);
+    if (t.trim().length >= MIN_PAGE_CHARS && !spaced) { pages.push({ page: i + 1, text: t, ocr: false }); continue; }
     const o = await ocrPage(file, i + 1, tessCache);
     ocrPages++;
-    // Keep whichever is longer: a near-empty page (a signature block, a divider) may OCR to nothing.
-    pages.push(o.text.trim().length > t.trim().length
+    // Keep whichever is longer: a near-empty page (a signature block, a divider) may OCR to nothing. A letter-spaced
+    // layer is always longer than its OCR, so there the OCR wins whenever it read a real page.
+    const useOcr = spaced ? o.text.trim().length >= MIN_PAGE_CHARS : o.text.trim().length > t.trim().length;
+    pages.push(useOcr
       ? { page: i + 1, text: o.text, ocr: true, confidence: o.confidence }
       : { page: i + 1, text: t, ocr: false });
   }
@@ -86,21 +113,33 @@ export async function extractArtifact(
   file: string,
   opts: { contentType: string; sha256: string; cacheDir: string },
 ): Promise<Extracted> {
-  const cacheFile = path.join(opts.cacheDir, `${opts.sha256}.v${CACHE_VERSION}.json`);
-  try { return JSON.parse(await fs.readFile(cacheFile, 'utf8')) as Extracted; } catch { /* not cached */ }
+  const cached = await readCachedExtraction(opts.cacheDir, opts.sha256);
+  if (cached) return cached;
 
   let out: Extracted;
   if (opts.contentType === 'application/pdf') out = await extractPdf(file, path.join(opts.cacheDir, 'tessdata'));
   else if (opts.contentType.startsWith('image/')) {
     // A scanned page posted as a picture (some executive issuances are JPGs).
-    const { data } = await (await getWorker(path.join(opts.cacheDir, 'tessdata'))).recognize(file);
-    out = { pages: [{ page: 1, text: data.text, ocr: true, confidence: data.confidence }], method: 'image-ocr', ocrPages: 1 };
+    const o = await recognizeBest(file, path.join(opts.cacheDir, 'tessdata'));
+    out = { pages: [{ page: 1, text: o.text, ocr: true, confidence: o.confidence }], method: 'image-ocr', ocrPages: 1 };
   }
   else if (opts.contentType.includes('html')) out = { pages: [{ page: null, text: htmlToText(await fs.readFile(file)), ocr: false }], method: 'html', ocrPages: 0 };
   else throw new Error(`Unsupported content type ${opts.contentType} for ${file}`);
 
-  // Keyed by artifact hash: changed bytes → new hash → fresh extraction.
-  await fs.mkdir(opts.cacheDir, { recursive: true });
-  await fs.writeFile(cacheFile, JSON.stringify(out));
+  await writeCachedExtraction(opts.cacheDir, opts.sha256, out);
   return out;
+}
+
+/** Newest cache entry for an artifact: v2 if present, else the v1 (200 dpi) entry. Never overwritten by a lower version. */
+export async function readCachedExtraction(cacheDir: string, sha256: string): Promise<Extracted | null> {
+  for (let v = CACHE_VERSION; v >= 1; v--) {
+    try { return JSON.parse(await fs.readFile(path.join(cacheDir, `${sha256}.v${v}.json`), 'utf8')) as Extracted; } catch { /* next */ }
+  }
+  return null;
+}
+
+// Keyed by artifact hash: changed bytes → new hash → fresh extraction.
+export async function writeCachedExtraction(cacheDir: string, sha256: string, out: Extracted) {
+  await fs.mkdir(cacheDir, { recursive: true });
+  await fs.writeFile(path.join(cacheDir, `${sha256}.v${CACHE_VERSION}.json`), JSON.stringify(out));
 }

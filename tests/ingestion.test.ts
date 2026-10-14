@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { chunkSections } from '../ingestion/chunk';
-import { htmlToText } from '../ingestion/extract';
+import { htmlToText, isLetterSpaced } from '../ingestion/extract';
 import { normalize } from '../ingestion/normalize';
 import { matchHeading, sectionize } from '../ingestion/sectionize';
 
@@ -99,5 +99,17 @@ describe('htmlToText', () => {
     const t = htmlToText(Buffer.from(html));
     expect(t).toContain('has been withdrawn');
     expect(t).not.toMatch(/Home|Resolutions|Contact us|WeMakeThingsHappen|Facebook/);
+  });
+});
+
+describe('isLetterSpaced', () => {
+  it('flags a text layer that splits words into letters (Memorandum Order No. 213)', () => {
+    const spaced = 'i n t h e b i d di n g d oc u m e n t s : P r o v i d ed , h o w e v e r , T h a t su b j e c t t o t h e gu i d e l i n es';
+    expect(isLetterSpaced(spaced)).toBe(true);
+  });
+  it('passes ordinary prose and short pages', () => {
+    const prose = 'The procuring entity may provide in the bidding documents that obligations may be paid in foreign currency, '.repeat(4);
+    expect(isLetterSpaced(prose)).toBe(false);
+    expect(isLetterSpaced('a b c d e')).toBe(false);
   });
 });

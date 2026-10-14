@@ -16,7 +16,7 @@ const lock = JSON.parse(await fs.readFile(path.join(ROOT, 'corpus', 'manifest.lo
 
 const cached = new Set(await fs.readdir(cacheDir).catch(() => [] as string[]));
 const todo = lock.artifacts
-  .filter(a => a.ingest_field && !cached.has(`${a.sha256}.v1.json`))
+  .filter(a => a.ingest_field && !cached.has(`${a.sha256}.v1.json`) && !cached.has(`${a.sha256}.v2.json`))
   .sort((a, b) => a.sha256.localeCompare(b.sha256))
   .filter((_, i) => i % count === index);
 
