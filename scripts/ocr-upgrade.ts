@@ -2,8 +2,10 @@
 // v2 cache entry when any page improved. The v1 file is left as it was. Weak = an OCR page under CLEAN_RETRY_BELOW,
 // or a letter-spaced text layer. Each page keeps whichever reading scores higher. Changed document ids are appended
 // to storage/logs/ocr-upgrade-changed.txt so only those need `corpus:ingest -- --only ...`.
+// With --below N it instead re-reads every OCR page under N in the newest entry (v1 or v2), e.g. after a new retry
+// was added to recognizeBest. Hand-transcribed pages carry confidence 100 and are never picked.
 //
-// Usage: npx tsx scripts/ocr-upgrade.ts --shard 0/3      (run 0/3, 1/3 and 2/3 side by side)
+// Usage: npx tsx scripts/ocr-upgrade.ts --shard 0/3 [--below 70]     (run 0/3, 1/3 and 2/3 side by side)
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {
@@ -14,19 +16,24 @@ import {
 type Artifact = { document_id: string; local_path: string; sha256: string; content_type: string; ingest_field: boolean };
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const arg = process.argv[process.argv.indexOf('--shard') + 1] ?? '0/1';
+const opt = (name: string) => process.argv.includes(name) ? process.argv[process.argv.indexOf(name) + 1] : undefined;
+const arg = opt('--shard') ?? '0/1';
+const below = opt('--below') === undefined ? undefined : Number(opt('--below'));
 const [index, count] = arg.split('/').map(Number);
 const cacheDir = path.join(ROOT, 'storage', 'processed');
 const tessCache = path.join(cacheDir, 'tessdata');
-const changedLog = path.join(ROOT, 'storage', 'logs', 'ocr-upgrade-changed.txt');
+const changedLog = path.join(ROOT, 'storage', 'logs', below === undefined ? 'ocr-upgrade-changed.txt' : `ocr-upgrade-below${below}-changed.txt`);
 const lock = JSON.parse(await fs.readFile(path.join(ROOT, 'corpus', 'manifest.lock.json'), 'utf8')) as { artifacts: Artifact[] };
 
 const cached = new Set(await fs.readdir(cacheDir).catch(() => [] as string[]));
-const isWeak = (p: Extracted['pages'][number]) => p.ocr ? (p.confidence ?? 100) < CLEAN_RETRY_BELOW : isLetterSpaced(p.text);
+const isWeak = (p: Extracted['pages'][number]) => below !== undefined
+  ? p.ocr && (p.confidence ?? 100) < below
+  : p.ocr ? (p.confidence ?? 100) < CLEAN_RETRY_BELOW : isLetterSpaced(p.text);
 
 const todo: Array<{ a: Artifact; ex: Extracted }> = [];
 for (const a of lock.artifacts) {
-  if (!a.ingest_field || cached.has(`${a.sha256}.v2.json`) || !cached.has(`${a.sha256}.v1.json`)) continue;
+  if (!a.ingest_field) continue;
+  if (below === undefined && (cached.has(`${a.sha256}.v2.json`) || !cached.has(`${a.sha256}.v1.json`))) continue;
   if (a.content_type !== 'application/pdf' && !a.content_type.startsWith('image/')) continue;
   const ex = await readCachedExtraction(cacheDir, a.sha256);
   if (ex?.pages.some(isWeak)) todo.push({ a, ex });

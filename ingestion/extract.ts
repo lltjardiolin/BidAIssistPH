@@ -40,15 +40,30 @@ export async function closeExtractors() {
   worker = undefined;
 }
 
-/** Reads an image; a weak reading is retried on a cleaned copy and the higher-confidence reading wins. */
-export async function recognizeBest(img: string, cacheDir: string): Promise<{ text: string; confidence: number }> {
+/** Below this confidence the page may be scanned sideways or upside down (landscape tables, annexes), so it is also
+ *  read at 90/180/270 degrees. A turned reading wins only by ROTATE_MARGIN: smaller gains are noise read as noise. */
+export const ROTATE_RETRY_BELOW = 70;
+const ROTATE_MARGIN = 15;
+
+/** Reads an image; a weak reading is retried on a cleaned copy and, if still weak, turned. The best reading wins. */
+export async function recognizeBest(img: string | Buffer, cacheDir: string): Promise<{ text: string; confidence: number }> {
   const w = await getWorker(cacheDir);
-  const { data } = await w.recognize(img);
-  if (data.confidence >= CLEAN_RETRY_BELOW) return { text: data.text, confidence: data.confidence };
   const { default: sharp } = await import('sharp');
-  const clean = await sharp(img).greyscale().median(3).threshold(140).png().toBuffer();
-  const { data: retry } = await w.recognize(clean);
-  const best = retry.confidence > data.confidence ? retry : data;
+  const read = async (deg: number) => {
+    const turned = deg ? await sharp(img).rotate(deg).png().toBuffer() : img;
+    const { data } = await w.recognize(turned);
+    if (data.confidence >= CLEAN_RETRY_BELOW) return data;
+    const { data: retry } = await w.recognize(await sharp(turned).greyscale().median(3).threshold(140).png().toBuffer());
+    return retry.confidence > data.confidence ? retry : data;
+  };
+  let best = await read(0);
+  const upright = best.confidence;
+  if (upright < ROTATE_RETRY_BELOW) {
+    for (const deg of [90, 180, 270]) {
+      const r = await read(deg);
+      if (r.confidence >= upright + ROTATE_MARGIN && r.confidence > best.confidence) best = r;
+    }
+  }
   return { text: best.text, confidence: best.confidence };
 }
 
